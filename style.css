@@ -1,48 +1,89 @@
+:root {
+  --orange: #ff6b00;
+  --dark-bg: #121212;
+  --light-bg: #f5f5f5;
+  --text-light: #fff;
+  --text-dark: #111;
+  --gradient: linear-gradient(135deg, #ff6b00, #ffbb33);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--dark-bg);
+  color: var(--text-light);
+  transition: all 0.3s ease-in-out;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 50px 0;
+  background: var(--gradient);
+  padding: 2rem;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 36px;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+section h2 {
+  font-size: 1.8rem;
+  color: var(--orange);
+  margin-bottom: 1rem;
 }
 
-ul li {
-    margin: 10px 0;
+a {
+  color: var(--orange);
+  text-decoration: none;
 }
 
-ul li a {
-    text-decoration: none;
-    color: #007BFF;
-    font-size: 18px;
+a:hover {
+  text-decoration: underline;
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+  text-align: center;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #aaa;
+  border-top: 1px solid #333;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Light mode (optional toggle later) */
+.light-mode body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+.light-mode header,
+.light-mode footer {
+  background: var(--gradient);
+  color: var(--text-dark);
+}
+.light-mode a {
+  color: var(--orange);
 }
