@@ -7,24 +7,12 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* ——— Re-center all container sections ——— */
-.container {
-  max-width: 1000px;   /* or whatever width you prefer */
-  margin: 0 auto;      /* auto left/right margins */
-  padding: 0 1rem;     /* small side padding so content never touches edge */
-}
-
-/* === Body Styling === */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #1c1c1c;
   color: #fff;
   line-height: 1.6;
 }
-
-/* ... other CSS styles ... */
-
 
 /* === Navbar === */
 .navbar {
@@ -49,13 +37,13 @@ body {
   display: flex;
   gap: 1.5rem;
 }
-.nav-links a {
+.nav-links li a {
   color: #ccc;
-  font-weight: 500;
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.3s;
 }
-.nav-links a:hover {
+.nav-links li a:hover {
   color: #ffae42;
 }
 
@@ -234,37 +222,4 @@ footer ul {
   margin-bottom: 1.5rem;
 }
 footer ul li {
-  margin: 0.5rem 0;
-}
-footer ul li a {
-  color: #ffb74d;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-footer ul li a:hover {
-  color: #fff;
-}
-footer p {
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* === Responsive === */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-img {
-    margin-top: 2rem;
-    max-width: 220px;
-  }
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-  }
-  .services .work-experience,
-  .resume .education {
-    padding: 1rem;
-  }
-}
+  margin
