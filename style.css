@@ -1,137 +1,158 @@
-/* === Reset & Fonts === */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #1a1a1a, #2a1200);
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #1e1e1e, #ff6b00);
   color: #fff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  line-height: 1.6;
 }
 
-/* === Header & Hero === */
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Hero Section */
 .hero {
-  padding: 4rem 2rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  padding: 4rem 0;
+  background-color: #333;
+  color: #fff;
 }
 .hero-content {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 .hero-text {
   flex: 1;
-  max-width: 600px;
-}
-.hero-text h2 {
-  font-size: 1.5rem;
-  color: #ff9800;
 }
 .hero-text h1 {
   font-size: 3rem;
-  font-weight: 700;
-  margin: 0.5rem 0;
-  color: #fff;
-}
-.hero-text h3 {
-  font-size: 1.4rem;
   margin-bottom: 1rem;
 }
-.hero-text h3 span {
-  color: #ffa726;
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6b00;
 }
 .hero-text p {
-  font-size: 1rem;
-  color: #ccc;
-  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
-
-/* === Buttons === */
-.buttons {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-.btn, .btn-secondary {
+.hero-text .btn {
   padding: 0.7rem 1.5rem;
+  background-color: #ff6b00;
+  color: white;
   text-decoration: none;
   border-radius: 5px;
   font-weight: 600;
-  transition: all 0.3s ease;
-  border: none;
 }
-.btn {
-  background: #ff6b00;
-  color: white;
-}
-.btn:hover {
-  background: #ff8800;
-}
-.btn-secondary {
-  background: transparent;
-  border: 1px solid #ff6b00;
-  color: #ff6b00;
-}
-.btn-secondary:hover {
-  background: #ff6b00;
-  color: #fff;
-}
-
-/* === Social Icons === */
-.social-icons a {
-  margin-right: 1rem;
-  color: #ffae42;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-.social-icons a:hover {
-  color: #ffc57a;
-}
-
-/* === Hero Image === */
 .hero-img img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 0 20px #ff6b00;
+  box-shadow: 0 0 15px #ff6b00;
   border: 4px solid #222;
 }
 
-/* === Section Styling === */
-.container section a {
-  color: #ffa726;
-  text-decoration: none;
-  font-weight: 500;
+/* About Section */
+.about {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #222;
 }
-.container section a:hover {
-  color: #ffcc80;
+.about h2 {
+  font-size: 2.5rem;
+  color: #ff6b00;
+  margin-bottom: 1rem;
+}
+.about p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
 }
 
-/* === Responsive === */
+/* Projects Section */
+.projects {
+  padding: 4rem 0;
+  background-color: #333;
+  text-align: center;
+}
+.projects h2 {
+  font-size: 2.5rem;
+  color: #ff6b00;
+  margin-bottom: 2rem;
+}
+.project {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #444;
+  border-radius: 8px;
+}
+.project h3 {
+  font-size: 1.8rem;
+  color: #ff6b00;
+}
+.project p {
+  font-size: 1rem;
+  color: #ccc;
+}
+.project a {
+  color: #ff6b00;
+  text-decoration: none;
+}
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #222;
+}
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+.contact li {
+  margin: 1rem 0;
+}
+.contact a {
+  font-size: 1.2rem;
+  color: #ff6b00;
+  text-decoration: none;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #111;
+  color: #777;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
   .hero-content {
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column;
     text-align: center;
   }
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
   .hero-img img {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
   }
 }
