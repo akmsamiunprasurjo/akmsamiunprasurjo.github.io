@@ -7,12 +7,24 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* ——— Re-center all container sections ——— */
+.container {
+  max-width: 1000px;   /* or whatever width you prefer */
+  margin: 0 auto;      /* auto left/right margins */
+  padding: 0 1rem;     /* small side padding so content never touches edge */
+}
+
+/* === Body Styling === */
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #1c1c1c;
   color: #fff;
   line-height: 1.6;
 }
+
+/* ... other CSS styles ... */
+
 
 /* === Navbar === */
 .navbar {
