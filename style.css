@@ -112,50 +112,85 @@ body {
   box-shadow: 0 0 30px #ff9800;
 }
 
-/* === About Section === */
-.about {
+/* === Section General === */
+section {
   padding: 4rem 2rem;
-  background-color: #2a2a2a;
+}
+section h2 {
   text-align: center;
-}
-.about h2 {
   font-size: 2.4rem;
-  margin-bottom: 1.5rem;
-  color: #ffb300;
+  color: #ffa726;
+  margin-bottom: 2rem;
 }
+
+/* === About Section === */
 .about p {
   max-width: 800px;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
   color: #ddd;
   font-size: 1.1rem;
 }
 
-/* === Metrics Cards === */
-.metrics {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.metric {
+/* === Services Section === */
+.services .work-experience {
   background: #1a1a1a;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   border-radius: 10px;
-  width: 180px;
-  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ddd;
   box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
 }
-.metric span {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #ffa726;
+.services .work-experience h3 {
+  color: #ffb74d;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
 }
-.metric p {
-  margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #ccc;
+.services .work-experience ul {
+  list-style: none;
+  padding: 0;
+}
+.services .work-experience ul li {
+  margin: 0.75rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+.services .work-experience ul li::before {
+  content: '•';
+  color: #ff9800;
+  position: absolute;
+  left: 0;
+}
+
+/* === Resume Section === */
+.resume .education {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
+}
+.resume .education ul {
+  list-style: none;
+  padding: 0;
+}
+.resume .education ul li {
+  margin: 0.75rem 0;
+  position: relative;
+  padding-left: 1rem;
+}
+.resume .education ul li::before {
+  content: '•';
+  color: #ff9800;
+  position: absolute;
+  left: 0;
+}
+.resume a.btn.download {
+  display: block;
+  width: max-content;
+  margin: 2rem auto 0;
 }
 
 /* === Footer === */
@@ -201,12 +236,12 @@ footer p {
     width: 220px;
     height: 220px;
   }
-  .metrics {
-    flex-direction: column;
-    align-items: center;
-  }
   .nav-links {
     flex-wrap: wrap;
     gap: 0.8rem;
+  }
+  .services .work-experience,
+  .resume .education {
+    padding: 1rem;
   }
 }
