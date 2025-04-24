@@ -52,16 +52,22 @@ body {
   padding: 4rem 2rem;
   background-color: #1f1f1f;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;  /* Space between image and text */
+}
+
 .hero-text {
-  max-width: 600px;
+  flex: 1;
+  max-width: 500px; /* Adjust for more space */
 }
-.greeting {
-  color: #ffb300;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
+
 .hero-text h1 {
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
@@ -76,10 +82,27 @@ body {
   margin-bottom: 2rem;
   color: #ccc;
 }
+
 .buttons {
   display: flex;
   gap: 1rem;
 }
+
+.hero-img {
+  flex: 1;
+  max-width: 350px; /* Adjust the image size */
+}
+
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #111;
+  border: 4px solid #ff9800;
+  box-shadow: 0 0 30px #ff9800;
+}
+
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -88,29 +111,25 @@ body {
   text-decoration: none;
   transition: background 0.3s;
 }
+
 .btn.discuss {
   background-color: #7e57c2;
   color: #fff;
 }
+
 .btn.discuss:hover {
   background-color: #9575cd;
 }
+
 .btn.download {
   background-color: #ff9800;
   color: #fff;
 }
+
 .btn.download:hover {
   background-color: #ffb74d;
 }
-.hero-img img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  background-color: #111;
-  border: 4px solid #ff9800;
-  box-shadow: 0 0 30px #ff9800;
-}
+
 
 /* === Section General === */
 section {
