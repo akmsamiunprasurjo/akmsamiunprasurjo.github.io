@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
   <!-- Navigation Bar -->
   <nav class="navbar" id="home">
     <div class="nav-container">
@@ -18,15 +18,17 @@
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Services</a></li>
         <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" id="home">
+  <header class="hero">
     <div class="hero-content">
       <div class="hero-text" data-aos="fade-right">
         <p class="greeting">Hello!</p>
@@ -48,44 +50,15 @@
   <section class="about container" id="about" data-aos="zoom-in">
     <h2>About Me</h2>
     <p>I’m A K M Samiun Prasurjo — a Computer Science &amp; Engineering student at Canadian University of Bangladesh and the founder of <strong>AKM IT Solutions</strong>. Since class 10, I’ve had a clear vision: to build scalable tech-powered businesses. I'm not just learning — I'm creating my path.</p>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services container" id="services">
-    <h2 data-aos="fade-up">Services &amp; Experience</h2>
-    <div class="metrics" data-aos="fade-up" data-aos-delay="100">
-      <div class="metric"><span>100%</span><p>Authentic Clients</p></div>
-      <div class="metric"><span>200+</span><p>Regular Clients</p></div>
-      <div class="metric"><span>5000+</span><p>Projects Completed</p></div>
-      <div class="metric"><span>6+</span><p>Years of Vision</p></div>
-    </div>
-    <div class="work-experience" data-aos="fade-up" data-aos-delay="200">
-      <h3>Work Experience</h3>
-      <ul>
-        <li>Scout Leader, Chaprashir Hat High School (2014–2018) – Noakhali, Bangladesh</li>
-        <li>School Cabinets Leadership, Chaprashir Hat HS (2015–2018) – Noakhali, Bangladesh</li>
-        <li>Public Relations Officer, CUB Computer Society (2022–2024) – Dhaka, Bangladesh</li>
-        <li>Marketing Specialist, CSE Dept, Canadian University (2023–Present) – Dhaka, Bangladesh</li>
-        <li>Assistant Joint Secretary &amp; Treasurer, CUB Computer Society (2024–Present) – Dhaka, Bangladesh</li>
-      </ul>
+    <div class="metrics">
+      <div class="metric" data-aos="fade-up"><span>100%</span><p>Authentic Clients</p></div>
+      <div class="metric" data-aos="fade-up" data-aos-delay="100"><span>200+</span><p>Regular Clients</p></div>
+      <div class="metric" data-aos="fade-up" data-aos-delay="200"><span>5000+</span><p>Projects Completed</p></div>
+      <div class="metric" data-aos="fade-up" data-aos-delay="300"><span>6+</span><p>Years of Vision</p></div>
     </div>
   </section>
 
-  <!-- Resume Section -->
-  <section class="resume container" id="resume">
-    <h2 data-aos="fade-up">Education &amp; Training</h2>
-    <div class="education" data-aos="fade-up" data-aos-delay="100">
-      <ul>
-        <li>PSC, Shah Fazlur Rahman Pre-Cadet Academy (2006–2012) – Noakhali</li>
-        <li>SSC, Chaprashir Hat High School (2012–2018) – Noakhali</li>
-        <li>HSC, Ideal College, Dhanmondi (2018–2020) – Dhaka</li>
-        <li>Honors, Canadian University of Bangladesh (2022–Present) – Dhaka</li>
-      </ul>
-    </div>
-    <a href="A%20K%20M%20Samiun%20Prasurjo%20CV.pdf" class="btn download" download data-aos="fade-up" data-aos-delay="200">Download CV</a>
-  </section>
-
-  <!-- Contact Section -->
+  <!-- Footer Contact Section -->
   <footer id="contact" data-aos="fade-up">
     <h2>Contact Me</h2>
     <ul>
@@ -99,6 +72,7 @@
   </footer>
 
   <!-- AOS animation library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script> AOS.init({ once: true, duration: 800 }); </script>
 </body>
