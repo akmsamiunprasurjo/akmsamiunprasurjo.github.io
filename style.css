@@ -1,8 +1,11 @@
-/* === Reset & Fonts === */
+/* === Reset & Smooth Scroll === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -34,13 +37,13 @@ body {
   display: flex;
   gap: 1.5rem;
 }
-.nav-links li a {
+.nav-links a {
   color: #ccc;
-  text-decoration: none;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.3s;
 }
-.nav-links li a:hover {
+.nav-links a:hover {
   color: #ffae42;
 }
 
@@ -52,84 +55,75 @@ body {
   padding: 4rem 2rem;
   background-color: #1f1f1f;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
-
 .hero-content {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
   align-items: center;
-  gap: 2rem;  /* Space between image and text */
+  justify-content: space-between;
 }
-
 .hero-text {
   flex: 1;
-  max-width: 500px; /* Adjust for more space */
+  max-width: 500px;
 }
-
+.greeting {
+  color: #ffb300;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
 .hero-text h1 {
   font-size: 2.8rem;
-  margin-bottom: 0.5rem;
   color: #fff;
+  margin-bottom: 0.5rem;
 }
 .hero-text h2 {
   font-size: 1.6rem;
-  margin-bottom: 1rem;
   color: #ffb74d;
+  margin-bottom: 1rem;
 }
 .hero-text p {
-  margin-bottom: 2rem;
   color: #ccc;
+  margin-bottom: 2rem;
 }
-
 .buttons {
   display: flex;
   gap: 1rem;
 }
-
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.btn.discuss {
+  background-color: #7e57c2;
+  color: #fff;
+}
+.btn.discuss:hover {
+  background-color: #9575cd;
+}
+.btn.download {
+  background-color: #ff9800;
+  color: #fff;
+}
+.btn.download:hover {
+  background-color: #ffb74d;
+  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
+}
 .hero-img {
   flex: 1;
-  max-width: 350px; /* Adjust the image size */
+  max-width: 350px;
 }
-
 .hero-img img {
   width: 100%;
-  height: auto;
   border-radius: 50%;
   object-fit: cover;
   background-color: #111;
   border: 4px solid #ff9800;
   box-shadow: 0 0 30px #ff9800;
 }
-
-.btn {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.btn.discuss {
-  background-color: #7e57c2;
-  color: #fff;
-}
-
-.btn.discuss:hover {
-  background-color: #9575cd;
-}
-
-.btn.download {
-  background-color: #ff9800;
-  color: #fff;
-}
-
-.btn.download:hover {
-  background-color: #ffb74d;
-}
-
 
 /* === Section General === */
 section {
@@ -146,8 +140,8 @@ section h2 {
 .about p {
   max-width: 800px;
   margin: 0 auto;
-  color: #ddd;
   font-size: 1.1rem;
+  color: #ddd;
 }
 
 /* === Services Section === */
@@ -160,21 +154,21 @@ section h2 {
   color: #ddd;
   box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
 }
-.services .work-experience h3 {
+.services h3 {
   color: #ffb74d;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
-.services .work-experience ul {
+.services ul {
   list-style: none;
   padding: 0;
 }
-.services .work-experience ul li {
+.services ul li {
   margin: 0.75rem 0;
-  position: relative;
   padding-left: 1rem;
+  position: relative;
 }
-.services .work-experience ul li::before {
+.services ul li::before {
   content: '•';
   color: #ff9800;
   position: absolute;
@@ -191,15 +185,74 @@ section h2 {
   color: #ddd;
   box-shadow: 0 0 10px rgba(255, 152, 0, 0.2);
 }
-.resume .education ul {
+.resume ul {
   list-style: none;
   padding: 0;
 }
-.resume .education ul li {
+.resume ul li {
   margin: 0.75rem 0;
-  position: relative;
   padding-left: 1rem;
+  position: relative;
 }
-.resume .education ul li::before {
+.resume ul li::before {
   content: '•';
-  color
+  color: #ff9800;
+  position: absolute;
+  left: 0;
+}
+.resume .btn.download {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+/* === Contact Section === */
+footer {
+  padding: 3rem 2rem;
+  background-color: #121212;
+  text-align: center;
+}
+footer h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ffa726;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+footer ul li {
+  margin: 0.5rem 0;
+}
+footer ul li a {
+  color: #ffb74d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+footer ul li a:hover {
+  color: #fff;
+}
+footer p {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-img {
+    margin-top: 2rem;
+    max-width: 220px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .services .work-experience,
+  .resume .education {
+    padding: 1rem;
+  }
+}
