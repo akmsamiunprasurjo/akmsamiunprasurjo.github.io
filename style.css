@@ -129,6 +129,8 @@ body {
   color: #ddd;
   font-size: 1.1rem;
 }
+
+/* === Metrics Cards === */
 .metrics {
   display: flex;
   justify-content: center;
