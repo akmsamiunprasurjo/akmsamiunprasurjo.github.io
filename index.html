@@ -119,5 +119,11 @@
       easing: 'ease-out'
     });
   </script>
+  <script>
+  document.querySelector('.nav-links a[href="#home"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </body>
 </html>
