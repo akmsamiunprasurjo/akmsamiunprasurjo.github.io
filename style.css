@@ -365,4 +365,9 @@ footer p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+#contact {
+  height: 100px;      /* space to scroll */
+  margin-top: -100px; /* cancel space visually */
+}
+
 
