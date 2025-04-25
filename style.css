@@ -268,3 +268,29 @@ footer p {
   margin-top: 0.5rem;    /* a little breathing room */
   color: #777;
 }
+/* === Footer Icon Styling === */
+footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;  /* Adjust space between icons */
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  color: #ff9800;
+  font-size: 1.5rem;  /* Size of the icons */
+  transition: color 0.3s;
+}
+
+footer ul li a:hover {
+  color: #ffa726;
+}
+
+footer p {
+  color: #777;
+}
