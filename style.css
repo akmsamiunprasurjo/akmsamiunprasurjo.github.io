@@ -294,3 +294,41 @@ footer ul li a:hover {
 footer p {
   color: #777;
 }
+/* === Achievements Section === */
+.achievements {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.achievements h2 {
+  font-size: 2.2rem;
+  color: #ffa726;
+  margin-bottom: 2.5rem;
+}
+.achievement-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.achievement {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.15);
+  width: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.achievement:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
+}
+.achievement h3 {
+  font-size: 2.5rem;
+  color: #ff9800;
+  margin-bottom: 0.5rem;
+}
+.achievement p {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
