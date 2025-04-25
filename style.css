@@ -205,24 +205,7 @@ section h2 {
   margin: 2rem auto 0;
 }
 
-/* === Contact Section === */
-footer {
-  padding: 3rem 2rem;
-  background-color: #121212;
-  text-align: center;
-}
-footer h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #ffa726;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1.5rem;
-}
-footer ul li {
-  margin
+/* === Contact Form Section === */
 .form-box {
   background: #1a1a1a;
   padding: 3rem 2rem;
