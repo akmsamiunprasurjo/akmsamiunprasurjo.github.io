@@ -365,3 +365,35 @@ footer p {
   font-size: 0.95rem;
   line-height: 1.4;
 }
+/* === Responsive Fix for Mobile === */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .hero-img img {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
