@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <!-- ======= Achievements Section ======= -->
+<!-- ======= Achievements Section ======= -->
 <section class="achievements container" data-aos="fade-up">
   <h2>My Achievements</h2>
   <div class="achievement-boxes">
@@ -106,6 +106,7 @@
     </div>
   </div>
 </section>
+
 
   <!-- ===================== Resume Section ===================== -->
   <section class="resume container" id="resume">
@@ -167,24 +168,22 @@
 </html>
 <script>
   // Animate counter only when visible
-  <script>
   function animateCounters() {
     const counters = document.querySelectorAll('.counter');
-    const speed = 200;
+    const speed = 200; // lower = faster
 
     counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-target'));
-      const suffix = counter.getAttribute('data-suffix') || "";
-      let count = 0;
-
       const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
         const increment = Math.ceil(target / speed);
+
         if (count < target) {
-          count += increment;
-          counter.innerText = count;
+          counter.innerText = count + increment;
           setTimeout(updateCount, 30);
         } else {
-          counter.innerText = target + suffix;
+          counter.innerText = target;
         }
       };
 
@@ -199,6 +198,7 @@
     });
   }
 
+  // Run after AOS
   AOS.init({
     once: true,
     duration: 800,
