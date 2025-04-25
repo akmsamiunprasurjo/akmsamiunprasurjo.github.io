@@ -173,15 +173,17 @@
     const speed = 200;
 
     counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
+      const target = parseInt(counter.getAttribute('data-target'));
       const suffix = counter.getAttribute('data-suffix') || "";
       let count = 0;
 
       const updateCount = () => {
         const increment = Math.ceil(target / speed);
+
         if (count < target) {
           count += increment;
-          counter.innerText = count + suffix;
+          if (count > target) count = target;
+          counter.innerText = count;
           setTimeout(updateCount, 30);
         } else {
           counter.innerText = target + suffix;
