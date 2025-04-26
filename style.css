@@ -257,7 +257,8 @@ footer {
 
 footer ul {
   display: flex;         /* lay out links in a row */
-  justify-content: center;  /* center that row */
+  justify-content: center; /* center that row */
+  flex-wrap: nowrap;
   gap: 1.5rem;           /* space between each link */
   padding: 0;            /* remove default ul padding */
   margin-bottom: 1rem;   /* space below the links */
