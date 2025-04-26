@@ -262,10 +262,12 @@ footer ul {
   gap: 1.5rem;           /* space between each link */
   padding: 0;            /* remove default ul padding */
   margin-bottom: 1rem;   /* space below the links */
+  overflow-x: auto;
 }
 
 footer ul li {
   list-style: none;      /* remove bullets */
+  white-space: nowrap;
 }
 
 footer p {
