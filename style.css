@@ -67,7 +67,58 @@ body {
   border-radius:50%; object-fit:cover;
   border:4px solid #ff9800; background:#121212;
   box-shadow:0 0 20px #ff9800;
+  
+/* === Resume Section === */
+.resume {
+  padding: 4rem 2rem;
 }
+.resume .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.resume .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.resume .info-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(255,152,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.resume .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,152,0,0.2);
+}
+.resume .info-card h3 {
+  color: #ff9800;
+  margin-bottom: 0.5rem;
+}
+.resume .info-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+/* style the Download CV button under resume */
+.resume .btn.download {
+  display: inline-block;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1.5rem;
+  background: #ff9800;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.resume .btn.download:hover {
+  background: #ffb74d;
+  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
+}
+
 
 /* Sections */
 section { padding:4rem 2rem; }
