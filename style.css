@@ -196,6 +196,21 @@ h2 {
   box-shadow:0 0 10px #ff9800;
 }
 
+/* Contact-section header: title + CV button side by side */
+.form-box .form-header {
+  display: flex;
+  justify-content: space-between;   /* title on left, button on right */
+  align-items: center;              /* vertically center both */
+  margin-bottom: 2rem;              /* gap down to the form */
+}
+
+/* Shrink the Download CV button so it matches the form’s width if you like */
+.form-box .form-header .btn.download {
+  margin: 0;                        /* remove any extra top/bottom margin */
+  white-space: nowrap;              /* keep it on one line */
+}
+
+
 /* Footer */
 footer {
   text-align:center; padding:2rem 1.5rem; background:#121212;
