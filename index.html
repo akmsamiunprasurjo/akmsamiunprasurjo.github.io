@@ -248,65 +248,54 @@
     });
   });
 
- <script>
-// Auto close menu when user scrolls (on mobile)
-window.addEventListener('scroll', () => {
-  const navLinks = document.querySelector('.nav-links'); // Assuming this is the class for your navigation links
-  const mobileMenu = document.querySelector('.mobile-menu'); // Assuming this is the class for the mobile menu
-  if (navLinks.classList.contains('active')) {
-    navLinks.classList.remove('active');
-    mobileMenu.classList.remove('active');
-  }
-});
-
-let currentIndex = 0;
-const container = document.getElementById("testimonialContainer");
-const slides = document.querySelectorAll(".testimonial");
-const total = slides.length;
-let slideInterval;
-
-// Function to update the slider position
-function updateSlider() {
-  container.style.transform = `translateX(-${currentIndex * 25}%)`;  // Changed to 25% for each testimonial
-}
-
-// Function to show the next slide
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % total;  // Looping back to the first slide after the last one
-  updateSlider();
-}
-
-// Function to show the previous slide
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + total) % total;  // Looping back to the last slide from the first one
-  updateSlider();
-}
-
-// Start the slider (auto-slide every 5 seconds)
-function startSlider() {
-  slideInterval = setInterval(nextSlide, 5000); // Auto-slide every 5 seconds
-}
-
-// Pause the slider when user hovers over it
-function pauseSlider() {
-  clearInterval(slideInterval);  // Stop the auto-sliding
-}
-
-// Resume the slider when user stops hovering
-function resumeSlider() {
-  startSlider();  // Restart the auto-sliding
-}
-
-// Initialize the slider
-document.addEventListener("DOMContentLoaded", () => {
-  updateSlider();  // Update to show the first slide
-  startSlider();   // Start the auto-sliding
-});
-
-// Event listeners for the navigation buttons (previous and next)
-document.querySelector('.next').addEventListener('click', nextSlide);  // Click to go to the next slide
-document.querySelector('.prev').addEventListener('click', prevSlide);  // Click to go to the previous slide
-
+ // Auto close menu when user scrolls (on mobile)
+  window.addEventListener('scroll', () => {
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
 </script>
+<script>
+  let currentIndex = 0;
+  const container = document.getElementById("testimonialContainer");
+  const slides = document.querySelectorAll(".testimonial");
+  const total = slides.length;
+  let slideInterval;
+
+  function updateSlider() {
+    container.style.transform = translateX(-${currentIndex * 100}%);
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % total;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + total) % total;
+    updateSlider();
+  }
+
+  function startSlider() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function pauseSlider() {
+    clearInterval(slideInterval);
+  }
+
+  function resumeSlider() {
+    startSlider();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateSlider();
+    startSlider();
+  });
+</script>
+
+</body>
+</html>
 </body>
 </html>
