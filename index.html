@@ -276,14 +276,15 @@ let currentIndex = 0;
 let intervalId;
 
 function renderTestimonials() {
-  container.innerHTML = reviews.map(review => 
+  container.innerHTML = reviews.map(review => `
     <div class="testimonial-item">
       <img src="images/${review.image}" alt="${review.name}">
       <p class="testimonial-text">${review.text}</p>
       <p class="testimonial-name"><a href="${review.link}" target="_blank">${review.name}</a></p>
     </div>
-  ).join('');
+  `).join('');
 }
+
 
 function showSlide(index) {
   const width = container.clientWidth;
