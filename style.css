@@ -142,12 +142,12 @@ h2 {
 
 .testimonial-container {
   display: flex;
-  width: 100%;  /* Adjusted to 100% for single slide view */
+  width: 400%;  /* Adjusted to show 4 testimonials, each taking 25% */
   transition: transform 0.5s ease;
 }
 
 .testimonial {
-  width: 100%;  /* Each slide takes up 100% of the container */
+  width: 25%;  /* Each slide takes up 25% of the container's width */
   box-sizing: border-box;
   background: #1a1a1a;
   padding: 2rem 1rem;
@@ -159,7 +159,7 @@ h2 {
 }
 
 .testimonial img {
-  width: 100px; 
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
