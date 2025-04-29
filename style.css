@@ -68,7 +68,7 @@ body {
   border:4px solid #ff9800; background:#121212;
   box-shadow:0 0 20px #ff9800;
 }
-
+  
 /* === Resume Section === */
 .resume {
   padding: 4rem 2rem;
@@ -120,10 +120,61 @@ body {
   box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
 }
 
+
+/* Sections */
+section { padding:4rem 2rem; }
+h2 {
+  text-align:center; font-size:2.4rem;
+  color:#ffa726; margin-bottom:2rem;
+}
+
+/* About */
+.about p {
+  max-width:800px; margin:0 auto;
+  font-size:1.1rem; color:#ddd;
+}
+
+/* Card Grid */
+.card-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem; margin-top:2rem;
+}
+.info-card {
+  background:#1a1a1a; padding:1.5rem; border-radius:10px;
+  box-shadow:0 0 10px rgba(255,152,0,0.1);
+  transition:transform .3s,box-shadow .3s;
+}
+.info-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 15px rgba(255,152,0,0.2);
+}
+.info-card h3 { color:#ff9800; margin-bottom:.5rem; }
+.info-card p { color:#ccc; font-size:.95rem; line-height:1.4; }
+
+/* Achievements */
+.achievements { text-align:center; }
+.achievements h2 { font-size:2.2rem; margin-bottom:2.5rem; }
+.achievement-boxes {
+  display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;
+}
+.achievement {
+  background:#1a1a1a; padding:2rem; border-radius:10px;
+  width:250px; box-shadow:0 0 10px rgba(255,152,0,0.15);
+  transition:transform .3s,box-shadow .3s;
+}
+.achievement:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 15px rgba(255,152,0,0.3);
+}
+.achievement h3 {
+  font-size:2.5rem; color:#ff9800; margin-bottom:.5rem;
+}
+.achievement p { color:#ccc; font-size:1.1rem; }
+
 /* === Testimonials Section === */
 .testimonials {
   text-align: center;
-  margin-top: 4rem;
 }
 .testimonial-slider {
   position: relative;
@@ -168,8 +219,8 @@ body {
 }
 .prev { left: 0; }
 .next { right: 0; }
-
- /* Contact Form */
+ 
+/* Contact Form */
 .form-box {
   background:#1a1a1a; padding:3rem 2rem;
   max-width:800px; margin:0 auto 4rem;
@@ -192,7 +243,6 @@ body {
   background:#ffa726;
   box-shadow:0 0 10px #ff9800;
 }
-
 /* Footer */
 footer {
   text-align:center; padding:2rem 1.5rem; background:#121212;
