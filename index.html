@@ -228,4 +228,18 @@ A K M Samiun Prasurjo.</p>
       showTestimonial(current);
       startSlider();
     });
-    prev.addEvent
+    prev.addEventListener('click', () => {
+      stopSlider();
+      current = (current - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(current);
+      startSlider();
+    });
+    document.querySelectorAll('.testimonial').forEach(t => {
+      t.addEventListener('mouseenter', stopSlider);
+      t.addEventListener('mouseleave', startSlider);
+    });
+    showTestimonial(current);
+    startSlider();
+  </script>
+</body>
+</html>
