@@ -201,19 +201,29 @@
     document.addEventListener('DOMContentLoaded', animateCounters);
 
     // Mobile Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navLinks   = document.querySelector('.nav-links');
-    mobileMenu.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks   = document.querySelector('.nav-links');
+
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
+
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
     });
-    // Close menu on link click
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileMenu.classList.remove('active');
-      });
-    });
-  </script>
+  });
+
+  // Auto close menu when user scrolls (on mobile)
+  window.addEventListener('scroll', () => {
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
+</script>
 </body>
 </html>
