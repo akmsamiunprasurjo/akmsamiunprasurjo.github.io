@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AKM Samiun Prasurjo | Tech Entrepreneur</title>
-  <meta name="google-site-verification" content="7L_Mnke3MyB_tZ3P-nRW9Fys9WoRpfRQiQn9NMbDT6E" />
+  <meta name="google-site-verification" content="7L_Mnke3MyB_tZ3P-nRW9Fys9WoRpfRQiQn9NMbDT6E">
   <meta name="description" content="Portfolio of A K M Samiun Prasurjo — Tech Entrepreneur & CSE Student. Founder of AKM IT Solutions.">
-  <meta property="og:title" content="A K M Samiun Prasurjo">
+  <meta property="og:title"       content="A K M Samiun Prasurjo">
   <meta property="og:description" content="Tech Entrepreneur & Founder of AKM IT Solutions">
-  <meta property="og:image" content="https://akmsamiunprasurjo.com/profile.jpg">
-  <meta property="og:url" content="https://akmsamiunprasurjo.com">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image"       content="https://akmsamiunprasurjo.com/profile.jpg">
+  <meta property="og:url"         content="https://akmsamiunprasurjo.com">
+  <meta name="twitter:card"       content="summary_large_image">
 
   <!-- Core CSS -->
   <link rel="stylesheet" href="style.css">
@@ -29,7 +29,7 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar" id="home">
+  <nav class="navbar">
     <div class="nav-container">
       <h1 class="logo">Me!</h1>
       <ul class="nav-links">
@@ -56,7 +56,7 @@
         <h2>Tech Entrepreneur & CSE Student</h2>
         <p>Turning ideas into digital solutions and building toward the future — from Noakhali to the world.</p>
         <div class="buttons">
-          <a href="#contact" class="btn discuss">Discuss With Me</a>
+          <a href="#form-box"    class="btn discuss">Discuss With Me</a>
           <a href="A K M Samiun Prasurjo CV.pdf" class="btn download" download>Download CV</a>
         </div>
       </div>
@@ -69,12 +69,12 @@
   <!-- About -->
   <section class="about container" id="about" data-aos="zoom-in">
     <h2>About Me</h2>
-    <p>I’m A K M Samiun Prasurjo — a Computer Science & Engineering student at Canadian University of Bangladesh and the founder of <strong>AKM IT Solutions</strong>. Since class 10, I’ve had a clear vision: to build scalable tech-powered businesses. I'm not just learning — I'm creating my path.</p>
+    <p>I’m A K M Samiun Prasurjo — a Computer Science &amp; Engineering student at Canadian University of Bangladesh and the founder of <strong>AKM IT Solutions</strong>. Since class 10, I’ve had a clear vision: to build scalable tech-powered businesses. I’m not just learning — I’m creating my path.</p>
   </section>
 
   <!-- Services -->
   <section class="services container" id="services">
-    <h2 data-aos="fade-up">Services & Collaborations</h2>
+    <h2 data-aos="fade-up">Services &amp; Collaborations</h2>
     <div class="card-grid">
       <div class="info-card" data-aos="fade-up" data-aos-delay="100">
         <h3>Scout Leader</h3>
@@ -124,7 +124,7 @@
 
   <!-- Resume -->
   <section class="resume container" id="resume">
-    <h2 data-aos="fade-up">Education & Training</h2>
+    <h2 data-aos="fade-up">Education &amp; Training</h2>
     <div class="card-grid">
       <div class="info-card" data-aos="fade-up" data-aos-delay="100">
         <h3>PSC</h3>
@@ -150,16 +150,16 @@
   <section id="form-box" class="form-box" data-aos="fade-up">
     <h2>Contact Me</h2>
     <form action="https://formspree.io/f/xpwdwzpn" method="POST">
-      <input type="text"  name="name"     placeholder="Your Name"    required>
-      <input type="email" name="_replyto"placeholder="Your Email"   required>
-      <input type="text"  name="subject"  placeholder="Your Subject" required>
+      <input type="text"   name="name"     placeholder="Your Name"    required>
+      <input type="email"  name="_replyto" placeholder="Your Email"   required>
+      <input type="text"   name="subject"  placeholder="Your Subject" required>
       <textarea name="message" rows="5"   placeholder="Your Message"required></textarea>
       <button type="submit" class="btn send">Submit</button>
     </form>
   </section>
 
   <!-- Footer -->
-  <div id="contact"></div> <!-- scroll anchor -->
+  <section id="contact"></section>
   <footer data-aos="fade-up">
     <h2>Stay Tuned</h2>
     <ul class="footer-icons">
@@ -176,17 +176,16 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Initialize AOS
     AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
     // Counter Animation
     function animateCounters() {
       document.querySelectorAll('.counter').forEach(counter => {
-        const suffix = counter.getAttribute('data-suffix') || '';
-        const target  = parseInt(counter.getAttribute('data-target'), 10);
+        const suffix = counter.dataset.suffix || '';
+        const target = +counter.dataset.target;
         let count = 0;
+        const step = Math.ceil(target / 200);
         const update = () => {
-          const step = Math.ceil(target / 200);
           count = Math.min(count + step, target);
           counter.innerText = count + suffix;
           if (count < target) setTimeout(update, 20);
@@ -208,6 +207,7 @@
       navLinks.classList.toggle('active');
       mobileMenu.classList.toggle('active');
     });
+    // Close menu on link click
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
