@@ -123,35 +123,35 @@
   </section>
   
 <section class="testimonial-section" id="testimonials">
-  <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
-
+  <h2 class="section-title">What Clients Say <span>About Me !! </span></h2>
   <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
     <div class="testimonial-container" id="testimonialContainer">
       <div class="testimonial">
-        <img src="Reviewer1.jpg" alt="Reviewer 1">
-        <h4 class="testimonial-name"><a href="https://facebook.com/reviewer1" target="_blank">Reviewer 1</a></h4>
-        <p class="testimonial-text">"Reviewer 1's review text goes here."</p>
+        <img src="images/Reviewer1.jpg" alt="Reviewer 1">
+        <div class="testimonial-name"><a href="#">Reviewer 1</a></div>
+        <div class="testimonial-text">Great service and awesome communication.</div>
       </div>
       <div class="testimonial">
-        <img src="Reviewer2.jpg" alt="Reviewer 2">
-        <h4 class="testimonial-name"><a href="https://facebook.com/reviewer2" target="_blank">Reviewer 2</a></h4>
-        <p class="testimonial-text">"Reviewer 2's review text goes here."</p>
+        <img src="images/Reviewer2.jpg" alt="Reviewer 2">
+        <div class="testimonial-name"><a href="#">Reviewer 2</a></div>
+        <div class="testimonial-text">Very professional and on-time delivery!</div>
       </div>
       <div class="testimonial">
-        <img src="Reviewer3.jpg" alt="Reviewer 3">
-        <h4 class="testimonial-name"><a href="https://facebook.com/reviewer3" target="_blank">Reviewer 3</a></h4>
-        <p class="testimonial-text">"Reviewer 3's review text goes here."</p>
+        <img src="images/Reviewer3.jpg" alt="Reviewer 3">
+        <div class="testimonial-name"><a href="#">Reviewer 3</a></div>
+        <div class="testimonial-text">Highly recommend for any IT needs.</div>
       </div>
       <div class="testimonial">
-        <img src="Reviewer4.jpg" alt="Reviewer 4">
-        <h4 class="testimonial-name"><a href="https://facebook.com/reviewer4" target="_blank">Reviewer 4</a></h4>
-        <p class="testimonial-text">"Reviewer 4's review text goes here."</p>
+        <img src="images/Reviewer4.jpg" alt="Reviewer 4">
+        <div class="testimonial-name"><a href="#">Reviewer 4</a></div>
+        <div class="testimonial-text">Fantastic experience, will hire again!</div>
       </div>
     </div>
-    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
-    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+    <button class="nav-btn prev">❮</button>
+    <button class="nav-btn next">❯</button>
   </div>
 </section>
+
 
   <!-- Resume -->
   <section class="resume container" id="resume">
@@ -264,7 +264,7 @@
   let slideInterval;
 
   function updateSlider() {
-    container.style.transform = translateX(-${currentIndex * 100}%);
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
   function nextSlide() {
@@ -292,10 +292,19 @@
   document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
     startSlider();
+
+    document.querySelector('.next').addEventListener('click', () => {
+      pauseSlider();
+      nextSlide();
+      resumeSlider();
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      pauseSlider();
+      prevSlide();
+      resumeSlider();
+    });
   });
 </script>
-
-</body>
-</html>
 </body>
 </html>
