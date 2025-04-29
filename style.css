@@ -142,12 +142,12 @@ h2 {
 
 .testimonial-container {
   display: flex;
-  width: 400%;  /* Adjusted to show 4 testimonials, each taking 25% */
   transition: transform 0.5s ease;
+  width: 400%;
 }
 
 .testimonial {
-  width: 25%;  /* Each slide takes up 25% of the container's width */
+  width: 100%;
   box-sizing: border-box;
   background: #1a1a1a;
   padding: 2rem 1rem;
@@ -156,11 +156,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .testimonial img {
-  width: 100px;
-  height: 100px;
+  width: 100px; height: 100px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #ff9800;
@@ -193,6 +193,7 @@ h2 {
   cursor: pointer;
   padding: 0 1rem;
   user-select: none;
+  z-index: 1;
 }
 
 .prev { left: 0; }
