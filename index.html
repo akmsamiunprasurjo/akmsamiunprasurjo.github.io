@@ -122,6 +122,18 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+<section class="testimonial-section" id="testimonials">
+  <h2 class="section-title">What Clients Say <span>About Me</span></h2>
+  <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
+    <div class="testimonial-container" id="testimonialContainer">
+      <!-- Testimonial items will be injected by JavaScript -->
+    </div>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+ 
   <!-- Resume -->
   <section class="resume container" id="resume">
     <h2 data-aos="fade-up">Education &amp; Training</h2>
@@ -224,6 +236,80 @@
       mobileMenu.classList.remove('active');
     }
   });
+</script>
+  <script>
+const reviews = [
+  {
+    image: 'reviewer1.jpg',
+    text: 'hi',
+    name: 'Azizul',
+    link: 'https://www.facebook.com/ah.azizulhoque.79'
+  },
+  {
+    image: 'reviewer2.jpg',
+    text: 'hi',
+    name: 'Kawsar',
+    link: 'https://www.facebook.com/KawsarAhmmedOfficial'
+  },
+  {
+    image: 'reviewer3.jpg',
+    text: 'hi',
+    name: 'Rifat',
+    link: 'https://www.facebook.com/mohammadsakhawathossenrifat'
+  },
+  {
+    image: 'reviewer4.jpg',
+    text: 'hi',
+    name: 'Jihad',
+    link: 'https://www.facebook.com/iamibrahimjihad'
+  }
+];
+
+const container = document.getElementById('testimonialContainer');
+let currentIndex = 0;
+let intervalId;
+
+function renderTestimonials() {
+  container.innerHTML = reviews.map(review => `
+    <div class="testimonial-item">
+      <img src="images/${review.image}" alt="${review.name}">
+      <p class="testimonial-text">${review.text}</p>
+      <p class="testimonial-name"><a href="${review.link}" target="_blank">${review.name}</a></p>
+    </div>
+  `).join('');
+}
+
+function showSlide(index) {
+  const width = container.clientWidth;
+  container.style.transform = `translateX(-${index * 100}%)`;
+  currentIndex = index;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % reviews.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+  showSlide(currentIndex);
+}
+
+function startSlider() {
+  intervalId = setInterval(nextSlide, 5000);
+}
+
+function pauseSlider() {
+  clearInterval(intervalId);
+}
+
+function resumeSlider() {
+  startSlider();
+}
+
+renderTestimonials();
+showSlide(0);
+startSlider();
 </script>
 </body>
 </html>
