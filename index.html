@@ -122,36 +122,36 @@
     </div>
   </section>
   
+<!-- Testimonials Section -->
 <section class="testimonial-section" id="testimonials">
-  <h2 class="section-title">What Clients Say <span>About Me !! </span></h2>
+  <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
   <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
     <div class="testimonial-container" id="testimonialContainer">
       <div class="testimonial">
         <img src="Reviewer1.jpg" alt="Reviewer 1">
         <div class="testimonial-name"><a href="#">Reviewer 1</a></div>
-        <div class="testimonial-text">Great service and awesome communication.</div>
+        <p class="testimonial-text">Great service and support. Highly recommend!</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer2.jpg" alt="Reviewer 2">
         <div class="testimonial-name"><a href="#">Reviewer 2</a></div>
-        <div class="testimonial-text">Very professional and on-time delivery!</div>
+        <p class="testimonial-text">Professional and efficient. Amazing experience.</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer3.jpg" alt="Reviewer 3">
         <div class="testimonial-name"><a href="#">Reviewer 3</a></div>
-        <div class="testimonial-text">Highly recommend for any IT needs.</div>
+        <p class="testimonial-text">Excellent communication and quality work.</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer4.jpg" alt="Reviewer 4">
         <div class="testimonial-name"><a href="#">Reviewer 4</a></div>
-        <div class="testimonial-text">Fantastic experience, will hire again!</div>
+        <p class="testimonial-text">Truly helpful. Will work again for sure.</p>
       </div>
     </div>
-    <button class="nav-btn prev">❮</button>
-    <button class="nav-btn next">❯</button>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </div>
 </section>
-
 
   <!-- Resume -->
   <section class="resume container" id="resume">
@@ -292,19 +292,8 @@
   document.addEventListener("DOMContentLoaded", () => {
     updateSlider();
     startSlider();
-
-    document.querySelector('.next').addEventListener('click', () => {
-      pauseSlider();
-      nextSlide();
-      resumeSlider();
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-      pauseSlider();
-      prevSlide();
-      resumeSlider();
-    });
   });
 </script>
+
 </body>
 </html>
