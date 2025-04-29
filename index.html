@@ -121,13 +121,13 @@
       </div>
     </div>
   </section>
-
- <!-- Testimonials Section -->
+  
+<!-- Testimonials Section -->
 <section class="testimonial-section" id="testimonials">
   <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
   <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
     <div class="testimonial-container" id="testimonialContainer">
-      <div class="testimonial active">
+      <div class="testimonial">
         <img src="images/Reviewer1.jpg" alt="Reviewer 1">
         <p>"My brother is truly one of a kind! He not only loves me deeply, but also consistently helps me resolve any challenges in my online business. Without his constant support, I wouldn’t be able to achieve much. His unwavering dedication and tireless hard work continue to inspire me every day."</p>
         <a href="https://www.facebook.com/MdAzizulHaqueBhuyan" target="_blank"><h4>Reviewer 1</h4></a>
@@ -153,7 +153,7 @@ A K M Samiun Prasurjo."</p>
         <p>"I've had multiple great business collaborations with AKM Samiun Prasurjo. He's a creative, sharp entrepreneur who brings real value to every conversation. His insights and support have helped me a lot—truly a great person to work with."</p>
         <a href="https://www.facebook.com/iamibrahimjihad" target="_blank"><h4>Reviewer 4</h4></a>
       </div>
-    </div>
+   </div>
     <button class="nav-btn prev" onclick="prevSlide()">❮</button>
     <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </div>
@@ -268,9 +268,9 @@ A K M Samiun Prasurjo."</p>
   let slideInterval;
 
   function showSlide(index) {
-    testimonials.forEach((testimonial, i) => {
-      testimonial.style.display = i === index ? "flex" : "none";
-    });
+    const offset = -index * 100;
+    document.getElementById("testimonialContainer")
+            .style.transform = `translateX(${offset}%)`;
   }
 
   function nextSlide() {
@@ -295,9 +295,11 @@ A K M Samiun Prasurjo."</p>
     startSlider();
   }
 
-  // Initialize
-  showSlide(currentIndex);
-  startSlider();
+  // initialize on DOM load
+  document.addEventListener("DOMContentLoaded", () => {
+    showSlide(currentIndex);
+    startSlider();
+  });
 </script>
 
 </body>
