@@ -142,7 +142,7 @@ h2 {
 
 .testimonial-container {
   display: flex;
-  width: 100%;
+  width: 400%;
   transition: transform 0.5s ease;
 }
 
