@@ -271,9 +271,10 @@ A K M Samiun Prasurjo.',
   }
 ];
 
-const container = document.getElementById('testimonialContainer');
+
 let currentIndex = 0;
-let intervalId;
+let interval;
+const container = document.getElementById("testimonialContainer");
 
 function renderTestimonials() {
   container.innerHTML = reviews.map(review => `
@@ -285,11 +286,11 @@ function renderTestimonials() {
   `).join('');
 }
 
-
 function showSlide(index) {
-  const width = container.clientWidth;
-  container.style.transform = translateX(-${index * 100}%);
-  currentIndex = index;
+  const items = document.querySelectorAll('.testimonial-item');
+  items.forEach((item, i) => {
+    item.style.display = i === index ? 'block' : 'none';
+  });
 }
 
 function nextSlide() {
@@ -303,22 +304,19 @@ function prevSlide() {
 }
 
 function startSlider() {
-  intervalId = setInterval(nextSlide, 5000);
+  interval = setInterval(nextSlide, 5000);
 }
 
 function pauseSlider() {
-  clearInterval(intervalId);
+  clearInterval(interval);
 }
 
 function resumeSlider() {
   startSlider();
 }
 
-renderTestimonials();
-showSlide(0);
-startSlider();
-</script>
-</body>
-</html>
-
-
+document.addEventListener("DOMContentLoaded", () => {
+  renderTestimonials();
+  showSlide(currentIndex);
+  startSlider();
+});
