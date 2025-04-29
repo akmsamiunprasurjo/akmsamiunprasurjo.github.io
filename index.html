@@ -1,135 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A K M Samiun Prasurjo</title>
-  <meta name="description" content="Official personal portfolio of A K M Samiun Prasurjo — founder of AKM IT Solutions, showcasing achievements, skills, and future ambitions.">
-  <meta name="author" content="A K M Samiun Prasurjo">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AKM Samiun Prasurjo | Tech Entrepreneur</title>
+  <meta name="google-site-verification" content="7L_Mnke3MyB_tZ3P-nRW9Fys9WoRpfRQiQn9NMbDT6E">
+  <meta name="description" content="Portfolio of A K M Samiun Prasurjo — Tech Entrepreneur & CSE Student. Founder of AKM IT Solutions.">
+  <meta property="og:title"       content="A K M Samiun Prasurjo">
+  <meta property="og:description" content="Tech Entrepreneur & Founder of AKM IT Solutions">
+  <meta property="og:image"       content="https://akmsamiunprasurjo.com/profile.jpg">
+  <meta property="og:url"         content="https://akmsamiunprasurjo.com">
+  <meta name="twitter:card"       content="summary_large_image">
 
-  <!-- Open Graph for social media -->
-  <meta property="og:title" content="A K M Samiun Prasurjo" />
-  <meta property="og:description" content="Official portfolio of A K M Samiun Prasurjo — Tech Enthusiast & Entrepreneur." />
-  <meta property="og:image" content="https://akmsamiunprasurjo.com/images/profile.jpg" />
-  <meta property="og:url" content="https://akmsamiunprasurjo.com" />
-  <meta name="theme-color" content="#0f172a" />
-
-  <!-- Google Verification -->
-  <meta name="google-site-verification" content="W9CjB9rkBpaXvj7e2p-4Ukc8UupJsk4T-xvWc3wCUa8" />
-
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Fonts and Libraries -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "A K M Samiun Prasurjo",
-    "url": "https://akmsamiunprasurjo.com",
-    "image": "https://akmsamiunprasurjo.com/images/profile.jpg",
-    "sameAs": [
-      "https://www.facebook.com/akmsamiunprasurjo",
-      "https://www.linkedin.com/in/akmsamiunprasurjo",
-      "https://github.com/akmsamiunprasurjo",
-      "https://medium.com/@akmsamiunprasurjo",
-      "https://linktr.ee/akmsamiunprasurjo"
-    ],
-    "jobTitle": "Tech Entrepreneur",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "AKM IT Solutions"
-    }
-  }
-  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
-  <!-- Your existing content goes here -->
 
-  <!-- Testimonials Slider -->
-  <section id="testimonials" class="testimonial-section">
-    <h2>What People Say</h2>
-    <div class="testimonial-container" id="testimonialContainer">
-      <!-- JS will inject testimonial content here -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Me!</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-    <div class="testimonial-controls">
-      <button onclick="prevTestimonial()">←</button>
-      <button onclick="nextTestimonial()">→</button>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right">
+        <p class="greeting">Hello!</p>
+        <h1>I'm <strong>A K M Samiun Prasurjo</strong></h1>
+        <h2>Tech Entrepreneur & CSE Student</h2>
+        <p>Turning ideas into digital solutions and building toward the future — from Noakhali to the world.</p>
+        <div class="buttons">
+          <a href="#form-box"    class="btn discuss">Discuss With Me</a>
+          <a href="A K M Samiun Prasurjo CV.pdf" class="btn download" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-img" data-aos="fade-left">
+        <img src="profile.jpg" alt="Samiun Prasurjo">
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section class="about container" id="about" data-aos="zoom-in">
+    <h2>About Me</h2>
+    <p>I’m A K M Samiun Prasurjo — a Computer Science &amp; Engineering student at Canadian University of Bangladesh and the founder of <strong>AKM IT Solutions</strong>. Since class 10, I’ve had a clear vision: to build scalable tech-powered businesses. I’m not just learning — I’m creating my path.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="services container" id="services">
+    <h2 data-aos="fade-up">Services &amp; Collaborations</h2>
+    <div class="card-grid">
+      <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Scout Leader</h3>
+        <p>Chaprashir Hat High School (2014–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+        <h3>School Cabinets Leadership</h3>
+        <p>Chaprashir Hat High School (2015–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Public Relations Officer</h3>
+        <p>CUB Computer Society (2022–2024)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="250">
+        <h3>Marketing Specialist</h3>
+        <p>Department of CSE, Canadian University (2023–Present)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Assistant Joint Secretary</h3>
+        <p>CUB Computer Society (Mar–Jul 2024)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="350">
+        <h3>Treasurer</h3>
+        <p>CUB Computer Society (Jul 2024–Present)<br><small>Dhaka</small></p>
+      </div>
     </div>
   </section>
 
+  <!-- Achievements -->
+  <section class="achievements container" data-aos="fade-up">
+    <h2>My Achievements</h2>
+    <div class="achievement-boxes">
+      <div class="achievement">
+        <h3 class="counter" data-target="185" data-suffix="+">0</h3>
+        <p>Regular Clients</p>
+      </div>
+      <div class="achievement">
+        <h3 class="counter" data-target="100" data-suffix="%">0</h3>
+        <p>Authentic Clients</p>
+      </div>
+      <div class="achievement">
+        <h3 class="counter" data-target="5000" data-suffix="+">0</h3>
+        <p>Projects Completed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+<section class="testimonial-section" id="testimonials">
+  <h2 class="section-title">What Clients Say <span>About Me !! </span></h2>
+  <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
+    <div class="testimonial-container" id="testimonialContainer">
+      <!-- Testimonial items will be injected by JavaScript -->
+    </div>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+ 
+  <!-- Resume -->
+  <section class="resume container" id="resume">
+    <h2 data-aos="fade-up">Education &amp; Training</h2>
+    <div class="card-grid">
+      <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>PSC</h3>
+        <p>Shah Fazlur Rahman Pre-Cadet Academy (2006–2012)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+        <h3>SSC</h3>
+        <p>Chaprashir Hat High School (2012–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>HSC</h3>
+        <p>Ideal College, Dhanmondi (2018–2020)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="250">
+        <h3>Honors</h3>
+        <p>Canadian University of Bangladesh (2022–Present)<br><small>Dhaka</small></p>
+      </div>
+    </div>
+    <a href="A K M Samiun Prasurjo CV.pdf" class="btn download" download data-aos="fade-up" data-aos-delay="300">Download CV</a>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="form-box" class="form-box" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xpwdwzpn" method="POST">
+      <input type="text"   name="name"     placeholder="Your Name"    required>
+      <input type="email"  name="_replyto" placeholder="Your Email"   required>
+      <input type="text"   name="subject"  placeholder="Your Subject" required>
+      <textarea name="message" rows="5"   placeholder="Your Message"required></textarea>
+      <button type="submit" class="btn send">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <section id="contact"></section>
+  <footer data-aos="fade-up">
+    <h2>Stay Tuned</h2>
+    <ul class="footer-icons">
+      <li><a href="mailto:akmsamiunprasurjo@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="https://github.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.facebook.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/akmsamiunprasurjo" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://medium.com/@akmsamiunprasurjo" target="_blank"><i class="fab fa-medium"></i></a></li>
+      <li><a href="https://linktr.ee/akmsamiunprasurjo" target="_blank"><i class="fas fa-link"></i></a></li>
+    </ul>
+    <p>&copy; 2025 A K M Samiun Prasurjo. All rights reserved.</p>
+  </footer>
+
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init();
-  </script>
-  <script>
-    const testimonials = [
-      {
-        image: "images/Reviewer1.jpg",
-        text: "An exceptionally talented and driven individual — Samiun combines innovation with strategic thinking like few others.",
-        name: "Rahim Uddin",
-        link: "https://facebook.com/rahimuddin"
-      },
-      {
-        image: "images/Reviewer2.jpg",
-        text: "I’ve seen his leadership at AKM IT Solutions — inspiring and impactful.",
-        name: "Sumaiya Khan",
-        link: "https://facebook.com/sumaiyakhan"
-      },
-      {
-        image: "images/Reviewer3.jpg",
-        text: "Future tech leaders like Samiun are rare. Keep an eye on his journey.",
-        name: "Tanvir Ahmed",
-        link: "https://facebook.com/tanvirahmed"
-      },
-      {
-        image: "images/Reviewer4.jpg",
-        text: "His ideas are original, and his work ethic unmatched. Proud to call him a friend.",
-        name: "Fatima Jahan",
-        link: "https://facebook.com/fatimajahan"
-      }
-    ];
+    AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
-    let currentIndex = 0;
-    const container = document.getElementById("testimonialContainer");
-
-    function renderTestimonial(index) {
-      const t = testimonials[index];
-      container.innerHTML = `
-        <div class="testimonial">
-          <img src="${t.image}" alt="Photo of ${t.name}" loading="lazy">
-          <p>"${t.text}"</p>
-          <h4><a href="${t.link}" target="_blank">${t.name}</a></h4>
-        </div>
-      `;
+    // Counter Animation
+    function animateCounters() {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const suffix = counter.dataset.suffix || '';
+        const target = +counter.dataset.target;
+        let count = 0;
+        const step = Math.ceil(target / 200);
+        const update = () => {
+          count = Math.min(count + step, target);
+          counter.innerText = count + suffix;
+          if (count < target) setTimeout(update, 20);
+        };
+        new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            update();
+            this.disconnect();
+          }
+        }, { threshold: 0.6 }).observe(counter);
+      });
     }
+    document.addEventListener('DOMContentLoaded', animateCounters);
 
-    function nextTestimonial() {
-      currentIndex = (currentIndex + 1) % testimonials.length;
-      renderTestimonial(currentIndex);
-    }
+    // Mobile Menu Toggle
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks   = document.querySelector('.nav-links');
 
-    function prevTestimonial() {
-      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
-      renderTestimonial(currentIndex);
-    }
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
 
-    renderTestimonial(currentIndex);
-    let autoSlide = setInterval(nextTestimonial, 5000);
-    container.addEventListener("mouseenter", () => clearInterval(autoSlide));
-    container.addEventListener("mouseleave", () => {
-      autoSlide = setInterval(nextTestimonial, 5000);
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
     });
-  </script>
+  });
+
+  // Auto close menu when user scrolls (on mobile)
+  window.addEventListener('scroll', () => {
+    if (navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
+</script>
+  <script>
+const reviews = [
+  {
+    image: 'Reviewer1.jpg',
+    text: 'My brother is truly one of a kind! He not only loves me deeply, but also consistently helps me resolve any challenges in my online business. Without his constant support, I wouldn’t be able to achieve much. His unwavering dedication and tireless hard work continue to inspire me every day.',
+    name: 'Azizul',
+    link: 'https://www.facebook.com/MdAzizulHaqueBhuyan'
+  },
+  {
+    image: 'Reviewer2.jpg',
+    text: 'A K M SAMIUN PRASURJO has been a game-changer in my entrepreneurial journey. From the very first step of shaping my business idea to strategic guidance on efficient management, his insights have been nothing short of exceptional. What truly set him apart was the support from his company, AKM IT Solution, which crafted a powerful online presence for my brand—professional, sleek, and impactful. His blend of vision, tech expertise, and genuine dedication gave my new venture the solid foundation it needed. I’m truly grateful for his mentorship and highly recommend him to anyone serious about building something remarkable.
+Thank you, Prasurjo bhai.',
+    name: 'Kawsar',
+    link: 'https://www.facebook.com/KawsarAhmmedOfficial'
+  },
+  {
+    image: 'Reviewer3.jpg',
+    text: 'You've done an incredible job, and I’m genuinely impressed. I had a lot of issues across different sector, and I was under a lot of stress. But after talking with you, everything changed—I feel so much more at ease now. You solved every problem with such clarity, and I’ve learned so much from each step you guided me through.
+Your advice worked like magic, and now I feel confident handling any challenge on my own. Even in my social life, the solutions you offered brought real value. You approach everything with such intelligence and grace—it's truly inspiring. There's so much everyone can learn from you.
+Thank you for being there, advising me like a mentor and guiding me like a guardian. You're an exceptional person.
+
+Thank you-
+A K M Samiun Prasurjo.',
+    name: 'Rifat',
+    link: 'https://www.facebook.com/mohammadsakhawathossenrifat'
+  },
+  {
+    image: 'Reviewer4.jpg',
+    text: 'I've had multiple great business collaborations with AKM Samiun Prasurjo. He's a creative, sharp entrepreneur who brings real value to every conversation. His insights and support have helped me a lot—truly a great person to work with.',
+    name: 'Jihad',
+    link: 'https://www.facebook.com/iamibrahimjihad'
+  }
+];
+
+const container = document.getElementById('testimonialContainer');
+let currentIndex = 0;
+let intervalId;
+
+function renderTestimonials() {
+  container.innerHTML = reviews.map(review => 
+    <div class="testimonial-item">
+      <img src="images/${review.image}" alt="${review.name}">
+      <p class="testimonial-text">${review.text}</p>
+      <p class="testimonial-name"><a href="${review.link}" target="_blank">${review.name}</a></p>
+    </div>
+  ).join('');
+}
+
+function showSlide(index) {
+  const width = container.clientWidth;
+  container.style.transform = translateX(-${index * 100}%);
+  currentIndex = index;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % reviews.length;
+  showSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+  showSlide(currentIndex);
+}
+
+function startSlider() {
+  intervalId = setInterval(nextSlide, 5000);
+}
+
+function pauseSlider() {
+  clearInterval(intervalId);
+}
+
+function resumeSlider() {
+  startSlider();
+}
+
+renderTestimonials();
+showSlide(0);
+startSlider();
+</script>
 </body>
 </html>
+
+
