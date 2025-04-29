@@ -128,10 +128,16 @@ h2 {
 
 
 /* === Testimonials Section === */
-.testimonials {
+.testimonial-section {
   text-align: center;
   padding: 4rem 1rem;
   background-color: #0f0f0f;
+  color: #fff;
+}
+
+.testimonial-section .section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
   color: #fff;
 }
 
@@ -145,31 +151,43 @@ h2 {
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
 }
 
 .testimonial-item {
   min-width: 100%;
   box-sizing: border-box;
   background: #1a1a1a;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 152, 0, 0.2);
+  padding: 2rem 1.5rem 3.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.3);
   text-align: center;
+  position: relative;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 2.5rem;
+  z-index: 1;
+  position: relative;
 }
 
 .testimonial-item img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 1rem;
   object-fit: cover;
+  border: 3px solid #ff9800;
+  position: absolute;
+  top: calc(100% - 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
 }
 
-.testimonial-text {
-  font-style: italic;
-  margin-bottom: 0.5rem;
-  color: #ccc;
+.testimonial-name {
+  margin-top: 3.5rem;
 }
 
 .testimonial-name a {
