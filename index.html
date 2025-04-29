@@ -262,84 +262,38 @@ A K M Samiun Prasurjo.</p>
   });
 </script>
   <script>
-const reviews = [
-  {
-    image: 'Reviewer1.jpg',
-    text: 'My brother is truly one of a kind! He not only loves me deeply, but also consistently helps me resolve any challenges in my online business. Without his constant support, I wouldn’t be able to achieve much. His unwavering dedication and tireless hard work continue to inspire me every day.',
-    name: 'Azizul',
-    link: 'https://www.facebook.com/MdAzizulHaqueBhuyan'
-  },
-  {
-    image: 'Reviewer2.jpg',
-    text: 'A K M SAMIUN PRASURJO has been a game-changer in my entrepreneurial journey. From the very first step of shaping my business idea to strategic guidance on efficient management, his insights have been nothing short of exceptional. What truly set him apart was the support from his company, AKM IT Solution, which crafted a powerful online presence for my brand—professional, sleek, and impactful. His blend of vision, tech expertise, and genuine dedication gave my new venture the solid foundation it needed. I’m truly grateful for his mentorship and highly recommend him to anyone serious about building something remarkable.
-Thank you, Prasurjo bhai.',
-    name: 'Kawsar',
-    link: 'https://www.facebook.com/KawsarAhmmedOfficial'
-  },
-  {
-    image: 'Reviewer3.jpg',
-    text: 'You've done an incredible job, and I’m genuinely impressed. I had a lot of issues across different sector, and I was under a lot of stress. But after talking with you, everything changed—I feel so much more at ease now. You solved every problem with such clarity, and I’ve learned so much from each step you guided me through.
-Your advice worked like magic, and now I feel confident handling any challenge on my own. Even in my social life, the solutions you offered brought real value. You approach everything with such intelligence and grace—it's truly inspiring. There's so much everyone can learn from you.
-Thank you for being there, advising me like a mentor and guiding me like a guardian. You're an exceptional person.
+  let currentIndex = 0;
+  const testimonials = document.querySelectorAll(".testimonial-item");
+  const container = document.getElementById("testimonialContainer");
 
-Thank you-
-A K M Samiun Prasurjo.',
-    name: 'Rifat',
-    link: 'https://www.facebook.com/mohammadsakhawathossenrifat'
-  },
-  {
-    image: 'Reviewer4.jpg',
-    text: 'I've had multiple great business collaborations with AKM Samiun Prasurjo. He's a creative, sharp entrepreneur who brings real value to every conversation. His insights and support have helped me a lot—truly a great person to work with.',
-    name: 'Jihad',
-    link: 'https://www.facebook.com/iamibrahimjihad'
+  function showSlide(index) {
+    const offset = -index * 100;
+    container.style.transform = `translateX(${offset}%)`;
   }
-];
 
-const container = document.getElementById('testimonialContainer');
-let currentIndex = 0;
-let intervalId;
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    showSlide(currentIndex);
+  }
 
-function renderTestimonials() {
-  container.innerHTML = reviews.map(review => 
-    <div class="testimonial-item">
-      <img src="images/${review.image}" alt="${review.name}">
-      <p class="testimonial-text">${review.text}</p>
-      <p class="testimonial-name"><a href="${review.link}" target="_blank">${review.name}</a></p>
-    </div>
-  ).join('');
-}
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    showSlide(currentIndex);
+  }
 
-function showSlide(index) {
-  const width = container.clientWidth;
-  container.style.transform = translateX(-${index * 100}%);
-  currentIndex = index;
-}
+  let slideInterval = setInterval(nextSlide, 5000);
 
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % reviews.length;
+  function pauseSlider() {
+    clearInterval(slideInterval);
+  }
+
+  function resumeSlider() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  // Initial
   showSlide(currentIndex);
-}
-
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-  showSlide(currentIndex);
-}
-
-function startSlider() {
-  intervalId = setInterval(nextSlide, 5000);
-}
-
-function pauseSlider() {
-  clearInterval(intervalId);
-}
-
-function resumeSlider() {
-  startSlider();
-}
-
-renderTestimonials();
-showSlide(0);
-startSlider();
 </script>
+
 </body>
 </html>
