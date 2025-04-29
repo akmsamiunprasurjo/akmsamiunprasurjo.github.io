@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AKM Samiun Prasurjo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="logo">AKM Samiun Prasurjo</div>
-      <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <ul class="nav-links" id="nav-links">
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#resume">Resume</a></li>
         <li><a href="#achievements">Achievements</a></li>
@@ -29,41 +26,46 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="hero">
+  <section class="hero">
     <div class="hero-content">
       <div class="hero-text">
-        <p class="greeting">Hello, I'm</p>
+        <p class="greeting">Hi, I'm</p>
         <h1>AKM Samiun Prasurjo</h1>
-        <h2>Computer Science & Engineering Student</h2>
-        <p>I'm passionate about technology and business. Let's work together on amazing projects!</p>
+        <h2>Entrepreneur, Developer, Tech Enthusiast</h2>
+        <p>I'm passionate about technology and business. Let's work together to create something amazing!</p>
         <div class="buttons">
           <a href="#contact" class="btn discuss">Discuss With Me</a>
           <a href="path/to/cv.pdf" class="btn download" download>Download CV</a>
         </div>
       </div>
       <div class="hero-img">
-        <img src="path/to/your-image.jpg" alt="AKM Samiun Prasurjo">
+        <img src="path/to/profile-image.jpg" alt="AKM Samiun Prasurjo">
       </div>
     </div>
   </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a Computer Science student at Canadian University of Bangladesh. I am passionate about technology and want to use my knowledge to build tech-based startups. I am focused on learning every aspect of technology for the future of business.</p>
+  </section>
+
   <!-- Resume Section -->
-  <section class="resume" id="resume">
+  <section id="resume" class="resume">
+    <h2>My Resume</h2>
     <div class="container">
-      <h2>My Resume</h2>
       <div class="card-grid">
-        <!-- Add your resume cards here -->
         <div class="info-card">
           <h3>Experience</h3>
-          <p>Detail about your work experience.</p>
+          <p>Detail about experience here.</p>
         </div>
         <div class="info-card">
           <h3>Education</h3>
-          <p>Detail about your education.</p>
+          <p>Detail about education here.</p>
         </div>
         <div class="info-card">
           <h3>Skills</h3>
-          <p>Detail about your skills.</p>
+          <p>Detail about skills here.</p>
         </div>
       </div>
       <a href="path/to/cv.pdf" class="btn download" download>Download CV</a>
@@ -71,47 +73,51 @@
   </section>
 
   <!-- Achievements Section -->
-  <section class="achievements" id="achievements">
-    <h2>Achievements</h2>
+  <section id="achievements" class="achievements">
+    <h2>My Achievements</h2>
     <div class="achievement-boxes">
       <div class="achievement">
         <h3>Achievement 1</h3>
-        <p>Detail about your first achievement.</p>
+        <p>Description of achievement.</p>
       </div>
       <div class="achievement">
         <h3>Achievement 2</h3>
-        <p>Detail about your second achievement.</p>
-      </div>
-      <div class="achievement">
-        <h3>Achievement 3</h3>
-        <p>Detail about your third achievement.</p>
+        <p>Description of achievement.</p>
       </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section class="testimonials" id="testimonials">
-    <h2>What Others Say</h2>
+  <section id="testimonials" class="testimonials">
+    <h2>What People Say</h2>
     <div class="testimonial-slider">
       <div class="testimonial active">
         <img src="path/to/reviewer1.jpg" alt="Reviewer 1">
-        <p>"Testimonial text here."</p>
-        <a href="https://www.facebook.com/reviewer1"><h4>Reviewer 1</h4></a>
+        <p>"This person is amazing to work with!"</p>
+        <a href="https://www.facebook.com/reviewer1">
+          <h4>Reviewer 1</h4>
+        </a>
       </div>
       <div class="testimonial">
         <img src="path/to/reviewer2.jpg" alt="Reviewer 2">
-        <p>"Testimonial text here."</p>
-        <a href="https://www.facebook.com/reviewer2"><h4>Reviewer 2</h4></a>
+        <p>"Great professional and very skilled."</p>
+        <a href="https://www.facebook.com/reviewer2">
+          <h4>Reviewer 2</h4>
+        </a>
       </div>
       <div class="testimonial">
         <img src="path/to/reviewer3.jpg" alt="Reviewer 3">
-        <p>"Testimonial text here."</p>
-        <a href="https://www.facebook.com/reviewer3"><h4>Reviewer 3</h4></a>
+        <p>"Highly recommended for any project!"</p>
+        <a href="https://www.facebook.com/reviewer3">
+          <h4>Reviewer 3</h4>
+        </a>
       </div>
       <div class="testimonial">
         <img src="path/to/reviewer4.jpg" alt="Reviewer 4">
-        <p>"Testimonial text here."</p>
-        <a href="https://www.facebook.com/reviewer4"><h4>Reviewer 4</h4></a>
+        <p>"Amazing work ethic and dedication!"</p>
+        <a href="https://www.facebook.com/reviewer4">
+          <h4>Reviewer 4</h4>
+        </a>
       </div>
       <span class="arrow prev">&#10094;</span>
       <span class="arrow next">&#10095;</span>
@@ -119,13 +125,14 @@
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
     <div class="form-box">
-      <h2>Contact Me</h2>
-      <form action="submit-form.php" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+      <h2>Let's Get In Touch</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
         <button type="submit" class="btn send">Send Message</button>
       </form>
     </div>
@@ -133,14 +140,48 @@
 
   <!-- Footer -->
   <footer>
+    <p>Made by AKM Samiun Prasurjo. All rights reserved.</p>
     <ul class="footer-icons">
-      <li><a href="https://www.linkedin.com">LinkedIn</a></li>
-      <li><a href="https://www.github.com">GitHub</a></li>
-      <li><a href="https://www.twitter.com">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/your-linkedin">LinkedIn</a></li>
+      <li><a href="https://github.com/your-github">GitHub</a></li>
     </ul>
-    <p>&copy; 2025 AKM Samiun Prasurjo. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- JavaScript for Testimonial Slider -->
+  <script>
+    // Testimonial Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let currentIndex = 0;
+
+    function showTestimonial(index) {
+      testimonials.forEach((testimonial, i) => {
+        testimonial.classList.remove('active');
+        if (i === index) {
+          testimonial.classList.add('active');
+        }
+      });
+    }
+
+    function nextTestimonial() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+    }
+
+    function prevTestimonial() {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentIndex);
+    }
+
+    // Auto Slide Every 5 Seconds
+    setInterval(nextTestimonial, 5000);
+
+    // Manual Controls
+    document.querySelector('.prev').addEventListener('click', prevTestimonial);
+    document.querySelector('.next').addEventListener('click', nextTestimonial);
+
+    // Initial Setup
+    showTestimonial(currentIndex);
+  </script>
 </body>
+
 </html>
