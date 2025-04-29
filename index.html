@@ -122,43 +122,36 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+ <!-- Testimonials Section -->
 <section class="testimonial-section" id="testimonials">
   <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
   <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
     <div class="testimonial-container" id="testimonialContainer">
-      <div class="testimonial-item">
-        <p class="testimonial-text">“My brother is truly one of a kind! He not only loves me deeply, but also consistently helps me resolve any challenges in my online business. Without his constant support, I wouldn’t be able to achieve much. His unwavering dedication and tireless hard work continue to inspire me every day.”</p>
-        <img src="Reviewer1.jpg" alt="Reviewer 1" />
-        <h4 class="testimonial-name"><a href="https://web.facebook.com/MdAzizulHaqueBhuyan" target="_blank">Reviewer One</a></h4>
+      <div class="testimonial active">
+        <img src="images/Reviewer1.jpg" alt="Reviewer 1">
+        <p>"Reviewer 1's review text goes here."</p>
+        <a href="https://facebook.com/reviewer1" target="_blank"><h4>Reviewer 1</h4></a>
       </div>
-      <div class="testimonial-item">
-        <p class="testimonial-text">“A K M SAMIUN PRASURJO has been a game-changer in my entrepreneurial journey. From the very first step of shaping my business idea to strategic guidance on efficient management, his insights have been nothing short of exceptional. What truly set him apart was the support from his company, AKM IT Solution, which crafted a powerful online presence for my brand—professional, sleek, and impactful. His blend of vision, tech expertise, and genuine dedication gave my new venture the solid foundation it needed. I’m truly grateful for his mentorship and highly recommend him to anyone serious about building something remarkable.
-Thank you, Prasurjo bhai.”</p>
-        <img src="Reviewer2.jpg" alt="Reviewer 2" />
-        <h4 class="testimonial-name"><a href="https://www.facebook.com/KawsarAhmmedOfficial" target="_blank">Reviewer Two</a></h4>
+      <div class="testimonial">
+        <img src="images/Reviewer2.jpg" alt="Reviewer 2">
+        <p>"Reviewer 2's review text goes here."</p>
+        <a href="https://facebook.com/reviewer2" target="_blank"><h4>Reviewer 2</h4></a>
       </div>
-      <div class="testimonial-item">
-        <p class="testimonial-text">“You've done an incredible job, and I’m genuinely impressed. I had a lot of issues across different sector, and I was under a lot of stress. But after talking with you, everything changed—I feel so much more at ease now. You solved every problem with such clarity, and I’ve learned so much from each step you guided me through.
-Your advice worked like magic, and now I feel confident handling any challenge on my own. Even in my social life, the solutions you offered brought real value. You approach everything with such intelligence and grace—it's truly inspiring. There's so much everyone can learn from you.
-Thank you for being there, advising me like a mentor and guiding me like a guardian. You're an exceptional person.
-
-Thank you-
-A K M Samiun Prasurjo.”</p>
-        <img src="Reviewer3.jpg" alt="Reviewer 3" />
-        <h4 class="testimonial-name"><a href="https://www.facebook.com/mohammadsakhawathossenrifat" target="_blank">Reviewer Three</a></h4>
+      <div class="testimonial">
+        <img src="images/Reviewer3.jpg" alt="Reviewer 3">
+        <p>"Reviewer 3's review text goes here."</p>
+        <a href="https://facebook.com/reviewer3" target="_blank"><h4>Reviewer 3</h4></a>
       </div>
-      <div class="testimonial-item">
-        <p class="testimonial-text">“I've had multiple great business collaborations with AKM Samiun Prasurjo. He's a creative, sharp entrepreneur who brings real value to every conversation. His insights and support have helped me a lot—truly a great person to work with.”</p>
-        <img src="Reviewer4.jpg" alt="Reviewer 4" />
-        <h4 class="testimonial-name"><a href="https://www.facebook.com/iamibrahimjihad" target="_blank">Reviewer Four</a></h4>
+      <div class="testimonial">
+        <img src="images/Reviewer4.jpg" alt="Reviewer 4">
+        <p>"Reviewer 4's review text goes here."</p>
+        <a href="https://facebook.com/reviewer4" target="_blank"><h4>Reviewer 4</h4></a>
       </div>
     </div>
     <button class="nav-btn prev" onclick="prevSlide()">❮</button>
     <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </div>
 </section>
-
 
   <!-- Resume -->
   <section class="resume container" id="resume">
@@ -263,14 +256,15 @@ A K M Samiun Prasurjo.”</p>
     }
   });
 </script>
-  <script>
+ <script>
   let currentIndex = 0;
-  const testimonials = document.querySelectorAll(".testimonial-item");
-  const container = document.getElementById("testimonialContainer");
+  const testimonials = document.querySelectorAll(".testimonial");
+  let slideInterval;
 
   function showSlide(index) {
-    const offset = -index * 100;
-    container.style.transform = `translateX(${offset}%)`;
+    testimonials.forEach((testimonial, i) => {
+      testimonial.style.display = i === index ? "flex" : "none";
+    });
   }
 
   function nextSlide() {
@@ -283,18 +277,21 @@ A K M Samiun Prasurjo.”</p>
     showSlide(currentIndex);
   }
 
-  let slideInterval = setInterval(nextSlide, 5000);
+  function startSlider() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
 
   function pauseSlider() {
     clearInterval(slideInterval);
   }
 
   function resumeSlider() {
-    slideInterval = setInterval(nextSlide, 5000);
+    startSlider();
   }
 
-  // Initial
+  // Initialize
   showSlide(currentIndex);
+  startSlider();
 </script>
 
 </body>
