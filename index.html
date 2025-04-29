@@ -295,26 +295,24 @@ A K M Samiun Prasurjo.',
   }
 ];
 
-
+const container = document.getElementById('testimonialContainer');
 let currentIndex = 0;
-let interval;
-const container = document.getElementById("testimonialContainer");
+let intervalId;
 
 function renderTestimonials() {
-  container.innerHTML = reviews.map(review => `
+  container.innerHTML = reviews.map(review => 
     <div class="testimonial-item">
       <img src="images/${review.image}" alt="${review.name}">
       <p class="testimonial-text">${review.text}</p>
       <p class="testimonial-name"><a href="${review.link}" target="_blank">${review.name}</a></p>
     </div>
-  `).join('');
+  ).join('');
 }
 
 function showSlide(index) {
-  const items = document.querySelectorAll('.testimonial-item');
-  items.forEach((item, i) => {
-    item.style.display = i === index ? 'block' : 'none';
-  });
+  const width = container.clientWidth;
+  container.style.transform = translateX(-${index * 100}%);
+  currentIndex = index;
 }
 
 function nextSlide() {
@@ -328,19 +326,20 @@ function prevSlide() {
 }
 
 function startSlider() {
-  interval = setInterval(nextSlide, 5000);
+  intervalId = setInterval(nextSlide, 5000);
 }
 
 function pauseSlider() {
-  clearInterval(interval);
+  clearInterval(intervalId);
 }
 
 function resumeSlider() {
   startSlider();
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderTestimonials();
-  showSlide(currentIndex);
-  startSlider();
-});
+renderTestimonials();
+showSlide(0);
+startSlider();
+</script>
+</body>
+</html>
