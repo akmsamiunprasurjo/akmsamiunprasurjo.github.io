@@ -172,6 +172,54 @@ h2 {
 }
 .achievement p { color:#ccc; font-size:1.1rem; }
 
+/* === Testimonials Section === */
+.testimonials {
+  text-align: center;
+}
+.testimonial-slider {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonial {
+  display: none;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.2);
+}
+.testimonial.active {
+  display: block;
+}
+.testimonial img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.testimonial a h4 {
+  color: #ff9800;
+  margin-top: 0;
+}
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #ff9800;
+  padding: 0 1rem;
+  user-select: none;
+}
+.prev { left: 0; }
+.next { right: 0; }
+ 
 /* Contact Form */
 .form-box {
   background:#1a1a1a; padding:3rem 2rem;
