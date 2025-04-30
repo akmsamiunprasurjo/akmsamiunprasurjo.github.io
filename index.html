@@ -264,7 +264,8 @@
   let slideInterval;
 
   function updateSlider() {
-    container.style.transform = translateX(-${currentIndex * 100}%);
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
+
   }
 
   function nextSlide() {
