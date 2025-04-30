@@ -124,28 +124,28 @@
   
 <!-- Testimonials Section -->
 <section class="testimonial-section" id="testimonials">
-  <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
+  <h2 class="section-title">What Clients Say <span>About Me!!</span></h2>
   <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
     <div class="testimonial-container" id="testimonialContainer">
       <div class="testimonial">
         <img src="Reviewer1.jpg" alt="Reviewer 1">
-        <div class="testimonial-name"><a href="#">Reviewer 1</a></div>
-        <p class="testimonial-text">Great service and support. Highly recommend!</p>
+        <div class="testimonial-name"><a href="https://facebook.com/ah.azizulhoque.79" target="_blank">Azizul Hoque</a></div>
+        <p class="testimonial-text">My brother is truly one of a kind! He consistently helps me resolve any challenges in my online business.</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer2.jpg" alt="Reviewer 2">
-        <div class="testimonial-name"><a href="#">Reviewer 2</a></div>
-        <p class="testimonial-text">Professional and efficient. Amazing experience.</p>
+        <div class="testimonial-name"><a href="https://facebook.com/KawsarAhmmedOfficial" target="_blank">Kawsar Ahmmed</a></div>
+        <p class="testimonial-text">A game-changer in my entrepreneurial journey—exceptional guidance and a powerful online presence.</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer3.jpg" alt="Reviewer 3">
-        <div class="testimonial-name"><a href="#">Reviewer 3</a></div>
-        <p class="testimonial-text">Excellent communication and quality work.</p>
+        <div class="testimonial-name"><a href="https://facebook.com/mohammadsakhawathossenrifat" target="_blank">Mohammad Rifat</a></div>
+        <p class="testimonial-text">Everything changed after talking with you—I feel so much more at ease now. Your advice worked like magic.</p>
       </div>
       <div class="testimonial">
         <img src="Reviewer4.jpg" alt="Reviewer 4">
-        <div class="testimonial-name"><a href="#">Reviewer 4</a></div>
-        <p class="testimonial-text">Truly helpful. Will work again for sure.</p>
+        <div class="testimonial-name"><a href="https://facebook.com/iamibrahimjihad" target="_blank">Ibrahim Jihad</a></div>
+        <p class="testimonial-text">Creative, sharp entrepreneur—his insights and support bring real value to every collaboration.</p>
       </div>
     </div>
     <button class="nav-btn prev" onclick="prevSlide()">❮</button>
@@ -255,44 +255,56 @@
       mobileMenu.classList.remove('active');
     }
   });
-</script>
 <script>
   let currentIndex = 0;
-  const container = document.getElementById("testimonialContainer");
-  const slides = document.querySelectorAll(".testimonial");
-  const total = slides.length;
-  let slideInterval;
+  const container = document.querySelector(".testimonial-container");
+  const testimonials = document.querySelectorAll(".testimonial");
+  const totalTestimonials = testimonials.length;
 
+  // Update slider position
   function updateSlider() {
-    container.style.transform = translateX(-${currentIndex * 100}%);
+    container.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
+  // Move to next testimonial
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % total;
+    currentIndex = (currentIndex + 1) % totalTestimonials;
     updateSlider();
   }
 
+  // Move to previous testimonial
   function prevSlide() {
-    currentIndex = (currentIndex - 1 + total) % total;
+    currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
     updateSlider();
   }
 
-  function startSlider() {
-    slideInterval = setInterval(nextSlide, 5000);
+  // Auto-slide every 5 seconds
+  function autoSlide() {
+    setInterval(nextSlide, 5000);
   }
 
-  function pauseSlider() {
-    clearInterval(slideInterval);
-  }
+  // Pause auto-slide on hover
+  container.addEventListener("mouseenter", () => clearInterval(autoSlideInterval));
+  container.addEventListener("mouseleave", () => autoSlide());
 
-  function resumeSlider() {
-    startSlider();
-  }
+  // Initialize the auto-slide
+  let autoSlideInterval = setInterval(nextSlide, 5000);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    updateSlider();
-    startSlider();
+  // Set up navigation buttons
+  document.querySelector(".next").addEventListener("click", () => {
+    clearInterval(autoSlideInterval); // Pause auto slide on manual click
+    nextSlide();
+    autoSlideInterval = setInterval(nextSlide, 5000); // Restart auto slide after click
   });
+
+  document.querySelector(".prev").addEventListener("click", () => {
+    clearInterval(autoSlideInterval); // Pause auto slide on manual click
+    prevSlide();
+    autoSlideInterval = setInterval(nextSlide, 5000); // Restart auto slide after click
+  });
+
+  // Initialize slider
+  updateSlider();
 </script>
 
 </body>
