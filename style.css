@@ -127,7 +127,6 @@ h2 {
 }
 
 /* === Testimonials Section === */
-/* === Testimonials Section === */
 .testimonial-section {
   text-align: center;
   padding: 3rem 0;
@@ -144,7 +143,7 @@ h2 {
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease;
-  width: 100%; /* This should be 100% of the container */
+  width: 400%; /* This should be 100% of the container */
 }
 
 .testimonial {
