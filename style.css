@@ -152,9 +152,10 @@ h2 {
 
 .testimonial-container {
   display: flex;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease-in-out; /* Ensure smooth sliding transition */
   width: 400%; /* 4 testimonials, 100% each */
 }
+
 
 .testimonial {
   flex: 0 0 100%;
