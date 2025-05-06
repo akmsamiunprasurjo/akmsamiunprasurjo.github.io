@@ -257,44 +257,46 @@
   });
 </script>
 <script>
-  let currentIndex = 0;
-  const container = document.getElementById("testimonialContainer");
-  const slides = document.querySelectorAll(".testimonial");
-  const total = slides.length;
-  let slideInterval;
+  let currentSlide = 0;
+  let testimonials = document.querySelectorAll('.testimonial');
+  let interval;
 
-  function updateSlider() {
-  container.style.transform = `translateX(-${currentIndex * 100}%)`;
-
+  function showSlide(index) {
+    const container = document.getElementById('testimonialContainer');
+    const slideWidth = testimonials[0].offsetWidth;
+    container.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
   function nextSlide() {
-    currentIndex = (currentIndex + 1) % total;
-    updateSlider();
+    currentSlide = (currentSlide + 1) % testimonials.length;
+    showSlide(currentSlide);
   }
 
   function prevSlide() {
-    currentIndex = (currentIndex - 1 + total) % total;
-    updateSlider();
+    currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+    showSlide(currentSlide);
   }
 
   function startSlider() {
-    slideInterval = setInterval(nextSlide, 5000);
+    interval = setInterval(nextSlide, 3000);
   }
 
   function pauseSlider() {
-    clearInterval(slideInterval);
+    clearInterval(interval);
   }
 
   function resumeSlider() {
     startSlider();
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    updateSlider();
+  window.addEventListener('load', () => {
     startSlider();
+    showSlide(currentSlide);
+  });
+
+  window.addEventListener('resize', () => {
+    showSlide(currentSlide); // to adapt to responsive layout
   });
 </script>
-
 </body>
 </html>
