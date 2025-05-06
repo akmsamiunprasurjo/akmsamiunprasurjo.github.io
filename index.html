@@ -152,7 +152,7 @@
     <button class="nav-btn next" onclick="nextSlide()">❯</button>
   </div>
 </section>
-
+  
   <!-- Resume -->
   <section class="resume container" id="resume">
     <h2 data-aos="fade-up">Education &amp; Training</h2>
@@ -249,54 +249,53 @@
   });
 
  // Auto close menu when user scrolls (on mobile)
-  window.addEventListener('scroll', () => {
-    if (navLinks.classList.contains('active')) {
-      navLinks.classList.remove('active');
-      mobileMenu.classList.remove('active');
-    }
-  });
-</script>
-<script>
-  let currentSlide = 0;
-  let testimonials = document.querySelectorAll('.testimonial');
-  let interval;
-
-  function showSlide(index) {
-    const container = document.getElementById('testimonialContainer');
-    const slideWidth = testimonials[0].offsetWidth;
-    container.style.transform = `translateX(-${index * slideWidth}px)`;
+window.addEventListener('scroll', () => {
+  if (navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    mobileMenu.classList.remove('active');
   }
+});
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % testimonials.length;
-    showSlide(currentSlide);
-  }
+let currentSlide = 0;
+let testimonials = document.querySelectorAll('.testimonial');
+let interval;
 
-  function prevSlide() {
-    currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
-    showSlide(currentSlide);
-  }
+function showSlide(index) {
+  const container = document.getElementById('testimonialContainer');
+  const slideWidth = testimonials[0].offsetWidth;
+  container.style.transform = `translateX(-${index * slideWidth}px)`;
+}
 
-  function startSlider() {
-    interval = setInterval(nextSlide, 3000);
-  }
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % testimonials.length;
+  showSlide(currentSlide);
+}
 
-  function pauseSlider() {
-    clearInterval(interval);
-  }
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+  showSlide(currentSlide);
+}
 
-  function resumeSlider() {
-    startSlider();
-  }
+function startSlider() {
+  interval = setInterval(nextSlide, 3000);
+}
 
-  window.addEventListener('load', () => {
-    startSlider();
-    showSlide(currentSlide);
-  });
+function pauseSlider() {
+  clearInterval(interval);
+}
 
-  window.addEventListener('resize', () => {
-    showSlide(currentSlide); // to adapt to responsive layout
-  });
+function resumeSlider() {
+  startSlider();
+}
+
+window.addEventListener('load', () => {
+  startSlider();
+  showSlide(currentSlide);
+});
+
+window.addEventListener('resize', () => {
+  showSlide(currentSlide); // to adapt to responsive layout
+});
 </script>
 </body>
 </html>
