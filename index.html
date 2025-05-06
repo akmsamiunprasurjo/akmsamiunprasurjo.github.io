@@ -270,51 +270,53 @@ window.addEventListener('scroll', () => {
   }
 });
 
-let currentSlide = 0;
-let testimonials = document.querySelectorAll('.testimonial');
-let interval;
+<script>
+  let currentSlide = 0;
+  let testimonials = document.querySelectorAll('.testimonial');
+  let interval = null;
 
-function showSlide(index) {
-  const container = document.getElementById('testimonialContainer');
-  const slideWidth = testimonials[0].offsetWidth;
+  function showSlide(index) {
+    const container = document.getElementById('testimonialContainer');
+    const slideWidth = testimonials[0].offsetWidth;
+    container.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
 
-  console.log(`Sliding to: ${index} with transform: translateX(-${index * slideWidth}px)`); // Check if it's updating correctly
-  container.style.transform = `translateX(-${index * slideWidth}px)`; // Smooth transition
-}
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % testimonials.length;
+    showSlide(currentSlide);
+  }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % testimonials.length;
-  console.log('Next slide:', currentSlide); // Check current index
-  showSlide(currentSlide);
-}
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+    showSlide(currentSlide);
+  }
 
-function prevSlide() {
-  currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
-  console.log('Previous slide:', currentSlide); // Check current index
-  showSlide(currentSlide);
-}
+  function startSlider() {
+    clearInterval(interval); // Fix: prevent multiple intervals
+    interval = setInterval(nextSlide, 5000); // 5 seconds fixed
+  }
 
-function startSlider() {
-  interval = setInterval(nextSlide, 3000);
-}
+  function pauseSlider() {
+    clearInterval(interval);
+    interval = null; // Fix: stop further run
+  }
 
-function pauseSlider() {
-  clearInterval(interval);
-}
+  function resumeSlider() {
+    if (!interval) {
+      startSlider();
+    }
+  }
 
-function resumeSlider() {
-  startSlider();
-}
+  window.addEventListener('load', () => {
+    testimonials = document.querySelectorAll('.testimonial'); // refresh on load
+    startSlider();
+    showSlide(currentSlide);
+  });
 
-window.addEventListener('load', () => {
-  startSlider();
-  showSlide(currentSlide); // Ensure initial slide works
-});
-
-window.addEventListener('resize', () => {
-  showSlide(currentSlide); // Adjust slider on resize
-});
-
+  window.addEventListener('resize', () => {
+    showSlide(currentSlide); // Fix responsive scroll position
+  });
 </script>
+
 </body>
 </html>
