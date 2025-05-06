@@ -208,7 +208,7 @@ A K M Samiun Prasurjo.</p>
   <footer data-aos="fade-up">
     <h2>Stay Tuned</h2>
     <ul class="footer-icons">
-      <li><a href="mailto:akmsamiunprasurjo@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="akmsamiunprasurjo@gmail.com"><i class="fas fa-envelope"></i></a></li>
       <li><a href="https://github.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-github"></i></a></li>
       <li><a href="https://www.facebook.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-facebook"></i></a></li>
       <li><a href="https://www.linkedin.com/in/akmsamiunprasurjo" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -275,12 +275,10 @@ window.addEventListener('scroll', () => {
   let interval = null;
 
   function showSlide(index) {
-  const container = document.getElementById('testimonialContainer');
-  const testimonials = container.querySelectorAll('.testimonial'); // MOVE inside
-  const slideWidth = container.offsetWidth; // Use container width instead
-  container.style.transform = `translateX(-${index * slideWidth}px)`;
-}
-
+    const container = document.getElementById('testimonialContainer');
+    const slideWidth = testimonials[0].offsetWidth;
+    container.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
 
   function nextSlide() {
     currentSlide = (currentSlide + 1) % testimonials.length;
