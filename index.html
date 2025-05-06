@@ -275,10 +275,12 @@ window.addEventListener('scroll', () => {
   let interval = null;
 
   function showSlide(index) {
-    const container = document.getElementById('testimonialContainer');
-    const slideWidth = testimonials[0].offsetWidth;
-    container.style.transform = `translateX(-${index * slideWidth}px)`;
-  }
+  const container = document.getElementById('testimonialContainer');
+  const testimonials = container.querySelectorAll('.testimonial'); // MOVE inside
+  const slideWidth = container.offsetWidth; // Use container width instead
+  container.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
 
   function nextSlide() {
     currentSlide = (currentSlide + 1) % testimonials.length;
