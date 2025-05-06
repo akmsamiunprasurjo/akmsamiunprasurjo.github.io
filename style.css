@@ -219,6 +219,21 @@ h2 {
 .prev { left: 0; }
 .next { right: 0; }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 2rem 0;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+
+  .testimonial-container {
+    width: 300%; /* 3 testimonials for smaller screens */
+  }
+}
+
 /* Contact Form */
 .form-box {
   background:#1a1a1a; padding:3rem 2rem;
