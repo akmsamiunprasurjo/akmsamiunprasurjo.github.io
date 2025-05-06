@@ -151,10 +151,15 @@ h2 {
 }
 
 .testimonial-container {
+  width: 400%;
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%; /* FIX: No fixed width like 400% */
+  transition: transform 0.5s ease;
 }
+
+.testimonial {
+  flex: 0 0 100%;
+}
+
 
 .testimonial {
   min-width: 100%;
