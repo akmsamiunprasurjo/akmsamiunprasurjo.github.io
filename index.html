@@ -263,16 +263,20 @@ let interval;
 function showSlide(index) {
   const container = document.getElementById('testimonialContainer');
   const slideWidth = testimonials[0].offsetWidth;
-  container.style.transform = `translateX(-${index * slideWidth}px)`;
+
+  console.log(`Sliding to: ${index} with transform: translateX(-${index * slideWidth}px)`); // Check if it's updating correctly
+  container.style.transform = `translateX(-${index * slideWidth}px)`; // Smooth transition
 }
 
 function nextSlide() {
   currentSlide = (currentSlide + 1) % testimonials.length;
+  console.log('Next slide:', currentSlide); // Check current index
   showSlide(currentSlide);
 }
 
 function prevSlide() {
   currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+  console.log('Previous slide:', currentSlide); // Check current index
   showSlide(currentSlide);
 }
 
@@ -290,12 +294,13 @@ function resumeSlider() {
 
 window.addEventListener('load', () => {
   startSlider();
-  showSlide(currentSlide);
+  showSlide(currentSlide); // Ensure initial slide works
 });
 
 window.addEventListener('resize', () => {
-  showSlide(currentSlide); // to adapt to responsive layout
+  showSlide(currentSlide); // Adjust slider on resize
 });
+
 </script>
 </body>
 </html>
