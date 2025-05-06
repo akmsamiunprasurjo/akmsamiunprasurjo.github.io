@@ -310,6 +310,11 @@ window.addEventListener('scroll', () => {
     testimonials = document.querySelectorAll('.testimonial'); // refresh on load
     startSlider();
     showSlide(currentSlide);
+     // Force layout update for mobile rendering
+  const container = document.getElementById('testimonialContainer');
+  container.style.display = 'none';
+  void container.offsetWidth; // Trigger reflow
+  container.style.display = 'flex';
   });
 
   window.addEventListener('resize', () => {
