@@ -152,13 +152,12 @@ h2 {
 
 .testimonial-container {
   display: flex;
-  transition: transform 0.5s ease-in-out; /* Ensure smooth sliding transition */
-  width: 400%; /* 4 testimonials, 100% each */
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* FIX: No fixed width like 400% */
 }
 
-
 .testimonial {
-  flex: 0 0 100%;
+  min-width: 100%;
   box-sizing: border-box;
   background: #1a1a1a;
   padding: 2rem 1rem;
@@ -188,18 +187,12 @@ h2 {
 .testimonial-name a {
   color: #ff9800;
   text-decoration: none;
-  transition: color 0.3s;
-}
-
-.testimonial-name a:hover {
-  color: #ffa733;
 }
 
 .testimonial-text {
   font-style: italic;
   font-size: 1.1rem;
   max-width: 600px;
-  margin: 0 auto;
   line-height: 1.6;
 }
 
@@ -212,13 +205,12 @@ h2 {
   font-size: 2rem;
   color: #ff9800;
   cursor: pointer;
-  padding: 0 1rem;
-  user-select: none;
-  z-index: 2;
+  z-index: 10;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
+.prev { left: 10px; }
+.next { right: 10px; }
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
