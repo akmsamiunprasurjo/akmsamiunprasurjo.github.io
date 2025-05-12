@@ -68,7 +68,7 @@ body {
 
 .hero-img img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 40px;
   object-fit: cover;
   border: 4px solid #ff9800;
   background: #121212;
