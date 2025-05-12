@@ -3,9 +3,10 @@
 html { scroll-behavior:smooth; }
 body {
   font-family:'Poppins',sans-serif;
-  background:#1c1c1c; color:#fff; line-height:1.6;
+  background:#1f1f1f; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড হালকা কালো */
+  color:#fff;
+  line-height:1.6;
 }
-
 /* Navbar */
 .navbar {
   background:#121212; padding:1rem 2rem;
@@ -34,6 +35,7 @@ body {
 }
 
 /* Hero */
+
 .hero {
   display:flex; align-items:center; justify-content:space-between;
   padding:4rem 2rem; background:#1f1f1f; flex-wrap:wrap;
@@ -70,28 +72,49 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
-    text-align: center;
+    align-items: center; /* সামগ্রিক কনটেন্ট মাঝে থাকবে */
   }
 
   .hero-identity {
-    text-align: center; /* Center the name and signature on smaller screens */
+    text-align: left; /* ভেতরের এলিমেন্টগুলোর ডিফল্ট অ্যালাইনমেন্ট */
     margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column; /* নাম এবং সিগনেচার উপরে নিচে */
+    align-items: flex-start; /* ভেতরের এলিমেন্ট বাম দিকে শুরু হবে */
   }
 
   .hero-identity h1 {
-    font-size: 2.5rem; /* ছোট স্ক্রিনে ফন্ট সাইজ কমানো */
-    text-align: center; /* ছোট স্ক্রিনে টেক্সট সেন্টার করা */
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
   }
 
   .signature {
-    width: 150px; /* ছোট স্ক্রিনে সিগনেচারের প্রস্থ কমানো */
+    width: 150px;
   }
 
   .profession {
-    font-size: 1rem; /* ছোট স্ক্রিনে প্রফেশনের ফন্ট সাইজ কমানো */
+    font-size: 1rem;
+    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+    order: -1; /* ছবি প্রথমে */
+  }
+
+  .hero-text {
+    order: 2; /* টেক্সট পরে */
+    text-align: center; /* ভেতরের টেক্সট মাঝে */
+  }
+
+  .hero-text .greeting,
+  .hero-text h2,
+  .hero-text p {
+    margin-bottom: 0.5rem; /* "Hello!", "I'm Prasurjo", প্যারাগ্রাফের নিচের মার্জিন কমানো */
   }
 }
 @media (max-width: 480px) {
@@ -102,35 +125,32 @@ body {
     width: 120px; /* আরও ছোট স্ক্রিনে সিগনেচারের প্রস্থ আরও কমানো */
   }
 }
-.buttons-desktop {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.buttons-mobile {
-    display: none; /* Hide on desktop */
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 1rem;
-    align-items: center; /* Center buttons on mobile */
-}
+.greeting { color:#ffb300; font-weight:600; margin-bottom:.5rem; }
+.hero-text h2 { font-size:1.6rem; color:#ffb74d; margin-bottom:1rem; }
+.hero-text p { color:#ccc; margin-bottom:2rem; }
+.buttons { display:flex; gap:1rem; }
 .btn {
-  padding: 1rem 2rem; /* Increased padding for larger buttons */
-  border-radius: 8px; /* Slightly more rounded corners */
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background .3s, box-shadow .3s;
-  display: inline-block; /* To allow proper alignment */
-  font-size: 1.1rem; /* Slightly larger font size */
-  letter-spacing: 0.5px; /* Add a little letter spacing */
+  padding:.75rem 1.5rem; border-radius:5px;
+  font-weight:600; text-decoration:none;
+  white-space:nowrap;
+  transition:background .3s, box-shadow .3s;
 }
-.btn.discuss { background:#7e57c2; color:#fff; box-shadow: 0 2px 5px rgba(126, 87, 194, 0.3); }
-.btn.discuss:hover { background:#9575cd; box-shadow: 0 4px 8px rgba(149, 117, 205, 0.3); }
-.btn.download { background:#ff9800; color:#fff; box-shadow: 0 2px 5px rgba(255, 152, 0, 0.3); }
+.btn.discuss { background:#7e57c2; color:#fff; }
+.btn.discuss:hover { background:#9575cd; }
+.btn.download { background:#ff9800; color:#fff; }
 .btn.download:hover {
   background:#ffb74d;
-  box-shadow:0 0 10px #ff9800, 0 4px 8px rgba(255, 183, 77, 0.3);
+  box-shadow:0 0 10px #ff9800, 0 0 20px #ff9800;
+}
+.hero-img { flex:1; max-width:350px; }
+.hero-img img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 40px; /* স্কয়ার এবং কোণা গোল করার জন্য */
+  object-fit: cover;
+  border: 4px solid #ff9800;
+  background: #121212;
+  box-shadow: 0 0 20px #ff9800;
 }
 
 /* Sections */
@@ -190,7 +210,6 @@ h2 {
   text-align: center;
 }
 
-/* Testimonial Section Fix */
 /* === Testimonials Section === */
 .testimonial-section {
   text-align: center;
@@ -215,7 +234,6 @@ h2 {
   overflow: hidden;
   min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
 }
-
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -279,36 +297,7 @@ h2 {
 .next { right: 10px; }
 
 /* === Mobile Adjustments === */
-@media (max-width: 768px) {
-  .hero-content-redesigned {
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero-middle {
-    order: 0; /* Reset order for mobile */
-    margin-bottom: 1.5rem;
-  }
-  .hero-right {
-    align-items: center; /* Center buttons on mobile */
-  }
-  .buttons-desktop {
-    display: none; /* Hide on mobile */
-  }
-  .buttons-mobile {
-    display: flex; /* Show on mobile */
-  }
-  .hero-left {
-    text-align: center;
-  }
-  .name-signature {
-    text-align: center; /* Center name, signature and entrepreneur text on mobile */
-  }
-  .name-signature h1 {
-    font-size: 2rem;
-  }
-  .signature-img {
-    max-width: 150px;
-  }
+@media only screen and (max-width: 768px) {
   .testimonial {
     flex: 0 0 100%; /* Each testimonial takes full width */
     padding: 1.5rem 0.5rem; /* Adjust padding for smaller screens */
@@ -331,25 +320,29 @@ h2 {
   .nav-btn {
     font-size: 1.5rem; /* Smaller navigation buttons on mobile */
   }
+
+  .hero-identity {
+    text-align: center; /* Center the name and signature on smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .hero-identity h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .signature {
+    width: 120px; /* Adjust signature size for smaller screens */
+  }
+
+  .profession {
+    font-size: 1rem; /* Adjust profession size for smaller screens */
+  }
 }
 
 /* For extra small devices */
 @media only screen and (max-width: 480px) {
   .section-title {
     font-size: 1.5rem; /* Smaller section title */
-  }
-  .hero-middle {
-    max-width: 150px; /* Further reduce image size for very small screens */
-  }
-  .name-signature h1 {
-    font-size: 1.7rem;
-  }
-  .signature-img {
-    max-width: 120px;
-  }
-  .btn {
-    padding: 0.8rem 1.5rem; /* Adjust button padding for smaller screens */
-    font-size: 0.9rem;
   }
 }
 
@@ -375,7 +368,7 @@ h2 {
 }
 .btn.send:hover {
   background:#ffa726;
-  box-shadow:0 010px #ff9800;
+  box-shadow:0 0 10px #ff9800;
 }
 
 /* Footer */
@@ -396,11 +389,29 @@ footer p { color:#777; font-size:.9rem; }
 /* Responsive */
 @media (max-width:768px) {
   /* hero -> column */
-  .hero-content-redesigned { flex-direction:column; text-align:center; }
-  .hero-middle { margin-top:2rem; order: 0; } /* Ensure image is in the middle on mobile */
-  .hero-left { text-align: center; } /* Center name and signature on mobile */
-  .buttons-desktop { display: none; }
-  .buttons-mobile { display: flex; }
+  .hero-content { flex-direction:column; text-align:center; }
+  .hero-img { margin-top:2rem; }
+  .hero-img img { max-width:250px; }
+
+  .hero-identity {
+    text-align: center; /* Center the name and signature on smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .hero-identity h1 {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .signature {
+    width: 120px; /* Adjust signature size for smaller screens */
+  }
+
+  .profession {
+    font-size: 1rem; /* Adjust profession size for smaller screens */
+  }
+
+  /* buttons */
+  .buttons { justify-content:center; flex-wrap:wrap; }
 
   /* hamburger */
   .menu-toggle { display:flex; }
@@ -413,4 +424,47 @@ footer p { color:#777; font-size:.9rem; }
     gap:2rem; transition:.3s;
   }
   .nav-links.active { left:0; }
+}
+.section-box {
+  background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
+  color: #fff; /* ভেতরের লেখার রং সাদা (প্রয়োজনে পরিবর্তন করা যাবে) */
+  padding: 2rem; /* ভেতরের স্পেস */
+  margin-bottom: 2rem; /* বক্সগুলোর মধ্যে নিচের দিকে স্পেস */
+  border-radius: 10px; /* হালকা কোণা গোল (ঐচ্ছিক) */
+}
+
+/* হিরো সেকশনের জন্য আলাদা স্টাইল (ব্যাকগ্রাউন্ড কালো এবং ভেতরের প্যাডিং) */
+.hero {
+  background-color: #000;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* টেস্টিমোনিয়াল সেকশনের জন্য আলাদা স্টাইল (কারণ এর ভেতরের ব্যাকগ্রাউন্ড গাঢ়) */
+.testimonial-section {
+  background-color: #000;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* কন্টাক্ট ফর্মের জন্য */
+.form-box {
+  background-color: #000;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* ফুটারের জন্য */
+footer {
+  background-color: #000;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+}
+
+/* সেকশনের ভেতরের হেডিং এর রং অপরিবর্তিত রাখতে */
+.section-box h2 {
+  color: #ffa726; /* অথবা আগের রং */
 }
