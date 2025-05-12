@@ -249,16 +249,19 @@ h2 {
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
-  background: #1a1a1a;
+  background: transparent; /* কার্ডের নিজস্ব ব্যাকগ্রাউন্ড সরিয়ে দেওয়া হলো */
   padding: 2rem 1rem;
   border-radius: 10px;
-  color: #ccc;
+  color: #fff; /* টেক্সটের রঙ সাদা */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.testimonial-name a {
+  color: #ff9800;
+}
 .testimonial img {
   width: 100px;
   height: 100px;
