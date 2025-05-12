@@ -71,7 +71,7 @@ body {
 }
 
 /* Responsive */
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
     align-items: center; /* সামগ্রিক কনটেন্ট মাঝে থাকবে */
@@ -88,6 +88,7 @@ body {
   .hero-identity h1 {
     font-size: 2.5rem;
     margin-bottom: 0.3rem;
+    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
   }
 
   .signature {
@@ -96,6 +97,7 @@ body {
 
   .profession {
     font-size: 1rem;
+    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
   }
 
   .hero-img {
