@@ -71,31 +71,24 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  /* ... অন্যান্য স্টাইল ... */
-  .hero-img {
-    margin-top: 2rem;
-    order: -1; /* ছবিকে টেক্সটের আগে দেখানোর জন্য */
+  @media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center; /* সামগ্রিক কনটেন্ট মাঝে থাকবে */
   }
 
-  .hero-text {
-    order: 2; /* টেক্সটকে ছবির পরে দেখানোর জন্য */
-    text-align: center; /* টেক্সট মাঝে দেখানোর জন্য */
-  }
-}
-  /* ... অন্যান্য স্টাইল ... */
   .hero-identity {
-    text-align: center;
+    text-align: left; /* নাম, সিগনেচার বামে */
     margin-bottom: 1rem;
-    display: flex; /* ফ্লেক্সবক্স ব্যবহার */
-    flex-direction: column; /* উপাদানগুলো উপরে নিচে সাজানো থাকবে */
-    align-items: center; /* অনুভূমিকভাবে মাঝে সারিবদ্ধ */
+    display: flex; /* পাশাপাশি রাখার জন্য */
+    flex-direction: column;
+    align-items: flex-start; /* বাম দিকে সারিবদ্ধ */
   }
 
   .hero-identity h1 {
     font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 0.3rem; /* সিগনেচারের সাথে দূরত্ব কমানো */
+    text-align: left;
+    margin-bottom: 0.3rem;
   }
 
   .signature {
@@ -104,9 +97,25 @@ body {
 
   .profession {
     font-size: 1rem;
+    text-align: left;
+  }
+
+  .hero-img {
+    margin-top: 2rem;
+    order: -1; /* ছবি প্রথমে */
+  }
+
+  .hero-text {
+    order: 2; /* টেক্সট পরে */
+    text-align: center; /* ভেতরের টেক্সট মাঝে */
+  }
+
+  .hero-text .greeting,
+  .hero-text h2,
+  .hero-text p {
+    margin-bottom: 0.5rem; /* "Hello!", "I'm Prasurjo", প্যারাগ্রাফের নিচের মার্জিন কমানো */
   }
 }
-
 @media (max-width: 480px) {
   .hero-identity h1 {
     font-size: 2rem; /* আরও ছোট স্ক্রিনে ফন্ট সাইজ আরও কমানো */
