@@ -210,15 +210,15 @@ h2 {
 }
 
 /* Testimonial Section Fix */
-/* === Testimonials Section === */
 .testimonial-section {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: #fff; /* ব্যাকগ্রাউন্ড সাদা */
+  background-color: #fff; /* মূল ব্যাকগ্রাউন্ড সাদা */
   color: #000; /* ডিফল্ট টেক্সট কালার কালো */
   border-radius: 10px;
   margin-bottom: 2rem;
 }
+
 .section-title {
   font-size: 2rem;
   color: #ffa726; /* টাইটেলের রঙ কমলা */
@@ -229,39 +229,34 @@ h2 {
 .section-title span {
   color: #ff9800; /* স্প্যানের রঙ অপরিবর্তিত */
 }
+
 .testimonial-slider {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px; /* কালো বক্সের সর্বোচ্চ প্রস্থ */
+  margin: 2rem auto; /* মার্জিন অটো করে মাঝে নিয়ে আসা */
   overflow: hidden;
   min-height: 360px;
   background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
   padding: 2rem; /* ভেতরের স্পেস */
   border-radius: 10px;
+  color: #fff; /* রিভিউ টেক্সটের রঙ সাদা */
 }
+
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%; /* FIX: No fixed width like 400% */
+  width: 100%;
 }
 
 .testimonial {
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
-  background: transparent; /* কার্ডের নিজস্ব ব্যাকগ্রাউন্ড সরিয়ে দেওয়া হলো */
   padding: 2rem 1rem;
   border-radius: 10px;
-  color: #fff; /* টেক্সটের রঙ সাদা */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  text-align: center; /* ভেতরের টেক্সট মাঝে */
 }
 
-.testimonial-name a {
-  color: #ff9800;
-}
 .testimonial img {
   width: 100px;
   height: 100px;
