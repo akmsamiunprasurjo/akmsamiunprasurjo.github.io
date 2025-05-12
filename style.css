@@ -426,3 +426,46 @@ footer p { color:#777; font-size:.9rem; }
   }
   .nav-links.active { left:0; }
 }
+.section-box {
+  background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
+  color: #fff; /* ভেতরের লেখার রং সাদা (প্রয়োজনে পরিবর্তন করা যাবে) */
+  padding: 2rem; /* ভেতরের স্পেস */
+  margin-bottom: 2rem; /* বক্সগুলোর মধ্যে নিচের দিকে স্পেস */
+  border-radius: 10px; /* হালকা কোণা গোল (ঐচ্ছিক) */
+}
+
+/* হিরো সেকশনের জন্য আলাদা স্টাইল (ব্যাকগ্রাউন্ড কালো এবং ভেতরের প্যাডিং) */
+.hero {
+  background-color: #000;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* টেস্টিমোনিয়াল সেকশনের জন্য আলাদা স্টাইল (কারণ এর ভেতরের ব্যাকগ্রাউন্ড গাঢ়) */
+.testimonial-section {
+  background-color: #000;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* কন্টাক্ট ফর্মের জন্য */
+.form-box {
+  background-color: #000;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+/* ফুটারের জন্য */
+footer {
+  background-color: #000;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+}
+
+/* সেকশনের ভেতরের হেডিং এর রং অপরিবর্তিত রাখতে */
+.section-box h2 {
+  color: #ffa726; /* অথবা আগের রং */
+}
