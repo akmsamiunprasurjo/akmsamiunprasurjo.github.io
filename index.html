@@ -1,313 +1,327 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AKM Samiun Prasurjo | Tech Entrepreneur</title>
+  <meta name="google-site-verification" content="7L_Mnke3MyB_tZ3P-nRW9Fys9WoRpfRQiQn9NMbDT6E">
+  <meta name="description" content="Portfolio of A K M Samiun Prasurjo — Tech Entrepreneur & CSE Student. Founder of AKM IT Solutions.">
+  <meta property="og:title"       content="A K M Samiun Prasurjo">
+  <meta property="og:description" content="Tech Entrepreneur & Founder of AKM IT Solutions">
+  <meta property="og:image"       content="https://akmsamiunprasurjo.com/profile.jpg">
+  <meta property="og:url"         content="https://akmsamiunprasurjo.com">
+  <meta name="twitter:card"       content="summary_large_image">
 
-/* Reset & Smooth Scroll */
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body {
-  font-family:'Poppins',sans-serif;
-  background:#1c1c1c; color:#fff; line-height:1.6;
-}
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
 
-/* Navbar */
-.navbar {
-  background:#121212; padding:1rem 2rem;
-  position:sticky; top:0; z-index:1000;
-}
-.nav-container {
-  display:flex; align-items:center; justify-content:space-between;
-}
-.logo { font-size:1.5rem; font-weight:700; color:#fff; }
-.nav-links {
-  list-style:none; display:flex; gap:1.5rem;
-}
-.nav-links a {
-  color:#ccc; text-decoration:none; font-weight:500;
-  transition:color .3s;
-}
-.nav-links a:hover { color:#ffae42; }
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">Me!</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-/* Hamburger */
-.menu-toggle {
-  display:none; flex-direction:column; cursor:pointer;
-}
-.menu-toggle .bar {
-  width:25px; height:3px; background:#ff9800;
-  margin:4px 0; border-radius:2px;
-}
+  <!-- Hero -->
+  <header class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-text" data-aos="fade-right">
+        <p class="greeting">Hello!</p>
+        <h1>I'm <strong>A K M Samiun Prasurjo</strong></h1>
+        <h2>Tech Entrepreneur & CSE Student</h2>
+        <p>Turning ideas into digital solutions and building toward the future — from Noakhali to the world.</p>
+        <div class="buttons">
+          <a href="#form-box"    class="btn discuss">Discuss With Me</a>
+          <a href="A K M Samiun Prasurjo CV.pdf" class="btn download" download>Download CV</a>
+        </div>
+      </div>
+      <div class="hero-img" data-aos="fade-left">
+        <img src="profile.jpg" alt="Samiun Prasurjo">
+      </div>
+    </div>
+  </header>
 
-/* Hero */
-.hero {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:4rem 2rem; background:#1f1f1f; flex-wrap:wrap;
-}
-.hero-content {
-  display:flex; gap:2rem; width:100%;
-  align-items:center; justify-content:space-between;
-}
-.hero-text { flex:1; max-width:500px; }
-.greeting { color:#ffb300; font-weight:600; margin-bottom:.5rem; }
-.hero-text h1 { font-size:2.8rem; margin-bottom:.5rem; }
-.hero-text h2 { font-size:1.6rem; color:#ffb74d; margin-bottom:1rem; }
-.hero-text p { color:#ccc; margin-bottom:2rem; }
-.buttons { display:flex; gap:1rem; }
-.btn {
-  padding:.75rem 1.5rem; border-radius:5px;
-  font-weight:600; text-decoration:none;
-  white-space:nowrap;
-  transition:background .3s, box-shadow .3s;
-}
-.btn.discuss { background:#7e57c2; color:#fff; }
-.btn.discuss:hover { background:#9575cd; }
-.btn.download { background:#ff9800; color:#fff; }
-.btn.download:hover {
-  background:#ffb74d;
-  box-shadow:0 0 10px #ff9800, 0 0 20px #ff9800;
-}
-.hero-img { flex:1; max-width:350px; }
-.hero-img img {
-  width:100%; max-width:300px;
-  border-radius:50%; object-fit:cover;
-  border:4px solid #ff9800; background:#121212;
-  box-shadow:0 0 20px #ff9800;
-}
+  <!-- About -->
+  <section class="about container" id="about" data-aos="zoom-in">
+    <h2>About Me</h2>
+    <p>I’m A K M Samiun Prasurjo — a Computer Science &amp; Engineering student at Canadian University of Bangladesh and the founder of <strong>AKM IT Solutions</strong>. Since class 10, I’ve had a clear vision: to build scalable tech-powered businesses. I’m not just learning — I’m creating my path.</p>
+  </section>
 
-/* Sections */
-section { padding:4rem 2rem; }
-h2 {
-  text-align:center; font-size:2.4rem;
-  color:#ffa726; margin-bottom:2rem;
-}
+  <!-- Services -->
+  <section class="services container" id="services">
+    <h2 data-aos="fade-up">Services &amp; Collaborations</h2>
+    <div class="card-grid">
+      <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Scout Leader</h3>
+        <p>Chaprashir Hat High School (2014–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+        <h3>School Cabinets Leadership</h3>
+        <p>Chaprashir Hat High School (2015–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Public Relations Officer</h3>
+        <p>CUB Computer Society (2022–2024)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="250">
+        <h3>Marketing Specialist</h3>
+        <p>Department of CSE, Canadian University (2023–Present)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+        <h3>Assistant Joint Secretary</h3>
+        <p>CUB Computer Society (Mar–Jul 2024)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="350">
+        <h3>Treasurer</h3>
+        <p>CUB Computer Society (Jul 2024–Present)<br><small>Dhaka</small></p>
+      </div>
+    </div>
+  </section>
 
-/* About */
-.about p {
-  max-width:800px; margin:0 auto;
-  font-size:1.1rem; color:#ddd;
-}
+  <!-- Achievements -->
+  <section class="achievements container" data-aos="fade-up">
+    <h2>My Achievements</h2>
+    <div class="achievement-boxes">
+      <div class="achievement">
+        <h3 class="counter" data-target="185" data-suffix="+">0</h3>
+        <p>Regular Clients</p>
+      </div>
+      <div class="achievement">
+        <h3 class="counter" data-target="100" data-suffix="%">0</h3>
+        <p>Authentic Clients</p>
+      </div>
+      <div class="achievement">
+        <h3 class="counter" data-target="5000" data-suffix="+">0</h3>
+        <p>Projects Completed</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- Testimonials Section -->
+<section class="testimonial-section" id="testimonials">
+  <h2 class="section-title">What Clients Say <span>About Me !!</span></h2>
+  <div class="testimonial-slider" onmouseenter="pauseSlider()" onmouseleave="resumeSlider()">
+    <div class="testimonial-container" id="testimonialContainer">
+      <div class="testimonial">
+        <img src="Reviewer1.jpg" alt="Reviewer 1">
+        <div class="testimonial-name">
+          <a href="https://www.facebook.com/MdAzizulHaqueBhuyan" target="_blank">Md Azizul Hoque Aziz</a>
+        </div>
+        <p class="testimonial-text">My brother is truly one of a kind! He not only loves me deeply, but also consistently helps me resolve any challenges in my online business. Without his constant support, I wouldn’t be able to achieve much. His unwavering dedication and tireless hard work continue to inspire me every day.</p>
+      </div>
+      <div class="testimonial">
+        <img src="Reviewer2.jpg" alt="Reviewer 2">
+        <div class="testimonial-name">
+          <a href="https://www.facebook.com/KawsarAhmmedOfficial" target="_blank">Kawsar Ahmmed</a>
+        </div>
+        <p class="testimonial-text">A K M SAMIUN PRASURJO has been a game-changer in my entrepreneurial journey. From the very first step of shaping my business idea to strategic guidance on efficient management, his insights have been nothing short of exceptional. What truly set him apart was the support from his company, AKM IT Solution, which crafted a powerful online presence for my brand—professional, sleek, and impactful. His blend of vision, tech expertise, and genuine dedication gave my new venture the solid foundation it needed. I’m truly grateful for his mentorship and highly recommend him to anyone serious about building something remarkable.
+Thank you, Prasurjo bhai.</p>
+      </div>
+      <div class="testimonial">
+        <img src="Reviewer3.jpg" alt="Reviewer 3">
+        <div class="testimonial-name">
+          <a href="https://www.facebook.com/mohammadsakhawathossenrifat" target="_blank">Mohammad Sakhawat Hossen</a>
+        </div>
+        <p class="testimonial-text">You've done an incredible job, and I’m genuinely impressed. I had a lot of issues across different sector, and I was under a lot of stress. But after talking with you, everything changed—I feel so much more at ease now. You solved every problem with such clarity, and I’ve learned so much from each step you guided me through.
+Your advice worked like magic, and now I feel confident handling any challenge on my own. Even in my social life, the solutions you offered brought real value. You approach everything with such intelligence and grace—it's truly inspiring. There's so much everyone can learn from you.
+Thank you for being there, advising me like a mentor and guiding me like a guardian. You're an exceptional person.
 
-/* Card Grid */
-.card-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem; margin-top:2rem;
-}
-.info-card {
-  background:#1a1a1a; padding:1.5rem; border-radius:10px;
-  box-shadow:0 0 10px rgba(255,152,0,0.1);
-  transition:transform .3s,box-shadow .3s;
-}
-.info-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(255,152,0,0.2);
-}
-.info-card h3 { color:#ff9800; margin-bottom:.5rem; }
-.info-card p { color:#ccc; font-size:.95rem; line-height:1.4; }
+Thank you-
+A K M Samiun Prasurjo.</p>
+      </div>
+      <div class="testimonial">
+        <img src="Reviewer4.jpg" alt="Reviewer 4">
+        <div class="testimonial-name">
+          <a href="https://www.facebook.com/iamibrahimjihad" target="_blank">Ibrahim Jihad</a>
+        </div>
+        <p class="testimonial-text">I've had multiple great business collaborations with AKM Samiun Prasurjo. He's a creative, sharp entrepreneur who brings real value to every conversation. His insights and support have helped me a lot—truly a great person to work with.</p>
+      </div>
+    </div>
+    <button class="nav-btn prev" onclick="prevSlide()">❮</button>
+    <button class="nav-btn next" onclick="nextSlide()">❯</button>
+  </div>
+</section>
+  
+  <!-- Resume -->
+  <section class="resume container" id="resume">
+    <h2 data-aos="fade-up">Education &amp; Training</h2>
+    <div class="card-grid">
+      <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>PSC</h3>
+        <p>Shah Fazlur Rahman Pre-Cadet Academy (2006–2012)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+        <h3>SSC</h3>
+        <p>Chaprashir Hat High School (2012–2018)<br><small>Noakhali</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>HSC</h3>
+        <p>Ideal College, Dhanmondi (2018–2020)<br><small>Dhaka</small></p>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="250">
+        <h3>Honors</h3>
+        <p>Canadian University of Bangladesh (2022–Present)<br><small>Dhaka</small></p>
+      </div>
+    </div>
+    <a href="A K M Samiun Prasurjo CV.pdf" class="btn download" download data-aos="fade-up" data-aos-delay="300">Download CV</a>
+  </section>
 
-/* Achievements */
-.achievements { text-align:center; }
-.achievements h2 { font-size:2.2rem; margin-bottom:2.5rem; }
-.achievement-boxes {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;
-}
-.achievement {
-  background:#1a1a1a; padding:2rem; border-radius:10px;
-  width:250px; box-shadow:0 0 10px rgba(255,152,0,0.15);
-  transition:transform .3s,box-shadow .3s;
-}
-.achievement:hover {
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(255,152,0,0.3);
-}
-.achievement h3 {
-  font-size:2.5rem; color:#ff9800; margin-bottom:.5rem;
-}
-.achievement p { color:#ccc; font-size:1.1rem; }
-.testimonial-section {
-  padding: 60px 20px;
-  background-color: #0d0d0d;
-  color: white;
-  text-align: center;
-}
+  <!-- Contact Form -->
+  <section id="form-box" class="form-box" data-aos="fade-up">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xpwdwzpn" method="POST">
+      <input type="text"   name="name"     placeholder="Your Name"    required>
+      <input type="email"  name="_replyto" placeholder="Your Email"   required>
+      <input type="text"   name="subject"  placeholder="Your Subject" required>
+      <textarea name="message" rows="5"   placeholder="Your Message"required></textarea>
+      <button type="submit" class="btn send">Submit</button>
+    </form>
+  </section>
 
-/* Testimonial Section Fix */
-/* === Testimonials Section === */
-.testimonial-section {
-  text-align: center;
-  padding: 3rem 0;
-  background: #111;
-}
+  <!-- Footer -->
+  <section id="contact"></section>
+  <footer data-aos="fade-up">
+    <h2>Stay Tuned</h2>
+    <ul class="footer-icons">
+      <li><a href="akmsamiunprasurjo@gmail.com"><i class="fas fa-envelope"></i></a></li>
+      <li><a href="https://github.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.facebook.com/akmsamiunprasurjo" target="_blank"><i class="fab fa-facebook"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/akmsamiunprasurjo" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+      <li><a href="https://medium.com/@akmsamiunprasurjo" target="_blank"><i class="fab fa-medium"></i></a></li>
+      <li><a href="https://linktr.ee/akmsamiunprasurjo" target="_blank"><i class="fas fa-link"></i></a></li>
+    </ul>
+    <p>&copy; 2025 A K M Samiun Prasurjo. All rights reserved.</p>
+  </footer>
 
-.section-title {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 2rem;
-}
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800, easing: 'ease-out' });
 
-.section-title span {
-  color: #ff9800;
-}
+    // Counter Animation
+    function animateCounters() {
+      document.querySelectorAll('.counter').forEach(counter => {
+        const suffix = counter.dataset.suffix || '';
+        const target = +counter.dataset.target;
+        let count = 0;
+        const step = Math.ceil(target / 200);
+        const update = () => {
+          count = Math.min(count + step, target);
+          counter.innerText = count + suffix;
+          if (count < target) setTimeout(update, 20);
+        };
+        new IntersectionObserver(entries => {
+          if (entries[0].isIntersecting) {
+            update();
+            obs.disconnect();
+          }
+        }, { threshold: 0.6 }).observe(counter);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', animateCounters);
 
-.testimonial-slider {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
-}
+    // Mobile Menu Toggle
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks   = document.querySelector('.nav-links');
 
-.testimonial-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%; /* FIX: No fixed width like 400% */
-}
+  mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
 
-.testimonial {
-  flex: 0 0 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  background: #1a1a1a;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  color: #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  // Close menu when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    });
+  });
 
-.testimonial img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ff9800;
-  margin-bottom: 1rem;
-}
+ // Auto close menu when user scrolls (on mobile)
+window.addEventListener('scroll', () => {
+  if (navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  }
+});
 
-.testimonial-name {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
+  let currentSlide = 0;
+  let testimonials = document.querySelectorAll('.testimonial');
+  let interval = null;
 
-.testimonial-name a {
-  color: #ff9800;
-  text-decoration: none;
-}
-
-.testimonial-text {
-  font-style: italic;
-  font-size: 1.1rem;
-  max-width: 600px;
-  line-height: 1.6;
-}
-
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #ff9800;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* === Mobile Adjustments === */
-@media only screen and (max-width: 768px) {
-  .testimonial {
-    flex: 0 0 100%; /* Each testimonial takes full width */
-    padding: 1.5rem 0.5rem; /* Adjust padding for smaller screens */
+  function showSlide(index) {
+    const container = document.getElementById('testimonialContainer');
+    const slideWidth = testimonials[0].offsetWidth;
+    container.style.transform = `translateX(-${index * slideWidth}px)`;
   }
 
-  .testimonial img {
-    width: 80px; /* Reduce image size for smaller screens */
-    height: 80px; /* Keep it proportional */
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % testimonials.length;
+    showSlide(currentSlide);
   }
 
-  .testimonial-name {
-    font-size: 1rem; /* Slightly smaller name */
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+    showSlide(currentSlide);
   }
 
-  .testimonial-text {
-    font-size: 1rem; /* Smaller font size for readability */
-    max-width: 90%; /* Allow the text to be responsive */
+  function startSlider() {
+    clearInterval(interval); // Fix: prevent multiple intervals
+    interval = setInterval(nextSlide, 5000); // 5 seconds fixed
   }
 
-  .nav-btn {
-    font-size: 1.5rem; /* Smaller navigation buttons on mobile */
+  function pauseSlider() {
+    clearInterval(interval);
+    interval = null; // Fix: stop further run
   }
-}
 
-/* For extra small devices */
-@media only screen and (max-width: 480px) {
-  .section-title {
-    font-size: 1.5rem; /* Smaller section title */
+  function resumeSlider() {
+    if (!interval) {
+      startSlider();
+    }
   }
-}
 
+  window.addEventListener('load', () => {
+    testimonials = document.querySelectorAll('.testimonial'); // refresh on load
+    startSlider();
+    showSlide(currentSlide);
+     // Force layout update for mobile rendering
+  const container = document.getElementById('testimonialContainer');
+  container.style.display = 'none';
+  void container.offsetWidth; // Trigger reflow
+  container.style.display = 'flex';
+  });
 
-/* Contact Form */
-.form-box {
-  background:#1a1a1a; padding:3rem 2rem;
-  max-width:800px; margin:0 auto 4rem;
-  border-radius:10px; text-align:center;
-  box-shadow:0 0 15px rgba(255,152,0,0.2);
-}
-.form-box h2 { color:#ffa726; margin-bottom:2rem; }
-.form-box form {
-  display:flex; flex-direction:column; gap:1rem;
-}
-.form-box input, .form-box textarea {
-  padding:.75rem; border:none; border-radius:5px;
-  background:#2b2b2b; color:#fff; font-size:1rem;
-}
-.form-box ::placeholder { color:#bbb; }
-.btn.send {
-  background:#ff9800; color:#fff; border:none; font-weight:600;
-}
-.btn.send:hover {
-  background:#ffa726;
-  box-shadow:0 0 10px #ff9800;
-}
+  window.addEventListener('resize', () => {
+    showSlide(currentSlide); // Fix responsive scroll position
+  });
+</script>
 
-/* Footer */
-footer {
-  text-align:center; padding:2rem 1.5rem; background:#121212;
-}
-.footer-icons {
-  display:flex; justify-content:center; gap:1.5rem;
-  list-style:none; margin-bottom:1rem;
-}
-.footer-icons a {
-  color:#ff9800; font-size:1.5rem;
-  transition:color .3s;
-}
-.footer-icons a:hover { color:#ffa726; }
-footer p { color:#777; font-size:.9rem; }
-
-/* Responsive */
-@media (max-width:768px) {
-  /* hero -> column */
-  .hero-content { flex-direction:column; text-align:center; }
-  .hero-img { margin-top:2rem; }
-  .hero-img img { max-width:250px; }
-
-  /* buttons */
-  .buttons { justify-content:center; flex-wrap:wrap; }
-
-  /* hamburger */
-  .menu-toggle { display:flex; }
-  .nav-links {
-    position:absolute; top:70px; left:-100%;
-    background:#121212; width:100%;
-    height:calc(100vh-70px);
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    gap:2rem; transition:.3s;
-  }
-  .nav-links.active { left:0; }
-}
+</body>
+</html>
