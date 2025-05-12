@@ -78,16 +78,15 @@ body {
   }
 
   .hero-identity {
-    text-align: left; /* নাম, সিগনেচার বামে */
+    text-align: left; /* ভেতরের এলিমেন্টগুলোর ডিফল্ট অ্যালাইনমেন্ট */
     margin-bottom: 1rem;
-    display: flex; /* পাশাপাশি রাখার জন্য */
-    flex-direction: column;
-    align-items: flex-start; /* বাম দিকে সারিবদ্ধ */
+    display: flex;
+    flex-direction: column; /* নাম এবং সিগনেচার উপরে নিচে */
+    align-items: flex-start; /* ভেতরের এলিমেন্ট বাম দিকে শুরু হবে */
   }
 
   .hero-identity h1 {
     font-size: 2.5rem;
-    text-align: left;
     margin-bottom: 0.3rem;
   }
 
@@ -97,7 +96,6 @@ body {
 
   .profession {
     font-size: 1rem;
-    text-align: left;
   }
 
   .hero-img {
