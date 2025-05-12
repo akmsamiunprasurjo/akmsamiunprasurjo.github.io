@@ -37,122 +37,172 @@ body {
 /* Hero */
 
 .hero {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:4rem 2rem; background:#1f1f1f; flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* হিরো কন্টেন্ট মাঝে সারিবদ্ধ */
+  padding: 4rem 2rem;
+  background: #1f1f1f;
+  flex-wrap: wrap;
 }
+
 .hero-content {
-  display:flex; gap:2rem; width:100%;
-  align-items:center; justify-content:space-between;
+  display: flex;
+  gap: 2rem;
+  width: 90%; /* প্রয়োজন অনুযায়ী কন্টেন্টের প্রস্থ */
+  max-width: 1200px; /* সর্বোচ্চ প্রস্থ */
+  align-items: center;
+  justify-content: space-around; /* ভেতরের এলিমেন্টগুলোর মধ্যে স্পেস */
 }
-.hero-text { flex:1; max-width:500px; }
+
 .hero-identity {
-  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .hero-identity h1 {
-  font-size: 3rem; /* আরও বড় ফন্ট সাইজ */
-  margin-bottom: 0.3rem; /* সিগনেচারের সাথে দূরত্ব কমানো */
+  font-size: 3rem;
+  margin-bottom: 0.3rem;
   color: #fff;
-  font-weight: 700; /* আরও বোল্ড */
-  line-height: 1.2; /* লাইন স্পেসিং কমানো */
-  white-space: pre-wrap; /* টেক্সট দুই লাইনে দেখানোর জন্য */
-  text-align: left; /* টেক্সট বাম দিকে সারিবদ্ধ থাকবে */
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: pre-wrap;
 }
 
 .signature {
   display: block;
-  width: 200px; /* সিগনেচারের প্রস্থ বৃদ্ধি */
+  width: 150px; /* সিগনেচারের আকার কমানো */
   height: auto;
   margin-bottom: 0.5rem;
 }
 
 .profession {
-  color: #ffb74d; /* Set profession color */
-  font-size: 1.2rem; /* Adjust font size as needed */
+  color: #ffb74d;
+  font-size: 1.2rem;
 }
 
-/* Responsive */
- @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column;
-    align-items: center; /* সামগ্রিক কনটেন্ট মাঝে থাকবে */
-  }
-
-  .hero-identity {
-    text-align: left; /* ভেতরের এলিমেন্টগুলোর ডিফল্ট অ্যালাইনমেন্ট */
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column; /* নাম এবং সিগনেচার উপরে নিচে */
-    align-items: flex-start; /* ভেতরের এলিমেন্ট বাম দিকে শুরু হবে */
-  }
-
-  .hero-identity h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.3rem;
-    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
-  }
-
-  .signature {
-    width: 150px;
-  }
-
-  .profession {
-    font-size: 1rem;
-    text-align: left; /* নিশ্চিত করছি টেক্সট বাম দিকে */
-  }
-
-  .hero-img {
-    margin-top: 2rem;
-    order: -1; /* ছবি প্রথমে */
-  }
-
-  .hero-text {
-    order: 2; /* টেক্সট পরে */
-    text-align: center; /* ভেতরের টেক্সট মাঝে */
-  }
-
-  .hero-text .greeting,
-  .hero-text h2,
-  .hero-text p {
-    margin-bottom: 0.5rem; /* "Hello!", "I'm Prasurjo", প্যারাগ্রাফের নিচের মার্জিন কমানো */
-  }
+.hero-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@media (max-width: 480px) {
-  .hero-identity h1 {
-    font-size: 2rem; /* আরও ছোট স্ক্রিনে ফন্ট সাইজ আরও কমানো */
-  }
-  .signature {
-    width: 120px; /* আরও ছোট স্ক্রিনে সিগনেচারের প্রস্থ আরও কমানো */
-  }
+
+.hero-img {
+  max-width: 300px;
+  margin-bottom: 1rem; /* ছবির নিচে বাটনের জন্য স্পেস */
 }
-.greeting { color:#ffb300; font-weight:600; margin-bottom:.5rem; }
-.hero-text h2 { font-size:1.6rem; color:#ffb74d; margin-bottom:1rem; }
-.hero-text p { color:#ccc; margin-bottom:2rem; }
-.buttons { display:flex; gap:1rem; }
-.btn {
-  padding:.75rem 1.5rem; border-radius:5px;
-  font-weight:600; text-decoration:none;
-  white-space:nowrap;
-  transition:background .3s, box-shadow .3s;
-}
-.btn.discuss { background:#7e57c2; color:#fff; }
-.btn.discuss:hover { background:#9575cd; }
-.btn.download { background:#ff9800; color:#fff; }
-.btn.download:hover {
-  background:#ffb74d;
-  box-shadow:0 0 10px #ff9800, 0 0 20px #ff9800;
-}
-.hero-img { flex:1; max-width:350px; }
+
 .hero-img img {
   width: 100%;
-  max-width: 300px;
-  border-radius: 40px; /* স্কয়ার এবং কোণা গোল করার জন্য */
+  border-radius: 10px; /* স্কয়ার এবং কোণা গোল করার জন্য - আগের মান 40px থেকে 10px করা হলো */
   object-fit: cover;
   border: 4px solid #ff9800;
   background: #121212;
   box-shadow: 0 0 20px #ff9800;
 }
 
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.greeting {
+  color: #ffb300;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  text-align: center; /* টেক্সট মাঝে */
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+  text-align: center; /* টেক্সট মাঝে */
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  color: #ffb74d;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  color: #ccc;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: .75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .3s, box-shadow .3s;
+  color: #fff;
+}
+
+.btn.discuss {
+  background: #7e57c2;
+}
+
+.btn.discuss:hover {
+  background: #9575cd;
+}
+
+.btn.download {
+  background: #ff9800;
+}
+
+.btn.download:hover {
+  background: #ffb74d;
+  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
+}
+
+/* মোবাইল ভার্সনের জন্য */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center; /* মোবাইল স্ক্রিনে হিরো কন্টেন্ট মাঝে */
+  }
+
+  .hero-content {
+    flex-direction: column; /* মোবাইল স্ক্রিনে উপরে নিচে */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-identity {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .hero-middle {
+    order: -1; /* ছবি এবং বাটন প্রথমে দেখাবে */
+    margin-bottom: 2rem;
+  }
+
+  .buttons {
+    flex-direction: row; /* মোবাইল স্ক্রিনে বাটন পাশাপাশি */
+  }
+
+  .hero-img {
+    margin-bottom: 1rem; /* ছবির নিচে বাটনের জন্য স্পেস */
+  }
+
+  .hero-text {
+    order: 1; /* হ্যালো টেক্সট ছবির পরে */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-identity h1 {
+    font-size: 2rem; /* আরও ছোট স্ক্রিনে ফন্ট সাইজ আরও কমানো */
+  }
+
+  .signature {
+    width: 120px; /* আরও ছোট স্ক্রিনে সিগনেচারের প্রস্থ আরও কমানো */
+  }
+
+  .buttons {
+    flex-direction: column; /* ছোট স্ক্রিনে বাটন উপরে নিচে */
+  }
+}
 /* Sections */
 section { padding:4rem 2rem; }
 h2 {
