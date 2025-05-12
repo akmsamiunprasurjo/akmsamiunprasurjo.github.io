@@ -214,6 +214,66 @@ h2 {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Testimonial Section Fix */
+.testimonial-slider {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 360px; /* Fix for mobile */
+}
+
+.testimonial-container {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Slower transition */
+  width: 400%; /* Ensure this is based on how many testimonials you want to show */
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  background: #1a1a1a;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Button Fix */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ff9800;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Mobile Fix for Testimonial Container */
+@media (max-width: 768px) {
+  .testimonial-container {
+    width: 400%; /* Ensure each testimonial takes 25% of the screen width on mobile */
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
+}
+
+/* Add space between the testimonials */
+.testimonial {
+  gap: 1.5rem;
+}
 
 /* Responsiveness */
 @media (max-width: 768px) {
