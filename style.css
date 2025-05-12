@@ -136,7 +136,7 @@ body {
 .hero-img img {
   width: 100%;
   max-width: 300px;
-  border-radius: 20px; /* স্কয়ার এবং কোণা গোল করার জন্য */
+  border-radius: 40px; /* স্কয়ার এবং কোণা গোল করার জন্য */
   object-fit: cover;
   border: 4px solid #ff9800;
   background: #121212;
