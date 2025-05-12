@@ -35,60 +35,72 @@ body {
 
 /* Hero */
 .hero {
-  padding:4rem 2rem; background:#1f1f1f;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:4rem 2rem; background:#1f1f1f; flex-wrap:wrap;
 }
-.hero-content-redesigned {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
+.hero-content {
+  display:flex; gap:2rem; width:100%;
+  align-items:center; justify-content:space-between;
 }
-.hero-left {
-    flex: 1;
-    min-width: 300px;
+.hero-text { flex:1; max-width:500px; }
+.hero-identity {
+  margin-bottom: 1.5rem;
 }
-.name-signature {
-    margin-bottom: 1rem;
-    text-align: left; /* Align name and signature to the left */
+
+.hero-identity h1 {
+  font-size: 3rem; /* আরও বড় ফন্ট সাইজ */
+  margin-bottom: 0.3rem; /* সিগনেচারের সাথে দূরত্ব কমানো */
+  color: #fff;
+  font-weight: 700; /* আরও বোল্ড */
+  line-height: 1.2; /* লাইন স্পেসিং কমানো */
+  white-space: pre-wrap; /* টেক্সট দুই লাইনে দেখানোর জন্য */
+  text-align: left; /* টেক্সট বাম দিকে সারিবদ্ধ থাকবে */
 }
-.name-signature h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.3rem;
+
+.signature {
+  display: block;
+  width: 200px; /* সিগনেচারের প্রস্থ বৃদ্ধি */
+  height: auto;
+  margin-bottom: 0.5rem;
 }
-.signature-img {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
-    display: block;
+
+.profession {
+  color: #ffb74d; /* Set profession color */
+  font-size: 1.2rem; /* Adjust font size as needed */
 }
-.entrepreneur-text {
-    color: #ccc;
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-}
-.hero-middle {
-    flex: 0 0 auto; /* Don't grow, don't shrink, auto width */
-    max-width: 200px; /* Adjust image size */
-    width: 100%;
-    order: -1; /* Move to the top in mobile view */
-    text-align: center; /* Center image */
-}
-.hero-middle img {
-    width: 100%;
-    border-radius: 15px; /* Rounded corners for the image */
-    object-fit: cover;
-    border: 4px solid #ff9800;
-    background:#121212;
-    box-shadow:0 0 20px #ff9800;
-}
-.hero-right {
-    flex: 1;
-    min-width: 200px;
-    display: flex;
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
     flex-direction: column;
-    align-items: flex-start; /* Align buttons to the start on desktop */
-    gap: 1rem;
+    text-align: center;
+  }
+
+  .hero-identity {
+    text-align: center; /* Center the name and signature on smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .hero-identity h1 {
+    font-size: 2.5rem; /* ছোট স্ক্রিনে ফন্ট সাইজ কমানো */
+    text-align: center; /* ছোট স্ক্রিনে টেক্সট সেন্টার করা */
+  }
+
+  .signature {
+    width: 150px; /* ছোট স্ক্রিনে সিগনেচারের প্রস্থ কমানো */
+  }
+
+  .profession {
+    font-size: 1rem; /* ছোট স্ক্রিনে প্রফেশনের ফন্ট সাইজ কমানো */
+  }
+}
+@media (max-width: 480px) {
+  .hero-identity h1 {
+    font-size: 2rem; /* আরও ছোট স্ক্রিনে ফন্ট সাইজ আরও কমানো */
+  }
+  .signature {
+    width: 120px; /* আরও ছোট স্ক্রিনে সিগনেচারের প্রস্থ আরও কমানো */
+  }
 }
 .buttons-desktop {
     display: flex;
