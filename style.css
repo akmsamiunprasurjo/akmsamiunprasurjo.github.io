@@ -228,10 +228,15 @@ h2 {
 
 .testimonial-slider {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 800px; /* কালো বক্সের সর্বোচ্চ প্রস্থ */
+  margin: 2rem auto; /* মার্জিন অটো করে মাঝে নিয়ে আসা */
   overflow: hidden;
-  min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
+  min-height: auto; /* অটো উচ্চতা */
+  background-color: #fff; /* ব্যাকগ্রাউন্ড সাদা করা হলো */
+  padding: 2rem; /* ভেতরের স্পেস */
+  border-radius: 10px;
+  color: #000; /* রিভিউ টেক্সটের রঙ কালো করা হলো */
+  display: block; /* ফ্লেক্স ডিসপ্লে বাদ দেওয়া হলো */
 }
 
 .testimonial-container {
