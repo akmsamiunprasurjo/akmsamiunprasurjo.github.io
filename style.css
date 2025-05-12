@@ -209,55 +209,49 @@ h2 {
   text-align: center;
 }
 
-/* Testimonial Section Fix */
-
+/* === Testimonials Section === */
 .testimonial-section {
   text-align: center;
-  padding: 3rem 2rem;
-  background-color: #fff; /* মূল ব্যাকগ্রাউন্ড সাদা */
-  color: #000; /* ডিফল্ট টেক্সট কালার কালো */
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  padding: 3rem 0;
+  background: #111;
 }
 
 .section-title {
   font-size: 2rem;
-  color: #ffa726; /* টাইটেলের রঙ কমলা */
+  color: #fff;
   margin-bottom: 2rem;
-  text-align: center; /* টাইটেল মাঝে সারিবদ্ধ */
 }
 
 .section-title span {
-  color: #ff9800; /* স্প্যানের রঙ অপরিবর্তিত */
+  color: #ff9800;
 }
 
 .testimonial-slider {
   position: relative;
-  max-width: 800px; /* কালো বক্সের সর্বোচ্চ প্রস্থ */
-  margin: 2rem auto; /* মার্জিন অটো করে মাঝে নিয়ে আসা */
+  max-width: 800px;
+  margin: 0 auto;
   overflow: hidden;
-  min-height: auto; /* অটো উচ্চতা */
-  background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
-  padding: 2rem; /* ভেতরের স্পেস */
-  border-radius: 10px;
-  color: #fff; /* রিভিউ টেক্সটের রঙ সাদা */
-  display: block; /* ফ্লেক্স ডিসপ্লে বাদ দেওয়া হলো */
+  min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
 }
 
 .testimonial-container {
-  display: block; /* ফ্লেক্স ডিসপ্লে বাদ দেওয়া হলো */
-  transition: none; /* ট্রানজিশন বাদ দেওয়া হলো */
-  width: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* FIX: No fixed width like 400% */
 }
 
 .testimonial {
   flex: 0 0 100%;
   min-width: 100%;
   box-sizing: border-box;
+  background: #1a1a1a;
   padding: 2rem 1rem;
   border-radius: 10px;
-  text-align: center; /* ভেতরের টেক্সট মাঝে */
-  margin-bottom: 1rem; /* রিভিউগুলোর মধ্যে নিচের মার্জিন */
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .testimonial img {
@@ -288,8 +282,19 @@ h2 {
 }
 
 .nav-btn {
-  display: none; /* নেভিগেশন বাটনগুলো সরিয়ে দেওয়া হলো */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #ff9800;
+  cursor: pointer;
+  z-index: 10;
 }
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 /* === Mobile Adjustments === */
 @media only screen and (max-width: 768px) {
