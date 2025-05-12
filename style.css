@@ -216,17 +216,28 @@ h2 {
   padding: 3rem 0;
   background: #111;
 }
-
+.testimonial-section {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #fff; /* ব্যাকগ্রাউন্ড সাদা */
+  color: #000; /* ডিফল্ট টেক্সট কালার কালো */
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
 .section-title {
   font-size: 2rem;
   color: #fff;
   margin-bottom: 2rem;
 }
-
-.section-title span {
-  color: #ff9800;
+.section-title {
+  font-size: 2rem;
+  color: #000; /* টাইটেলের রঙ কালো */
+  margin-bottom: 2rem;
 }
 
+.section-title span {
+  color: #ff9800; /* স্প্যানের রঙ অপরিবর্তিত */
+}
 .testimonial-slider {
   position: relative;
   max-width: 800px;
