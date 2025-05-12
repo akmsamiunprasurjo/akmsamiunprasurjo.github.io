@@ -164,13 +164,7 @@ h2 {
   max-width:800px; margin:0 auto;
   font-size:1.1rem; color:#ddd;
 }
-.about .section-box {
-  color: #000; /* "About Me" বক্সের ভেতরের টেক্সটের রঙ কালো */
-}
 
-.about .section-box p {
-  color: #333; /* "About Me" বক্সের প্যারাগ্রাফের রঙ আরও গাঢ় কালো */
-}
 /* Card Grid */
 .card-grid {
   display:grid;
