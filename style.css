@@ -291,9 +291,6 @@ h2 {
   display: none; /* নেভিগেশন বাটনগুলো সরিয়ে দেওয়া হলো */
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
 /* === Mobile Adjustments === */
 @media only screen and (max-width: 768px) {
   .testimonial {
