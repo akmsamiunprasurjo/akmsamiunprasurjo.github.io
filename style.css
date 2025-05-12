@@ -3,8 +3,9 @@
 html { scroll-behavior:smooth; }
 body {
   font-family:'Poppins',sans-serif;
-  background:#fff; /* ব্যাকগ্রাউন্ড সাদা করার জন্য */
-  color:#fff; line-height:1.6;
+  background:#1f1f1f; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড হালকা কালো */
+  color:#fff;
+  line-height:1.6;
 }
 /* Navbar */
 .navbar {
