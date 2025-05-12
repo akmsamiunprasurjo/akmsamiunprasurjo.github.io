@@ -236,16 +236,17 @@ h2 {
   max-width: 800px; /* কালো বক্সের সর্বোচ্চ প্রস্থ */
   margin: 2rem auto; /* মার্জিন অটো করে মাঝে নিয়ে আসা */
   overflow: hidden;
-  min-height: 360px;
+  min-height: auto; /* অটো উচ্চতা */
   background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
   padding: 2rem; /* ভেতরের স্পেস */
   border-radius: 10px;
   color: #fff; /* রিভিউ টেক্সটের রঙ সাদা */
+  display: block; /* ফ্লেক্স ডিসপ্লে বাদ দেওয়া হলো */
 }
 
 .testimonial-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  display: block; /* ফ্লেক্স ডিসপ্লে বাদ দেওয়া হলো */
+  transition: none; /* ট্রানজিশন বাদ দেওয়া হলো */
   width: 100%;
 }
 
@@ -256,6 +257,7 @@ h2 {
   padding: 2rem 1rem;
   border-radius: 10px;
   text-align: center; /* ভেতরের টেক্সট মাঝে */
+  margin-bottom: 1rem; /* রিভিউগুলোর মধ্যে নিচের মার্জিন */
 }
 
 .testimonial img {
@@ -286,15 +288,7 @@ h2 {
 }
 
 .nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #ff9800;
-  cursor: pointer;
-  z-index: 10;
+  display: none; /* নেভিগেশন বাটনগুলো সরিয়ে দেওয়া হলো */
 }
 
 .prev { left: 10px; }
