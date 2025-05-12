@@ -127,6 +127,7 @@ h2 {
   text-align: center;
 }
 
+/* Testimonial Section Fix */
 /* === Testimonials Section === */
 .testimonial-section {
   text-align: center;
@@ -146,21 +147,21 @@ h2 {
 
 .testimonial-slider {
   position: relative;
-  max-width: 800px;
+  max-width: 100%; /* Make sure it fills the container on smaller screens */
   margin: 0 auto;
   overflow: hidden;
-  min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
+  min-height: 360px; /* Ensures the height exists even when flex misbehaves */
 }
 
 .testimonial-container {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%; /* FIX: No fixed width like 400% */
+  width: 100%; /* No fixed width, responsive on all screen sizes */
 }
 
 .testimonial {
-  flex: 0 0 100%;
-  min-width: 100%;
+  flex: 0 0 100%; /* Ensures the testimonial takes full width */
+  min-width: 100%; /* Ensures each testimonial takes full width */
   box-sizing: border-box;
   background: #1a1a1a;
   padding: 2rem 1rem;
@@ -211,84 +212,47 @@ h2 {
   z-index: 10;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* Testimonial Section Fix */
-.testimonial-slider {
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
-  min-height: 360px; /* Fix for mobile */
+.prev { 
+  left: 10px; 
 }
 
-.testimonial-container {
-  display: flex;
-  transition: transform 1s ease-in-out; /* Slower transition */
-  width: 400%; /* Ensure this is based on how many testimonials you want to show */
+.next { 
+  right: 10px; 
 }
 
-.testimonial {
-  flex: 0 0 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  background: #1a1a1a;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  color: #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+/* === Mobile Adjustments === */
+@media only screen and (max-width: 768px) {
+  .testimonial {
+    flex: 0 0 100%; /* Each testimonial takes full width */
+    padding: 1.5rem 0.5rem; /* Adjust padding for smaller screens */
+  }
 
-/* Navigation Button Fix */
-.nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #ff9800;
-  cursor: pointer;
-  z-index: 10;
-}
+  .testimonial img {
+    width: 80px; /* Reduce image size for smaller screens */
+    height: 80px; /* Keep it proportional */
+  }
 
-.prev { left: 10px; }
-.next { right: 10px; }
-
-/* Mobile Fix for Testimonial Container */
-@media (max-width: 768px) {
-  .testimonial-container {
-    width: 400%; /* Ensure each testimonial takes 25% of the screen width on mobile */
+  .testimonial-name {
+    font-size: 1rem; /* Slightly smaller name */
   }
 
   .testimonial-text {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller font size for readability */
+    max-width: 90%; /* Allow the text to be responsive */
+  }
+
+  .nav-btn {
+    font-size: 1.5rem; /* Smaller navigation buttons on mobile */
   }
 }
 
-/* Add space between the testimonials */
-.testimonial {
-  gap: 1.5rem;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-  .testimonial-container {
-    width: 100%;
-  }
-
-  .testimonial-text {
-    font-size: 1rem;
-  }
-
-  .testimonial-container {
-    width: 400%; /* 4 testimonials for smaller screens */
+/* For extra small devices */
+@media only screen and (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem; /* Smaller section title */
   }
 }
+
 
 /* Contact Form */
 .form-box {
