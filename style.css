@@ -34,6 +34,7 @@ body {
 }
 
 /* Hero */
+/* Hero */
 .hero {
   display:flex; align-items:center; justify-content:space-between;
   padding:4rem 2rem; background:#1f1f1f; flex-wrap:wrap;
@@ -48,14 +49,18 @@ body {
 }
 
 .hero-identity h1 {
-  font-size: 2.5rem; /* Adjust font size as needed */
-  margin-bottom: 0.5rem;
-  color: #fff; /* Set name color */
+  font-size: 3rem; /* আরও বড় ফন্ট সাইজ */
+  margin-bottom: 0.3rem; /* সিগনেচারের সাথে দূরত্ব কমানো */
+  color: #fff;
+  font-weight: 700; /* আরও বোল্ড */
+  line-height: 1.2; /* লাইন স্পেসিং কমানো */
+  white-space: pre-wrap; /* টেক্সট দুই লাইনে দেখানোর জন্য */
+  text-align: left; /* টেক্সট বাম দিকে সারিবদ্ধ থাকবে */
 }
 
 .signature {
   display: block;
-  width: 150px; /* Adjust width of the signature image */
+  width: 200px; /* সিগনেচারের প্রস্থ বৃদ্ধি */
   height: auto;
   margin-bottom: 0.5rem;
 }
@@ -63,6 +68,40 @@ body {
 .profession {
   color: #ffb74d; /* Set profession color */
   font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-identity {
+    text-align: center; /* Center the name and signature on smaller screens */
+    margin-bottom: 1rem;
+  }
+
+  .hero-identity h1 {
+    font-size: 2.5rem; /* ছোট স্ক্রিনে ফন্ট সাইজ কমানো */
+    text-align: center; /* ছোট স্ক্রিনে টেক্সট সেন্টার করা */
+  }
+
+  .signature {
+    width: 150px; /* ছোট স্ক্রিনে সিগনেচারের প্রস্থ কমানো */
+  }
+
+  .profession {
+    font-size: 1rem; /* ছোট স্ক্রিনে প্রফেশনের ফন্ট সাইজ কমানো */
+  }
+}
+@media (max-width: 480px) {
+  .hero-identity h1 {
+    font-size: 2rem; /* আরও ছোট স্ক্রিনে ফন্ট সাইজ আরও কমানো */
+  }
+  .signature {
+    width: 120px; /* আরও ছোট স্ক্রিনে সিগনেচারের প্রস্থ আরও কমানো */
+  }
 }
 .greeting { color:#ffb300; font-weight:600; margin-bottom:.5rem; }
 .hero-text h2 { font-size:1.6rem; color:#ffb74d; margin-bottom:1rem; }
