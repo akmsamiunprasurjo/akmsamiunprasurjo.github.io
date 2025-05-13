@@ -46,7 +46,7 @@ body {
 
 .hero-content {
   display: flex;
-  gap: 1rem; /* মোবাইল এবং ডেস্কটপে ফাঁকা স্থান কমিয়ে দিন */
+  gap: 2rem; /* মোবাইল এবং ডেস্কটপে ফাঁকা স্থান */
   width: 90%;
   max-width: 1200px;
   align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
@@ -57,15 +57,13 @@ body {
 .hero-left {
   width: 30%; /* আনুমানিক প্রস্থ */
   text-align: left; /* ভেতরের লেখা বাম দিকে */
-  margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
   display: flex;
   flex-direction: column;
-  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
+  align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
 }
 
 .hero-middle {
   width: auto; /* ছবির জন্য অটো প্রস্থ */
-  margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-right {
@@ -73,12 +71,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
-  margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-identity {
-  text-align: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে */
-  margin-bottom: 0.5rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
+  text-align: left; /* ডেস্কটপে বাম দিকে */
+  margin-bottom: 1rem; /* মোবাইলে স্পেস */
 }
 
 .hero-identity h1 {
@@ -93,14 +90,15 @@ body {
 
 .signature {
   display: block;
-  width: 150px; /* মোবাইলে সিগনেচারের আকার কমিয়ে দিন */
+  width: 200px; /* ডেস্কটপে সিগনেচারের আকার */
   height: auto;
-  margin-bottom: 0.5rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
+  margin-top: 0.3rem; /* নামের নিচে স্পেস */
 }
 
 .profession {
   color: #ffb74d;
   font-size: 1.2rem;
+  margin-top: 0.5rem; /* সিগনেচারের নিচে স্পেস */
 }
 
 .hero-img {
@@ -118,21 +116,19 @@ body {
 
 .hero-buttons {
   display: flex;
-  flex-direction: column; /* উপরে নিচে বাটন */
-  gap: 0.5rem; /* মোবাইলে বাটনের মধ্যে ফাঁকা স্থান কমিয়ে দিন */
-  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে */
-  margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
+  gap: 0.5rem; /* বাটনের মধ্যে স্পেস */
+  align-items: center;
   width: 100%; /* বাটন ধারকের প্রস্থ */
 }
 
 .btn {
-  padding: 0.75rem 1.5rem; /* মোবাইলে প্যাডিং কমিয়ে দিন */
+  padding: 0.75rem 1.5rem;
   border-radius: 25px; /* আরও গোলাকার */
-  font-size: 1rem; /* মোবাইলে ফন্টের আকার কমিয়ে দিন */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%; /* বাটন পুরো প্রস্থ নেবে */
-  text-decoration: none; /* লিঙ্কের আন্ডারলাইন সরানোর জন্য */
-  text-align: center; /* বাটনের লেখা কেন্দ্রে */
+  text-decoration: none;
+  text-align: center;
 }
 
 .btn.discuss {
@@ -155,34 +151,28 @@ body {
 /* ডেস্কটপ ভার্সনের জন্য */
 @media (min-width: 769px) {
   .hero-content {
-    align-items: center; /* উল্লম্বভাবে মাঝখানে সারিবদ্ধ */
-    gap: 2rem; /* ডেস্কটপে ফাঁকা স্থান */
+    align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
+    gap: 2rem;
   }
 
   .hero-left {
     align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
-    margin-bottom: 0; /* ডেস্কটপে মার্জিন */
   }
 
   .hero-right {
-    align-items: flex-end; /* ডেস্কটপে ডান দিকে সারিবদ্ধ */
-    margin-top: 0; /* ডেস্কটপে মার্জিন */
+    align-items: center; /* ডেস্কটপে কেন্দ্রে */
+    flex-direction: row; /* পাশাপাশি বাটন */
   }
 
   .hero-buttons {
-    align-items: flex-end; /* ডেস্কটপে ডান দিকে সারিবদ্ধ */
-    gap: 1rem; /* ডেস্কটপে বাটনের মধ্যে ফাঁকা স্থান */
-    width: auto; /* ডেস্কটপে অটো প্রস্থ */
-  }
-
-  .signature {
-    width: 200px; /* ডেস্কটপে সিগনেচারের আকার */
+    flex-direction: row; /* পাশাপাশি বাটন */
+    align-items: center;
+    width: auto; /* অটো প্রস্থ */
   }
 
   .btn {
-    padding: 1rem 2rem; /* ডেস্কটপে প্যাডিং */
-    font-size: 1.1rem; /* ডেস্কটপে ফন্টের আকার */
-    width: auto; /* ডেস্কটপে অটো প্রস্থ */
+    width: auto; /* অটো প্রস্থ */
+    margin: 0 0.5rem; /* বাটনের মধ্যে স্পেস */
   }
 }
 
@@ -198,7 +188,7 @@ body {
     width: 100%; /* মোবাইলে পুরো প্রস্থ */
     align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
     text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
-    margin-bottom: 1rem; /* মোবাইলে মার্জিন */
+    margin-bottom: 2rem; /* নাম অংশের নিচে স্পেস */
   }
 
   .hero-right {
@@ -207,7 +197,7 @@ body {
   }
 
   .hero-buttons {
-    align-items: center; /* মোবাইলে বাটন মাঝে */
+    flex-direction: column; /* মোবাইলে উপরে নিচে বাটন */
     gap: 0.5rem;
     width: 100%;
   }
@@ -215,12 +205,6 @@ body {
   .btn {
     width: 100%;
     text-align: center;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-  }
-
-  .signature {
-    width: 120px;
   }
 }
 
