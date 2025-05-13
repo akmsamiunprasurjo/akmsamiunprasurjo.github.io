@@ -46,7 +46,7 @@ body {
 
 .hero-content {
   display: flex;
-  gap: 2rem;
+  gap: 1rem; /* মোবাইল এবং ডেস্কটপে ফাঁকা স্থান কমিয়ে দিন */
   width: 90%;
   max-width: 1200px;
   align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
@@ -57,10 +57,12 @@ body {
 .hero-left {
   width: 30%; /* আনুমানিক প্রস্থ */
   text-align: left; /* ভেতরের লেখা বাম দিকে */
+  margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-middle {
   width: auto; /* ছবির জন্য অটো প্রস্থ */
+  margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-right {
@@ -68,10 +70,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* ভেতরের বাটন ডান দিকে */
+  margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-identity {
   text-align: left; /* ডেস্কটপে বাম দিকে */
+  margin-bottom: 0.5rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-identity h1 {
@@ -86,9 +90,9 @@ body {
 
 .signature {
   display: block;
-  width: 200px;
+  width: 150px; /* মোবাইলে সিগনেচারের আকার কমিয়ে দিন */
   height: auto;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .profession {
@@ -112,16 +116,18 @@ body {
 .hero-buttons {
   display: flex;
   flex-direction: column; /* উপরে নিচে বাটন */
-  gap: 1rem;
+  gap: 0.5rem; /* মোবাইলে বাটনের মধ্যে ফাঁকা স্থান কমিয়ে দিন */
   align-items: flex-end;
+  margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .btn {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem; /* মোবাইলে প্যাডিং কমিয়ে দিন */
   border-radius: 25px; /* আরও গোলাকার */
-  font-size: 1.1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+  font-size: 1rem; /* মোবাইলে ফন্টের আকার কমিয়ে দিন */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
   width: auto;
+  text-decoration: none; /* লিঙ্কের আন্ডারলাইন সরানোর জন্য */
 }
 
 .btn.discuss {
@@ -140,32 +146,40 @@ body {
   background: #ffb74d;
   box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
 }
-.btn { /* অথবা তোমার বাটনের জন্য ব্যবহৃত ক্লাস */
-  text-decoration: none; /* আন্ডারলাইন সরানোর জন্য */
-  /* অন্যান্য স্টাইল */
-}
 
-.btn:hover { /* হোভার করলে যদি আন্ডারলাইন দেখাতে চাও */
-  /* text-decoration: underline; */
-}
 /* ডেস্কটপ ভার্সনের জন্য */
 @media (min-width: 769px) {
   .hero-content {
     align-items: center; /* উল্লম্বভাবে মাঝখানে সারিবদ্ধ */
+    gap: 2rem; /* ডেস্কটপে ফাঁকা স্থান */
   }
-}
-/* স্টাইলিশ বাটন */
 
-.btn {
+  .hero-left {
+    margin-bottom: 0; /* ডেস্কটপে মার্জিন */
+  }
 
-  padding: 1rem 2rem;
+  .hero-middle {
+    margin-bottom: 0; /* ডেস্কটপে মার্জিন */
+  }
 
-  border-radius: 25px; /* আরও গোলাকার */
+  .hero-right {
+    margin-top: 0; /* ডেস্কটপে মার্জিন */
+    align-items: flex-end;
+  }
 
-  font-size: 1.1rem;
+  .hero-buttons {
+    gap: 1rem; /* ডেস্কটপে বাটনের মধ্যে ফাঁকা স্থান */
+    align-items: flex-end;
+  }
 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+  .signature {
+    width: 200px; /* ডেস্কটপে সিগনেচারের আকার */
+  }
 
+  .btn {
+    padding: 1rem 2rem; /* ডেস্কটপে প্যাডিং */
+    font-size: 1.1rem; /* ডেস্কটপে ফন্টের আকার */
+  }
 }
 
 /* মোবাইল স্ক্রিনের জন্য */
@@ -173,6 +187,7 @@ body {
   .hero-content {
     flex-direction: column; /* মোবাইলে উপরে নিচে */
     align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
+    gap: 1rem;
   }
 
   .hero-left,
@@ -181,11 +196,12 @@ body {
     width: 100%; /* মোবাইলে পুরো প্রস্থ */
     align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
     text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
-    margin-bottom: 2rem; /* মোবাইলে নিচের মার্জিন */
+    margin-bottom: 1rem; /* মোবাইলে মার্জিন */
   }
 
   .hero-buttons {
     align-items: center; /* মোবাইলে বাটন মাঝে */
+    gap: 0.5rem;
   }
 }
 
@@ -197,10 +213,13 @@ body {
 
   .btn {
     width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
   }
 
   .signature {
-    width: 150px;
+    width: 120px;
   }
 }
 /* Sections */
