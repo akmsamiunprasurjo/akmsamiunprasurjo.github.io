@@ -69,7 +69,7 @@ body {
 .hero-right {
   width: 30%; /* আনুমানিক প্রস্থ */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* বাটনগুলো উপরে নিচে */
   align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
 }
 
@@ -116,6 +116,7 @@ body {
 
 .hero-buttons {
   display: flex;
+  flex-direction: column; /* বাটনগুলো উপরে নিচে */
   gap: 0.5rem; /* বাটনের মধ্যে স্পেস */
   align-items: center;
   width: 100%; /* বাটন ধারকের প্রস্থ */
@@ -161,18 +162,18 @@ body {
 
   .hero-right {
     align-items: center; /* ডেস্কটপে কেন্দ্রে */
-    flex-direction: row; /* পাশাপাশি বাটন */
+    flex-direction: column; /* বাটনগুলো উপরে নিচে */
   }
 
   .hero-buttons {
-    flex-direction: row; /* পাশাপাশি বাটন */
+    flex-direction: column; /* বাটনগুলো উপরে নিচে */
     align-items: center;
     width: auto; /* অটো প্রস্থ */
   }
 
   .btn {
     width: auto; /* অটো প্রস্থ */
-    margin: 0 0.5rem; /* বাটনের মধ্যে স্পেস */
+    margin: 0.5rem 0; /* বাটনের মধ্যে স্পেস */
   }
 }
 
@@ -198,6 +199,7 @@ body {
 
   .hero-buttons {
     flex-direction: column; /* মোবাইলে উপরে নিচে বাটন */
+    align-items: center;
     gap: 0.5rem;
     width: 100%;
   }
