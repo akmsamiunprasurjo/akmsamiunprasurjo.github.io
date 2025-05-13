@@ -58,6 +58,9 @@ body {
   width: 30%; /* আনুমানিক প্রস্থ */
   text-align: left; /* ভেতরের লেখা বাম দিকে */
   margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
 }
 
 .hero-middle {
@@ -156,6 +159,7 @@ body {
 
   .hero-left {
     margin-bottom: 0; /* ডেস্কটপে মার্জিন */
+    align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
   }
 
   .hero-middle {
@@ -190,9 +194,7 @@ body {
     gap: 1rem;
   }
 
-  .hero-left,
-  .hero-middle,
-  .hero-right {
+  .hero-left {
     width: 100%; /* মোবাইলে পুরো প্রস্থ */
     align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
     text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
@@ -228,7 +230,6 @@ h2 {
   text-align:center; font-size:2.4rem;
   color:#ffa726; margin-bottom:2rem;
 }
-
 /* About */
 .about p {
   max-width:800px; margin:0 auto;
