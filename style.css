@@ -60,7 +60,7 @@ body {
   margin-bottom: 1rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
+  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
 }
 
 .hero-middle {
@@ -72,12 +72,12 @@ body {
   width: 30%; /* আনুমানিক প্রস্থ */
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* ভেতরের বাটন ডান দিকে */
+  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
   margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
 .hero-identity {
-  text-align: left; /* ডেস্কটপে বাম দিকে */
+  text-align: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে */
   margin-bottom: 0.5rem; /* মোবাইলে মার্জিন কমিয়ে দিন */
 }
 
@@ -120,8 +120,9 @@ body {
   display: flex;
   flex-direction: column; /* উপরে নিচে বাটন */
   gap: 0.5rem; /* মোবাইলে বাটনের মধ্যে ফাঁকা স্থান কমিয়ে দিন */
-  align-items: flex-end;
+  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে */
   margin-top: 0; /* মোবাইলে মার্জিন কমিয়ে দিন */
+  width: 100%; /* বাটন ধারকের প্রস্থ */
 }
 
 .btn {
@@ -129,8 +130,9 @@ body {
   border-radius: 25px; /* আরও গোলাকার */
   font-size: 1rem; /* মোবাইলে ফন্টের আকার কমিয়ে দিন */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
-  width: auto;
+  width: 100%; /* বাটন পুরো প্রস্থ নেবে */
   text-decoration: none; /* লিঙ্কের আন্ডারলাইন সরানোর জন্য */
+  text-align: center; /* বাটনের লেখা কেন্দ্রে */
 }
 
 .btn.discuss {
@@ -158,22 +160,19 @@ body {
   }
 
   .hero-left {
-    margin-bottom: 0; /* ডেস্কটপে মার্জিন */
     align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
-  }
-
-  .hero-middle {
     margin-bottom: 0; /* ডেস্কটপে মার্জিন */
   }
 
   .hero-right {
+    align-items: flex-end; /* ডেস্কটপে ডান দিকে সারিবদ্ধ */
     margin-top: 0; /* ডেস্কটপে মার্জিন */
-    align-items: flex-end;
   }
 
   .hero-buttons {
+    align-items: flex-end; /* ডেস্কটপে ডান দিকে সারিবদ্ধ */
     gap: 1rem; /* ডেস্কটপে বাটনের মধ্যে ফাঁকা স্থান */
-    align-items: flex-end;
+    width: auto; /* ডেস্কটপে অটো প্রস্থ */
   }
 
   .signature {
@@ -183,6 +182,7 @@ body {
   .btn {
     padding: 1rem 2rem; /* ডেস্কটপে প্যাডিং */
     font-size: 1.1rem; /* ডেস্কটপে ফন্টের আকার */
+    width: auto; /* ডেস্কটপে অটো প্রস্থ */
   }
 }
 
@@ -201,27 +201,39 @@ body {
     margin-bottom: 1rem; /* মোবাইলে মার্জিন */
   }
 
+  .hero-right {
+    align-items: center; /* মোবাইলে বাটন মাঝে */
+    width: 100%;
+  }
+
   .hero-buttons {
     align-items: center; /* মোবাইলে বাটন মাঝে */
     gap: 0.5rem;
-  }
-}
-
-/* ছোট মোবাইল স্ক্রিনের জন্য */
-@media (max-width: 480px) {
-  .hero-buttons {
     width: 100%;
   }
 
   .btn {
     width: 100%;
+    text-align: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .signature {
+    width: 120px;
+  }
+}
+
+/* ছোট মোবাইল স্ক্রিনের জন্য */
+@media (max-width: 480px) {
+  .btn {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     border-radius: 20px;
   }
 
   .signature {
-    width: 120px;
+    width: 100px;
   }
 }
 /* Sections */
