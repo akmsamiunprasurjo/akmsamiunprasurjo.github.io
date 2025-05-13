@@ -79,7 +79,6 @@ body {
   margin-bottom: 0.3rem;
   color: #fff;
   font-weight: 900;
-  font-style: italic;
   font-family: 'Poppins', sans-serif;
   line-height: 1.2;
   white-space: pre-wrap;
@@ -147,6 +146,19 @@ body {
   .hero-content {
     align-items: center; /* উল্লম্বভাবে মাঝখানে সারিবদ্ধ */
   }
+}
+/* স্টাইলিশ বাটন */
+
+.btn {
+
+  padding: 1rem 2rem;
+
+  border-radius: 25px; /* আরও গোলাকার */
+
+  font-size: 1.1rem;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+
 }
 
 /* মোবাইল স্ক্রিনের জন্য */
