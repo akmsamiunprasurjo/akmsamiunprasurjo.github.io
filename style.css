@@ -86,7 +86,6 @@ body {
   margin-bottom: 0.3rem;
   color: #fff;
   font-weight: 900; /* Black এর জন্য */
-  font-style: italic; /* Italic এর জন্য */
   font-family: 'Poppins', sans-serif; /* Poppins ফন্ট ব্যবহার করার জন্য */
   line-height: 1.2;
   white-space: pre-wrap;
