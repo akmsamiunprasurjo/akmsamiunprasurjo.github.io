@@ -140,7 +140,14 @@ body {
   background: #ffb74d;
   box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
 }
+.btn { /* অথবা তোমার বাটনের জন্য ব্যবহৃত ক্লাস */
+  text-decoration: none; /* আন্ডারলাইন সরানোর জন্য */
+  /* অন্যান্য স্টাইল */
+}
 
+.btn:hover { /* হোভার করলে যদি আন্ডারলাইন দেখাতে চাও */
+  /* text-decoration: underline; */
+}
 /* ডেস্কটপ ভার্সনের জন্য */
 @media (min-width: 769px) {
   .hero-content {
