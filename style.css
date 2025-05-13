@@ -2,258 +2,318 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body {
-  font-family:'Poppins',sans-serif;
-  background:#1f1f1f; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড হালকা কালো */
-  color:#fff;
-  line-height:1.6;
+    font-family:'Poppins',sans-serif;
+    background:#1f1f1f; /* পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড হালকা কালো */
+    color:#fff;
+    line-height:1.6;
 }
 /* Navbar */
 .navbar {
-  background:#121212; padding:1rem 2rem;
-  position:sticky; top:0; z-index:1000;
+    background:#121212; padding:1rem 2rem;
+    position:sticky; top:0; z-index:1000;
 }
 .nav-container {
-  display:flex; align-items:center; justify-content:space-between;
+    display:flex; align-items:center; justify-content:space-between;
 }
 .logo { font-size:1.5rem; font-weight:700; color:#fff; }
 .nav-links {
-  list-style:none; display:flex; gap:1.5rem;
+    list-style:none; display:flex; gap:1.5rem;
 }
 .nav-links a {
-  color:#ccc; text-decoration:none; font-weight:500;
-  transition:color .3s;
+    color:#ccc; text-decoration:none; font-weight:500;
+    transition:color .3s;
 }
 .nav-links a:hover { color:#ffae42; }
 
 /* Hamburger */
 .menu-toggle {
-  display:none; flex-direction:column; cursor:pointer;
+    display:none; flex-direction:column; cursor:pointer;
 }
 .menu-toggle .bar {
-  width:25px; height:3px; background:#ff9800;
-  margin:4px 0; border-radius:2px;
+    width:25px; height:3px; background:#ff9800;
+    margin:4px 0; border-radius:2px;
+}
+
+/* Desktop Menu Toggle */
+.desktop-menu-toggle {
+    display: none; /* Initially hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
+
+.desktop-menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: #ff9800;
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Initially hide nav-links on desktop */
+@media (min-width: 769px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #121212;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        height: auto; /* Adjust as needed */
+        z-index: 999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .desktop-menu-toggle {
+        display: flex; /* Show the button on desktop */
+    }
+
+    .logo {
+        margin-right: auto; /* Push logo to the left */
+    }
+}
+
+/* Adjustments for smaller desktops if needed */
+@media (max-width: 960px) and (min-width: 769px) {
+    .nav-container {
+        padding: 1rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
 }
 
 /* Hero Section Modified */
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 2rem;
-  background: #1f1f1f;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: #1f1f1f;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-  display: flex;
-  gap: 2rem; /* মোবাইল এবং ডেস্কটপে ফাঁকা স্থান */
-  width: 90%;
-  max-width: 1200px;
-  align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
-  justify-content: space-between; /* বাম, মাঝ, ডানের মধ্যে স্পেস */
-  flex-direction: row; /* ডেস্কটপে পাশাপাশি */
+    display: flex;
+    gap: 2rem; /* মোবাইল এবং ডেস্কটপে ফাঁকা স্থান */
+    width: 90%;
+    max-width: 1200px;
+    align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
+    justify-content: space-between; /* বাম, মাঝ, ডানের মধ্যে স্পেস */
+    flex-direction: row; /* ডেস্কটপে পাশাপাশি */
 }
 
 .hero-left {
-  width: 30%; /* আনুমানিক প্রস্থ */
-  text-align: left; /* ভেতরের লেখা বাম দিকে */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
+    width: 30%; /* আনুমানিক প্রস্থ */
+    text-align: left; /* ভেতরের লেখা বাম দিকে */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
 }
 
 .hero-middle {
-  width: auto; /* ছবির জন্য অটো প্রস্থ */
+    width: auto; /* ছবির জন্য অটো প্রস্থ */
 }
 
 .hero-right {
-  width: 30%; /* আনুমানিক প্রস্থ */
-  display: flex;
-  flex-direction: column; /* বাটনগুলো উপরে নিচে */
-  align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
+    width: 30%; /* আনুমানিক প্রস্থ */
+    display: flex;
+    flex-direction: column; /* বাটনগুলো উপরে নিচে */
+    align-items: center; /* ডেস্কটপে এবং মোবাইলে কেন্দ্রে সারিবদ্ধ */
 }
 
 .hero-identity {
-  text-align: left; /* ডেস্কটপে বাম দিকে */
-  margin-bottom: 1rem; /* মোবাইলে স্পেস */
+    text-align: left; /* ডেস্কটপে বাম দিকে */
+    margin-bottom: 1rem; /* মোবাইলে স্পেস */
 }
 
 .hero-identity h1 {
-  font-size: 3rem;
-  margin-bottom: 0.3rem;
-  color: #fff;
-  font-weight: 900;
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.2;
-  white-space: pre-wrap;
+    font-size: 3rem;
+    margin-bottom: 0.3rem;
+    color: #fff;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    white-space: pre-wrap;
 }
 
 .signature {
-  display: block;
-  width: 200px; /* ডেস্কটপে সিগনেচারের আকার */
-  height: auto;
-  margin-top: 0.3rem; /* নামের নিচে স্পেস */
+    display: block;
+    width: 200px; /* ডেস্কটপে সিগনেচারের আকার */
+    height: auto;
+    margin-top: 0.3rem; /* নামের নিচে স্পেস */
 }
 
 .profession {
-  color: #ffb74d;
-  font-size: 1.2rem;
-  margin-top: 0.5rem; /* সিগনেচারের নিচে স্পেস */
+    color: #ffb74d;
+    font-size: 1.2rem;
+    margin-top: 0.5rem; /* সিগনেচারের নিচে স্পেস */
 }
 
 .hero-img {
-  max-width: 300px;
+    max-width: 300px;
 }
 
 .hero-img img {
-  width: 100%;
-  border-radius: 40px;
-  object-fit: cover;
-  border: 4px solid #ff9800;
-  background: #121212;
-  box-shadow: 0 0 20px #ff9800;
+    width: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+    border: 4px solid #ff9800;
+    background: #121212;
+    box-shadow: 0 0 20px #ff9800;
 }
 
 .hero-buttons {
-  display: flex;
-  flex-direction: column; /* বাটনগুলো উপরে নিচে */
-  gap: 0.75rem; /* বাটনের মধ্যে স্পেস */
-  align-items: center;
-  width: 100%; /* বাটন ধারকের প্রস্থ */
+    display: flex;
+    flex-direction: column; /* বাটনগুলো উপরে নিচে */
+    gap: 0.75rem; /* বাটনের মধ্যে স্পেস */
+    align-items: center;
+    width: 100%; /* বাটন ধারকের প্রস্থ */
 }
 
 .btn {
-  padding: 0.8rem 2rem; /* প্যাডিং বৃদ্ধি */
-  border-radius: 25px; /* আরও গোলাকার */
-  font-size: 1.1rem; /* ফন্টের আকার বৃদ্ধি */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 100%; /* বাটন পুরো প্রস্থ নেবে */
-  text-decoration: none;
-  text-align: center;
-  font-weight: 600; /* হালকা মোটা */
+    padding: 0.8rem 2rem; /* প্যাডিং বৃদ্ধি */
+    border-radius: 25px; /* আরও গোলাকার */
+    font-size: 1.1rem; /* ফন্টের আকার বৃদ্ধি */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 100%; /* বাটন পুরো প্রস্থ নেবে */
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600; /* হালকা মোটা */
 }
 
 .btn.discuss {
-  background: #7e57c2;
+    background: #7e57c2;
 }
 
 .btn.discuss:hover {
-  background: #9575cd;
+    background: #9575cd;
 }
 
 .btn.download {
-  background: #ff9800;
+    background: #ff9800;
 }
 
 .btn.download:hover {
-  background: #ffb74d;
-  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
+    background: #ffb74d;
+    box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800;
 }
 
 /* ডেস্কটপ ভার্সনের জন্য */
 @media (min-width: 769px) {
-  .hero-content {
-    align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
-    gap: 2rem;
-  }
+    .hero-content {
+        align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
+        gap: 2rem;
+    }
 
-  .hero-left {
-    align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
-  }
+    .hero-left {
+        align-items: flex-start; /* ডেস্কটপে বাম দিকে সারিবদ্ধ */
+    }
 
-  .hero-right {
-    align-items: center; /* ডেস্কটপে কেন্দ্রে */
-    flex-direction: column; /* বাটনগুলো উপরে নিচে */
-  }
+    .hero-right {
+        align-items: center; /* ডেস্কটপে কেন্দ্রে */
+        flex-direction: column; /* বাটনগুলো উপরে নিচে */
+    }
 
-  .hero-buttons {
-    flex-direction: column; /* বাটনগুলো উপরে নিচে */
-    align-items: center;
-    width: auto; /* অটো প্রস্থ */
-    gap: 0.75rem;
-  }
+    .hero-buttons {
+        flex-direction: column; /* বাটনগুলো উপরে নিচে */
+        align-items: center;
+        width: auto; /* অটো প্রস্থ */
+        gap: 0.75rem;
+    }
 
-  .btn {
-    width: auto; /* অটো প্রস্থ */
-    margin: 0.75rem 0; /* বাটনের মধ্যে স্পেস */
-    padding: 0.9rem 2.2rem; /* প্যাডিং বৃদ্ধি */
-    font-size: 1.1rem;
-  }
+    .btn {
+        width: auto; /* অটো প্রস্থ */
+        margin: 0.75rem 0; /* বাটনের মধ্যে স্পেস */
+        padding: 0.9rem 2.2rem; /* প্যাডিং বৃদ্ধি */
+        font-size: 1.1rem;
+    }
 }
 
 /* মোবাইল স্ক্রিনের জন্য */
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column; /* মোবাইলে উপরে নিচে */
-    align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
-    gap: 1rem;
-  }
+    .hero-content {
+        flex-direction: column; /* মোবাইলে উপরে নিচে */
+        align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
+        gap: 1rem;
+    }
 
-  .hero-left {
-    width: 100%; /* মোবাইলে পুরো প্রস্থ */
-    align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
-    text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
-    margin-bottom: 2rem; /* নাম অংশের নিচে স্পেস */
-  }
+    .hero-left {
+        width: 100%; /* মোবাইলে পুরো প্রস্থ */
+        align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
+        text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
+        margin-bottom: 2rem; /* নাম অংশের নিচে স্পেস */
+    }
 
-  .hero-right {
-    align-items: center; /* মোবাইলে বাটন মাঝে */
-    width: 100%;
-  }
+    .hero-right {
+        align-items: center; /* মোবাইলে বাটন মাঝে */
+        width: 100%;
+    }
 
-  .hero-buttons {
-    flex-direction: column; /* মোবাইলে উপরে নিচে বাটন */
-    align-items: center;
-    gap: 0.75rem;
-    width: 100%;
-  }
+    .hero-buttons {
+        flex-direction: column; /* মোবাইলে উপরে নিচে বাটন */
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+    }
 
-  .btn {
-    width: 100%;
-    text-align: center;
-    padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-  }
+    .btn {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 2rem;
+        font-size: 1.1rem;
+    }
 }
 
 /* ছোট মোবাইল স্ক্রিনের জন্য */
 @media (max-width: 480px) {
-  .btn {
-    padding: 0.6rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 20px;
-  }
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 20px;
+    }
 
-  .signature {
-    width: 100px;
-  }
+    .signature {
+        width: 100px;
+    }
 }
 /* Sections */
 section { padding:4rem 2rem; }
 h2 {
-  text-align:center; font-size:2.4rem;
-  color:#ffa726; margin-bottom:2rem;
+    text-align:center; font-size:2.4rem;
+    color:#ffa726; margin-bottom:2rem;
 }
 /* About */
 .about p {
-  max-width:800px; margin:0 auto;
-  font-size:1.1rem; color:#ddd;
+    max-width:800px; margin:0 auto;
+    font-size:1.1rem; color:#ddd;
 }
 
 /* Card Grid */
 .card-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:1.5rem; margin-top:2rem;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:1.5rem; margin-top:2rem;
 }
 .info-card {
-  background:#1a1a1a; padding:1.5rem; border-radius:10px;
-  box-shadow:0 0 10px rgba(255,152,0,0.1);
-  transition:transform .3s,box-shadow .3s;
+    background:#1a1a1a; padding:1.5rem; border-radius:10px;
+    box-shadow:0 0 10px rgba(255,152,0,0.1);
+    transition:transform .3s,box-shadow .3s;
 }
 .info-card:hover {
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(255,152,0,0.2);
+    transform:translateY(-5px);
+    box-shadow:0 0 15px rgba(255,152,0,0.2);
 }
 .info-card h3 { color:#ff9800; margin-bottom:.5rem; }
 .info-card p { color:#ccc; font-size:.95rem; line-height:1.4; }
@@ -262,109 +322,109 @@ h2 {
 .achievements { text-align:center; }
 .achievements h2 { font-size:2.2rem; margin-bottom:2.5rem; }
 .achievement-boxes {
-  display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;
 }
 .achievement {
-  background:#1a1a1a; padding:2rem; border-radius:10px;
-  width:250px; box-shadow:0 0 10px rgba(255,152,0,0.15);
-  transition:transform .3s,box-shadow .3s;
+    background:#1a1a1a; padding:2rem; border-radius:10px;
+    width:250px; box-shadow:0 0 10px rgba(255,152,0,0.15);
+    transition:transform .3s,box-shadow .3s;
 }
 .achievement:hover {
-  transform:translateY(-5px);
-  box-shadow:0 0 15px rgba(255,152,0,0.3);
+    transform:translateY(-5px);
+    box-shadow:0 0 15px rgba(255,152,0,0.3);
 }
 .achievement h3 {
-  font-size:2.5rem; color:#ff9800; margin-bottom:.5rem;
+    font-size:2.5rem; color:#ff9800; margin-bottom:.5rem;
 }
 .achievement p { color:#ccc; font-size:1.1rem; }
 .testimonial-section {
-  padding: 60px 20px;
-  background-color: #0d0d0d;
-  color: white;
-  text-align: center;
+    padding: 60px 20px;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
 }
 
 /* === Testimonials Section === */
 .testimonial-section {
-  text-align: center;
-  padding: 3rem 0;
-  background: #111;
+    text-align: center;
+    padding: 3rem 0;
+    background: #111;
 }
 
 .section-title {
-  font-size: 2rem;
-  color: #fff;
-  margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
 }
 
 .section-title span {
-  color: #ff9800;
+    color: #ff9800;
 }
 
 .testimonial-slider {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
-  min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    min-height: 360px; /* Fix for mobile: ensures height exists even when flex misbehaves */
 }
 .testimonial-container {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%; /* FIX: No fixed width like 400% */
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* FIX: No fixed width like 400% */
 }
 
 .testimonial {
-  flex: 0 0 100%;
-  min-width: 100%;
-  box-sizing: border-box;
-  background: #1a1a1a;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  color: #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    background: #1a1a1a;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .testimonial img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #ff9800;
-  margin-bottom: 1rem;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff9800;
+    margin-bottom: 1rem;
 }
 
 .testimonial-name {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .testimonial-name a {
-  color: #ff9800;
-  text-decoration: none;
+    color: #ff9800;
+    text-decoration: none;
 }
 
 .testimonial-text {
-  font-style: italic;
-  font-size: 1.1rem;
-  max-width: 600px;
-  line-height: 1.6;
+    font-style: italic;
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
 }
 
 .nav-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #ff9800;
-  cursor: pointer;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(--50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ff9800;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .prev { left: 10px; }
@@ -372,173 +432,173 @@ h2 {
 
 /* === Mobile Adjustments === */
 @media only screen and (max-width: 768px) {
-  .testimonial {
-    flex: 0 0 100%; /* Each testimonial takes full width */
-    padding: 1.5rem 0.5rem; /* Adjust padding for smaller screens */
-  }
+    .testimonial {
+        flex: 0 0 100%; /* Each testimonial takes full width */
+        padding: 1.5rem 0.5rem; /* Adjust padding for smaller screens */
+    }
 
-  .testimonial img {
-    width: 80px; /* Reduce image size for smaller screens */
-    height: 80px; /* Keep it proportional */
-  }
+    .testimonial img {
+        width: 80px; /* Reduce image size for smaller screens */
+        height: 80px; /* Keep it proportional */
+    }
 
-  .testimonial-name {
-    font-size: 1rem; /* Slightly smaller name */
-  }
+    .testimonial-name {
+        font-size: 1rem; /* Slightly smaller name */
+    }
 
-  .testimonial-text {
-    font-size: 1rem; /* Smaller font size for readability */
-    max-width: 90%; /* Allow the text to be responsive */
-  }
+    .testimonial-text {
+        font-size: 1rem; /* Smaller font size for readability */
+        max-width: 90%; /* Allow the text to be responsive */
+    }
 
-  .nav-btn {
-    font-size: 1.5rem; /* Smaller navigation buttons on mobile */
-  }
+    .nav-btn {
+        font-size: 1.5rem; /* Smaller navigation buttons on mobile */
+    }
 
-  .hero-identity {
-    text-align: center; /* Center the name and signature on smaller screens */
-    margin-bottom: 1rem;
-  }
+    .hero-identity {
+        text-align: center; /* Center the name and signature on smaller screens */
+        margin-bottom: 1rem;
+    }
 
-  .hero-identity h1 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
+    .hero-identity h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
 
-  .signature {
-    width: 120px; /* Adjust signature size for smaller screens */
-  }
+    .signature {
+        width: 120px; /* Adjust signature size for smaller screens */
+    }
 
-  .profession {
-    font-size: 1rem; /* Adjust profession size for smaller screens */
-  }
+    .profession {
+        font-size: 1rem; /* Adjust profession size for smaller screens */
+    }
 }
 
 /* For extra small devices */
 @media only screen and (max-width: 480px) {
-  .section-title {
-    font-size: 1.5rem; /* Smaller section title */
-  }
+    .section-title {
+        font-size: 1.5rem; /* Smaller section title */
+    }
 }
 
 
 /* Contact Form */
 .form-box {
-  background:#1a1a1a; padding:3rem 2rem;
-  max-width:800px; margin:0 auto 4rem;
-  border-radius:10px; text-align:center;
-  box-shadow:0 0 15px rgba(255,152,0,0.2);
+    background:#1a1a1a; padding:3rem 2rem;
+    max-width:800px; margin:0 auto 4rem;
+    border-radius:10px; text-align:center;
+    box-shadow:0 0 15px rgba(255,152,0,0.2);
 }
 .form-box h2 { color:#ffa726; margin-bottom:2rem; }
 .form-box form {
-  display:flex; flex-direction:column; gap:1rem;
+    display:flex; flex-direction:column; gap:1rem;
 }
 .form-box input, .form-box textarea {
-  padding:.75rem; border:none; border-radius:5px;
-  background:#2b2b2b; color:#fff; font-size:1rem;
+    padding:.75rem; border:none; border-radius:5px;
+    background:#2b2b2b; color:#fff; font-size:1rem;
 }
 .form-box ::placeholder { color:#bbb; }
 .btn.send {
-  background:#ff9800; color:#fff; border:none; font-weight:600;
+    background:#ff9800; color:#fff; border:none; font-weight:600;
 }
 .btn.send:hover {
-  background:#ffa726;
-  box-shadow:0 0 10px #ff9800;
+    background:#ffa726;
+    box-shadow:0 0 10px #ff9800;
 }
 
 /* Footer */
 footer {
-  text-align:center; padding:2rem 1.5rem; background:#121212;
+    text-align:center; padding:2rem 1.5rem; background:#121212;
 }
 .footer-icons {
-  display:flex; justify-content:center; gap:1.5rem;
-  list-style:none; margin-bottom:1rem;
+    display:flex; justify-content:center; gap:1.5rem;
+    list-style:none; margin-bottom:1rem;
 }
 .footer-icons a {
-  color:#ff9800; font-size:1.5rem;
-  transition:color .3s;
+    color:#ff9800; font-size:1.5rem;
+    transition:color .3s;
 }
 .footer-icons a:hover { color:#ffa726; }
 footer p { color:#777; font-size:.9rem; }
 
 /* Responsive */
 @media (max-width:768px) {
-  /* hero -> column */
-  .hero-content { flex-direction:column; text-align:center; }
-  .hero-img { margin-top:2rem; }
-  .hero-img img { max-width:250px; }
+    /* hero -> column */
+    .hero-content { flex-direction:column; text-align:center; }
+    .hero-img { margin-top:2rem; }
+    .hero-img img { max-width:250px; }
 
-  .hero-identity {
-    text-align: center; /* Center the name and signature on smaller screens */
-    margin-bottom: 1rem;
-  }
+    .hero-identity {
+        text-align: center; /* Center the name and signature on smaller screens */
+        margin-bottom: 1rem;
+    }
 
-  .hero-identity h1 {
-    font-size: 2rem; /* Adjust font size for smaller screens */
-  }
+    .hero-identity h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
 
-  .signature {
-    width: 120px; /* Adjust signature size for smaller screens */
-  }
+    .signature {
+        width: 120px; /* Adjust signature size for smaller screens */
+    }
 
-  .profession {
-    font-size: 1rem; /* Adjust profession size for smaller screens */
-  }
+    .profession {
+        font-size: 1rem; /* Adjust profession size for smaller screens */
+    }
 
-  /* buttons */
-  .buttons { justify-content:center; flex-wrap:wrap; }
+    /* buttons */
+    .buttons { justify-content:center; flex-wrap:wrap; }
 
-  /* hamburger */
-  .menu-toggle { display:flex; }
-  .nav-links {
-    position:absolute; top:70px; left:-100%;
-    background:#121212; width:100%;
-    height:calc(100vh-70px);
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    gap:2rem; transition:.3s;
-  }
-  .nav-links.active { left:0; }
+    /* hamburger */
+    .menu-toggle { display:flex; }
+    .nav-links {
+        position:absolute; top:70px; left:-100%;
+        background:#121212; width:100%;
+        height:calc(100vh-70px);
+        display:flex; flex-direction:column;
+        align-items:center; justify-content:center;
+        gap:2rem; transition:.3s;
+    }
+    .nav-links.active { left:0; }
 }
 .section-box {
-  background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
-  color: #fff; /* ভেতরের লেখার রং সাদা (প্রয়োজনে পরিবর্তন করা যাবে) */
-  padding: 2rem; /* ভেতরের স্পেস */
-  margin-bottom: 2rem; /* বক্সগুলোর মধ্যে নিচের দিকে স্পেস */
-  border-radius: 10px; /* হালকা কোণা গোল (ঐচ্ছিক) */
+    background-color: #000; /* কালো ব্যাকগ্রাউন্ড */
+    color: #fff; /* ভেতরের লেখার রং সাদা (প্রয়োজনে পরিবর্তন করা যাবে) */
+    padding: 2rem; /* ভেতরের স্পেস */
+    margin-bottom: 2rem; /* বক্সগুলোর মধ্যে নিচের দিকে স্পেস */
+    border-radius: 10px; /* হালকা কোণা গোল (ঐচ্ছিক) */
 }
 
 /* হিরো সেকশনের জন্য আলাদা স্টাইল (ব্যাকগ্রাউন্ড কালো এবং ভেতরের প্যাডিং) */
 .hero {
-  background-color: #000;
-  padding: 4rem 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+    background-color: #000;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
-/* টেস্টিমোনিয়াল সেকশনের জন্য আলাদা স্টাইল (কারণ এর ভেতরের ব্যাকগ্রাউন্ড গাঢ়) */
+/* টেস্টিমোনিয়াল সেকশনের জন্য আলাদা স্টাইল (কারণ এর ভেতরের ব্যাকগ্রাউন্ড গাঢ়) */
 .testimonial-section {
-  background-color: #000;
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+    background-color: #000;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 /* কন্টাক্ট ফর্মের জন্য */
 .form-box {
-  background-color: #000;
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+    background-color: #000;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 /* ফুটারের জন্য */
 footer {
-  background-color: #000;
-  padding: 2rem 1.5rem;
-  border-radius: 10px;
+    background-color: #000;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
 }
 
 /* সেকশনের ভেতরের হেডিং এর রং অপরিবর্তিত রাখতে */
 .section-box h2 {
-  color: #ffa726; /* অথবা আগের রং */
+    color: #ffa726; /* অথবা আগের রং */
 }
