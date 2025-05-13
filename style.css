@@ -35,7 +35,6 @@ body {
 }
 
 /* Hero Section Modified */
-/* Hero Section Modified */
 .hero {
   display: flex;
   align-items: center;
@@ -50,23 +49,29 @@ body {
   gap: 2rem;
   width: 90%;
   max-width: 1200px;
-  align-items: center;
-  justify-content: space-between; /* ডেস্কটপে স্পেস রাখবে */
-  flex-direction: column; /* মোবাইল স্ক্রিনে উপরে নিচে */
+  align-items: center; /* উল্লম্বভাবে মাঝে সারিবদ্ধ */
+  justify-content: space-between; /* বাম, মাঝ, ডানের মধ্যে স্পেস */
+  flex-direction: row; /* ডেস্কটপে পাশাপাশি */
 }
 
-.hero-left,
-.hero-middle,
+.hero-left {
+  width: 30%; /* আনুমানিক প্রস্থ */
+  text-align: left; /* ভেতরের লেখা বাম দিকে */
+}
+
+.hero-middle {
+  width: auto; /* ছবির জন্য অটো প্রস্থ */
+}
+
 .hero-right {
+  width: 30%; /* আনুমানিক প্রস্থ */
   display: flex;
   flex-direction: column;
-  align-items: center; /* মোবাইল স্ক্রিনে সব এলিমেন্ট মাঝে */
-  margin-bottom: 2rem; /* মোবাইল স্ক্রিনে এলিমেন্টের নিচে স্পেস */
-  width: 100%; /* মোবাইল স্ক্রিনে পুরো প্রস্থ */
+  align-items: flex-end; /* ভেতরের বাটন ডান দিকে */
 }
 
 .hero-identity {
-  text-align: center;
+  text-align: left; /* ডেস্কটপে বাম দিকে */
 }
 
 .hero-identity h1 {
@@ -109,18 +114,15 @@ body {
   display: flex;
   flex-direction: column; /* উপরে নিচে বাটন */
   gap: 1rem;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .btn {
-  padding: .75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background .3s, box-shadow .3s;
-  color: #fff;
-  width: auto; /* অটো প্রস্থ */
+  padding: 1rem 2rem;
+  border-radius: 25px; /* আরও গোলাকার */
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
+  width: auto;
 }
 
 .btn.discuss {
@@ -143,48 +145,43 @@ body {
 /* ডেস্কটপ ভার্সনের জন্য */
 @media (min-width: 769px) {
   .hero-content {
-    flex-direction: row; /* ডেস্কটপে পাশাপাশি */
-    justify-content: space-between;
-    align-items: flex-start; /* ডেস্কটপে টপ এলাইনমেন্ট */
+    align-items: center; /* উল্লম্বভাবে মাঝখানে সারিবদ্ধ */
+  }
+}
+
+/* মোবাইল স্ক্রিনের জন্য */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column; /* মোবাইলে উপরে নিচে */
+    align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
   }
 
   .hero-left,
   .hero-middle,
   .hero-right {
-    width: auto; /* ডেস্কটপে অটো প্রস্থ */
-    margin-bottom: 0;
-    align-items: flex-start; /* ডেস্কটপে বাম দিকে এলাইনমেন্ট */
-  }
-
-  .hero-right {
-    align-items: flex-end; /* ডান দিকে বাটন ডান এলাইনমেন্ট */
+    width: 100%; /* মোবাইলে পুরো প্রস্থ */
+    align-items: center; /* মোবাইলে মাঝে সারিবদ্ধ */
+    text-align: center; /* মোবাইলে ভেতরের লেখা মাঝে */
+    margin-bottom: 2rem; /* মোবাইলে নিচের মার্জিন */
   }
 
   .hero-buttons {
-    align-items: flex-end; /* ডান দিকে বাটন ডান এলাইনমেন্ট */
+    align-items: center; /* মোবাইলে বাটন মাঝে */
   }
 }
 
-/* স্টাইলিশ বাটন */
-.btn {
-  padding: 1rem 2rem;
-  border-radius: 25px; /* আরও গোলাকার */
-  font-size: 1.1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* হালকা শ্যাডো */
-}
 /* ছোট মোবাইল স্ক্রিনের জন্য */
 @media (max-width: 480px) {
   .hero-buttons {
-    flex-direction: column; /* আরও ছোট স্ক্রিনে উপরে নিচে */
-    width: 100%; /* ছোট স্ক্রিনে পুরো প্রস্থ জুড়ে বাটন */
+    width: 100%;
   }
 
   .btn {
-    width: 100%; /* ছোট স্ক্রিনে পুরো প্রস্থ জুড়ে বাটন */
+    width: 100%;
   }
 
   .signature {
-    width: 150px; /* ছোট স্ক্রিনে সিগনেচারের আকার কমানো */
+    width: 150px;
   }
 }
 /* Sections */
