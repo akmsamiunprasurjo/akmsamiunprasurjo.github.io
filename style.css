@@ -600,3 +600,78 @@ footer {
 .section-box h2 {
     color: #ffa726; /* অথবা আগের রং */
 }
+/* Articles Section */
+.articles {
+    padding: 4rem 2rem;
+    background-color: #1a1a1a; /* হালকা গাঢ় ব্যাকগ্রাউন্ড */
+    color: #f4f4f4; /* টেক্সটের রং */
+}
+
+.articles h1 {
+    text-align: center;
+    color: #00bfa6; /* আর্টিকেলের প্রধান শিরোনামের রং */
+    margin-bottom: 2rem;
+}
+
+.article {
+    background: #222; /* প্রতিটি আর্টিকেলের ব্যাকগ্রাউন্ড */
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.article h2 {
+    color: #00bfa6; /* আর্টিকেলের শিরোনামের রং */
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.tags {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.tags span {
+    background: #333;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border-radius: 4px;
+}
+
+.article p {
+    line-height: 1.6;
+    color: #ccc;
+}
+
+/* মোবাইল ডিভাইসের জন্য রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+    .articles {
+        padding: 2rem 1rem;
+    }
+
+    .article {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .articles h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .article h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .tags {
+        font-size: 0.8rem;
+    }
+
+    .article p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
