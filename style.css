@@ -117,19 +117,20 @@ body {
 .hero-buttons {
   display: flex;
   flex-direction: column; /* বাটনগুলো উপরে নিচে */
-  gap: 0.5rem; /* বাটনের মধ্যে স্পেস */
+  gap: 0.75rem; /* বাটনের মধ্যে স্পেস */
   align-items: center;
   width: 100%; /* বাটন ধারকের প্রস্থ */
 }
 
 .btn {
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 2rem; /* প্যাডিং বৃদ্ধি */
   border-radius: 25px; /* আরও গোলাকার */
-  font-size: 1rem;
+  font-size: 1.1rem; /* ফন্টের আকার বৃদ্ধি */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%; /* বাটন পুরো প্রস্থ নেবে */
   text-decoration: none;
   text-align: center;
+  font-weight: 600; /* হালকা মোটা */
 }
 
 .btn.discuss {
@@ -169,11 +170,14 @@ body {
     flex-direction: column; /* বাটনগুলো উপরে নিচে */
     align-items: center;
     width: auto; /* অটো প্রস্থ */
+    gap: 0.75rem;
   }
 
   .btn {
     width: auto; /* অটো প্রস্থ */
-    margin: 0.5rem 0; /* বাটনের মধ্যে স্পেস */
+    margin: 0.75rem 0; /* বাটনের মধ্যে স্পেস */
+    padding: 0.9rem 2.2rem; /* প্যাডিং বৃদ্ধি */
+    font-size: 1.1rem;
   }
 }
 
@@ -200,21 +204,23 @@ body {
   .hero-buttons {
     flex-direction: column; /* মোবাইলে উপরে নিচে বাটন */
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     width: 100%;
   }
 
   .btn {
     width: 100%;
     text-align: center;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
   }
 }
 
 /* ছোট মোবাইল স্ক্রিনের জন্য */
 @media (max-width: 480px) {
   .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
     border-radius: 20px;
   }
 
